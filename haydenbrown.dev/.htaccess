@@ -1,0 +1,13 @@
+Options -MultiViews
+
+#example.com/page will return a page, not the directory it points to,
+#if for example there is an example.com/page/subpage URL
+DirectorySlash Off
+
+#example.com/page will display the contents of example.com/page.html
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.+)$ $1.html [L,QSA]
+
+#301 from example.com/page.html to example.com/page
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /.*\.html\ HTTP/
+RewriteRule ^(.*)\.html$ /$1 [R=301,L]

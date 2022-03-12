@@ -1,0 +1,130 @@
+/*
+    Stylesheet for the article/project preview tiles that are everywhere on my damn website.
+*/
+
+.article-preview {
+  width: 446px;
+  background-color: #f4f4f4;
+  display: inline-block;
+  border-radius: 15px;
+  margin: 1.5%;
+  vertical-align: top;
+}
+
+.games-preview {
+  border: 2px solid #d64933;
+}
+.music-preview {
+  border: #264df7 solid 2px;
+}
+.hoops-preview {
+  border: 2px solid #eaa734;
+}
+.devblog-preview {
+  border: 2px solid #44af69;
+}
+
+/* stuff for the square images on the tiles*/
+
+.article-preview-image {
+  height: 150px;
+  width: 150px;
+  float: left;
+}
+.article-preview-image img {
+  width: 124px;
+  height: 124px;
+  margin: 13px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+.article-preview-text {
+  width: 292px;
+  padding: 10px 5px 5px 0px;
+  text-align: left;
+  float: right;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.article-preview-text h3 {
+  font-size: 1.85rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  text-decoration: underline black solid 1px;
+  text-underline-position: under;
+  color: black;
+  line-height: 22px;
+}
+.article-preview-text p {
+  padding-top: 10px;
+  vertical-align: middle;
+}
+
+#games-preview-text {
+  text-decoration: underline #d64933 solid 1px;
+}
+#music-preview-text {
+  text-decoration: underline #264df7 solid 1px;
+}
+#hoops-preview-text {
+  text-decoration: underline #eaa734 solid 1px;
+}
+#devblog-preview-text {
+  text-decoration: underline #44af69 solid 1px;
+}
+
+.article-meta {
+  justify-content: space-between;
+  display: flex;
+  padding: 0px 10px 5px 0px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.article-meta p {
+  color: #aaaaaa;
+}
+
+@media screen and (max-width: 447px) {
+  .article-preview {
+    margin: 5px 0px;
+    box-shadow: none;
+    height: 120px;
+    width: 355px;
+  }
+  .article-preview-image {
+    height: 99px;
+    width: 99px;
+    float: left;
+  }
+  .article-preview-image img {
+    width: 99px;
+    height: 99px;
+    margin: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  }
+  .article-preview-text {
+    width: 234px;
+    padding: 8px 4px 4px 0px;
+    text-align: left;
+    float: right;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+  .article-preview-text h3 {
+    font-size: 1.5rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    text-decoration: underline black solid 1px;
+    text-underline-position: under;
+    color: black;
+    line-height: 18px;
+  }
+  .article-preview-text p {
+    vertical-align: middle;
+    font-size: 1.3rem;
+    padding-top: 5px;
+  }
+  .article-meta {
+    padding: 0px 4px 5px 0px;
+  }
+  .article-meta p {
+    font-size: 1.3rem;
+    float: right;
+  }
+}

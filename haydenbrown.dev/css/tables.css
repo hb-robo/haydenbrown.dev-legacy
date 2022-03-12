@@ -1,0 +1,116 @@
+/*
+    Stylesheet for the wikipedia-styled tables that sort my written reviews.
+*/
+
+.table-index {
+  overflow-x: scroll;
+}
+
+.table-search {
+  background-image: url("/img/icons/searchicon.png"); /* Add a search icon to input */
+  background-position: 10px 12px; /* Position the search icon */
+  background-repeat: no-repeat; /* Do not repeat the icon image */
+  width: 95%;
+  font-size: 1.6rem;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.reviews-table {
+  border-collapse: collapse;
+  margin: 25px auto;
+  font-size: 1.45rem;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  width: 95%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+/* styling for the table headings. still unsure about what to include here. */
+.reviews-table thead tr {
+  background-color: #aeb0b2;
+  color: #ffffff;
+  font-weight: bold;
+  font-family: "planet-estyle";
+  font-size: 1.6rem;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+.reviews-table th {
+  padding: 12px 15px;
+}
+.reviews-table td {
+  padding: 5px;
+  border-left: 1px solid #aaaaaa;
+}
+
+/* alternates the coloring of each row slightly for readability. */
+.reviews-table tbody tr {
+  border-left: 2px solid #5d5e5f;
+  border-right: 2px solid #aeb0b2;
+  border-top: 1px solid #aeb0b2;
+}
+#table-body tr.even {
+  background-color: #ffffff;
+}
+#table-body tr.odd {
+  background-color: #f4f4f4;
+}
+#table-head th {
+  height: 60px;
+}
+/* ALBUM SPECIFIC TABLE SHOULD BE BLUE! */
+/* 
+  creates a solid border under the last row of the table, 
+  and centers the year and verdict columns.
+*/
+#music-table thead tr {
+  background-color: #264df7;
+}
+#music-table tbody {
+  border-bottom: 2px solid #264df7;
+}
+#music-table tr td:nth-child(1),
+#music-table tr td:nth-child(3) {
+  text-align: center;
+  font-weight: bold;
+}
+#music-table tr td:nth-child(2),
+#music-table tr td:nth-child(4),
+#music-table tr td:nth-child(5),
+#music-table tr td:nth-child(7) {
+  text-align: left;
+}
+
+#games-table tbody {
+  border-bottom: 2px solid #d64933;
+}
+#games-table thead tr {
+  background-color: #d64933;
+}
+#games-table tr td:nth-child(1),
+#games-table tr td:nth-child(3) {
+  font-weight: bold;
+}
+#games-table tr td:nth-child(2),
+#games-table tr td:nth-child(4),
+#games-table tr td:nth-child(5),
+#games-table tr td:nth-child(7) {
+  text-align: left;
+}
+#games-table tr td:nth-child(2) {
+  min-width: 175px;
+}
+#games-table tr td:nth-child(4),
+#games-table tr td:nth-child(5) {
+  min-width: 125px;
+}
+#games-table tr td:nth-child(7) {
+  min-width: 210px;
+}
+
+@media screen and (max-width: 768px) {
+  .reviews-table {
+    margin: 10px;
+  }
+}

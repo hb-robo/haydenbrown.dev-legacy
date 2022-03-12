@@ -1,0 +1,92 @@
+/*
+    Stylesheet for the "words" page, a preview of the most recent  in eac-sectionh major category.
+*/
+
+.words {
+  width: 70vw;
+  text-align: center;
+  margin: 10px auto;
+  padding: 10px;
+  background-color: white;
+}
+.words h1 {
+  font-family: "planet-estyle";
+}
+
+.words-header,
+.words-footer {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  margin: 20px auto;
+}
+
+.words-header h1,
+.words-footer h1 {
+  width: 25%;
+  font-size: 2.5rem;
+  text-align: center;
+  font-family: "planet-estyle";
+}
+.words-header h1 a {
+  text-decoration: none;
+  color: black;
+}
+.words-footer {
+  margin-top: 30px;
+}
+
+#music-header {
+  border-top: #264df7 4px solid;
+  border-bottom: #264df7 4px solid;
+}
+#hoops-header {
+  border-top: #eaa734 4px solid;
+  border-bottom: #eaa734 4px solid;
+}
+#games-header {
+  border-top: #d64933 4px solid;
+  border-bottom: #d64933 4px solid;
+}
+#devblog-header {
+  border-top: #44af69 4px solid;
+  border-bottom: #44af69 4px solid;
+}
+#music-footer {
+  border-top: #264df7 4px solid;
+}
+#hoops-footer {
+  border-top: #eaa734 4px solid;
+}
+#games-footer {
+  border-top: #d64933 4px solid;
+}
+#devblog-footer {
+  border-top: #44af69 4px solid;
+}
+
+@media screen and (max-width: 2177px) {
+  .words {
+    width: 85vw;
+  }
+}
+
+@media screen and (max-width: 1527px) {
+  .words {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 1116px) {
+  .words {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .words-header h1 {
+    font-size: 2rem;
+  }
+}

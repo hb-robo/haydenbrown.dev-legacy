@@ -1,0 +1,145 @@
+/* 
+    Stylesheet for a responsive navigation bar that condenses to a drop-down menu on mobile.
+    It's pretty involved, and a majority of the logic came from a Dev Ed video.
+*/
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
+  background-color: #d64933;
+  z-index: 2;
+}
+
+#music-nav {
+  background-color: #264df7;
+}
+#hoops-nav {
+  background-color: #eaa734;
+}
+#hoops-nav a {
+  color: white;
+}
+#devblog-nav {
+  background-color: #44af69;
+}
+#projects-nav {
+  background-color: #44af69;
+}
+
+.logo a h4 {
+  color: #ffffff;
+  letter-spacing: 4px;
+  font-size: 3.3rem;
+  font-family: "planet-kosmos";
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  width: 35%;
+  background-color: #d64933;
+  position: relative;
+  z-index: 3;
+}
+
+.nav-links a {
+  color: #f4f4f4;
+  text-decoration: none;
+  letter-spacing: 3px;
+  font-weight: bold;
+  font-size: 1.6rem;
+  font-family: "planet-estyle";
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+/* the "burger" is an affectionate name for the tribar shape used for the mobile nav. */
+.burger {
+  display: none;
+  cursor: pointer;
+}
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: #f4f4f4;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+/* 
+    RESPONSIVE CODE - TABLET
+    Because the navbar uses width %s, this required to prevent navlink overlap.
+    Required, because I don't want it to look messy between desktop and mobile. 
+*/
+@media screen and (max-width: 1024px) {
+  .nav-links {
+    width: 52%;
+  }
+}
+
+/* 
+    RESPONSIVE NAV - MOBILE
+    Gotta make it look nice on mobile! This is where the dropdown menu kicks in.
+    I'll be posting on Twitter/github, so it's likely mobile drives most traffic.
+*/
+@media screen and (max-width: 787px) {
+  body {
+    overflow-x: hidden;
+  }
+  .logo a h4 {
+    font-size: 2.4rem;
+  }
+  .nav-links {
+    border-top: 2px solid #f4f4f4;
+    position: fixed;
+    right: 0px;
+    height: 92vh;
+    top: 8vh;
+    background-color: #d64933;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+  }
+  .nav-links li {
+    opacity: 0;
+  }
+  .burger {
+    display: block;
+  }
+}
+
+/* toggle class for the mobile navbar to keep it off screen by default. */
+.nav-active {
+  transform: translateX(0%);
+}
+
+/* keyframes function for the linked "app.js" file to move the mobile navbar on and off the screen. */
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+/* nifty toggle class for each line of the "burger" to do a cool little animation to an X when clicked. */
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .line2 {
+  opacity: 0;
+}
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}

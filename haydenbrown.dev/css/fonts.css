@@ -1,0 +1,32 @@
+/* 
+    A stylesheet dedicated to font imports.
+*/
+
+/* 
+    All of the "planet" font types were developed by Planet of the Y2K Institute.
+    They are open-source, but I want to shout them out for making that happen.
+*/
+@font-face {
+  font-family: "planet-kosmos";
+  src: url(../fonts/PLANK___.TTF);
+  font-style: normal;
+  font-weight: 100;
+}
+@font-face {
+  font-family: "planet-bubble";
+  src: url(../fonts/PLANB___.TTF);
+  font-style: normal;
+  font-weight: 100;
+}
+@font-face {
+  font-family: "planet-tricolore";
+  src: url(../fonts/PLANTC__.TTF);
+  font-style: normal;
+  font-weight: 100;
+}
+@font-face {
+  font-family: "planet-estyle";
+  src: url(../fonts/PLANE___.TTF);
+  font-style: normal;
+  font-weight: 100;
+}
