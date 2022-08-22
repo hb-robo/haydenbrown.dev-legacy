@@ -1,90 +1,82 @@
-/*
-    Stylesheet for the individual article pages.
-*/
-
-/* formerly .___-articles, but combined. */
-.articles {
-  margin: 10px 10px auto;
-  padding: 10px;
-  max-width: 1128px;
-  background-color: white;
-  text-align: center;
-}
-
-/* article section heading (links, decoration, colors) */
-.articles h1,
-.articles h2 {
-  font-family: "planet-estyle";
-  text-align: center;
-}
-.articles h1 {
-  margin-bottom: 10px;
-}
-#games-heading {
-  border-bottom: solid #d64933 2px;
-}
-#music-heading {
-  border-bottom: solid #264df7 2px;
-}
-#hoops-heading {
-  border-bottom: solid #eaa734 2px;
-}
-#devblog-heading {
-  border-bottom: solid #44af69 2px;
-}
-
-/* article section footing (links, decoration, colors) */
-.articles h2 {
-  margin-top: 10px;
-}
-.articles h2 a {
-  text-decoration: none;
-  color: black;
-}
-#games-footing {
-  border-top: solid #d64933 2px;
-}
-#music-footing {
-  border-top: solid #264df7 2px;
-}
-#hoops-footing {
-  border-top: solid #eaa734 2px;
-}
-#devblog-footing {
-  border-top: solid #44af69 2px;
-}
-
-.article-footer {
-  font-family: "planet-estyle";
-  text-align: center;
-  margin-top: 10px;
-  text-decoration: none;
-}
-.article-footer ul {
-  padding-top: 5px;
-  list-style: none;
-  text-decoration: none;
-  display: flex;
-  justify-content: space-around;
-}
-
-@media screen and (max-width: 767px) {
-  .articles {
-    padding: 0px;
-    width: 100%;
-    margin: 10px 0px 0px 0px;
-  }
-
-  .article-footer {
-    padding-bottom: 10px;
-  }
-
-  .article-footer ul li h2 a {
-    font-size: 1.7rem;
-  }
-
-  #hoops-footing {
-    padding-top: 5px;
-    padding-bottom: 5px;
-  }
-}
+/*
+    Stylesheet for the individual article pages.
+*/
+/* formerly .___-articles, but combined. */
+.articles {
+	margin: 10px 10px auto;
+	padding: 10px;
+	max-width: 1128px;
+	background-color: white;
+	text-align: center;
+}
+/* article section heading (links, decoration, colors) */
+.articles h1,
+.articles h2 {
+	font-family: "planet-estyle";
+	text-align: center;
+}
+.articles h1 {
+	margin-bottom: 10px;
+}
+#games-heading {
+	border-bottom: solid #d64933 2px;
+}
+#music-heading {
+	border-bottom: solid #264df7 2px;
+}
+#hoops-heading {
+	border-bottom: solid #eaa734 2px;
+}
+#devblog-heading {
+	border-bottom: solid #44af69 2px;
+}
+/* article section footing (links, decoration, colors) */
+.articles h2 {
+	margin-top: 10px;
+}
+.articles h2 a {
+	text-decoration: none;
+	color: black;
+}
+#games-footing {
+	border-top: solid #d64933 2px;
+}
+#music-footing {
+	border-top: solid #264df7 2px;
+}
+#hoops-footing {
+	border-top: solid #eaa734 2px;
+}
+#devblog-footing {
+	border-top: solid #44af69 2px;
+}
+.article-footer {
+	font-family: "planet-estyle";
+	text-align: center;
+	margin-top: 10px;
+	text-decoration: none;
+}
+.article-footer ul {
+	padding-top: 5px;
+	list-style: none;
+	text-decoration: none;
+	display: flex;
+	justify-content: space-around;
+}
+@media screen and (max-width: 767px) {
+	.articles {
+		padding: 0px;
+		width: 100%;
+		margin: 10px 0px 0px 0px;
+	}
+	.article-footer {
+		padding-bottom: 10px;
+	}
+	.article-footer ul li h2 a {
+		font-size: 1.7rem;
+	}
+	#hoops-footing {
+		padding-top: 5px;
+		padding-bottom: 5px;
+	}
+}

@@ -1,113 +1,101 @@
-/* 
-    Stylesheet for a basic footer.
-    Works in conjunction with the "main" div class to keep it positioned at the page bottom.
-*/
-
-.footer {
-  background: #333333;
-  color: #f4f4f4;
-  height: 225px;
-  position: relative;
-  width: 100vw;
-  margin: auto;
-  text-align: center;
-}
-
-/* actual footer content (contact info, social links, etc.) */
-.footer-content {
-  max-width: 868px;
-  height: 200px;
-  margin: auto;
-  padding: 20px 50px 0px 50px;
-}
-
-.footer-content a {
-  display: inline;
-}
-
-.footer-content img {
-  width: 10%;
-  margin: 0 7%;
-  float: none;
-  vertical-align: middle;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 2px solid #f4f4f4;
-  background-color: white;
-}
-
-.footer-content img:hover {
-  box-shadow: 0px 1px 20px 0px rgba(255, 255, 255, 0.7);
-  transition: ease 0.15s;
-}
-
-.footer-content span {
-  height: 75px;
-  margin: auto;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 75px;
-  font-size: 1.6rem;
-}
-
-span#span0 {
-  display: inline;
-}
-span#span-email,
-span#span-linkedin,
-span#span-twitter,
-span#span-github {
-  display: none;
-}
-#email-icon:hover ~ span#span0,
-#linkedin-icon:hover ~ span#span0,
-#twitter-icon:hover ~ span#span0,
-#github-icon:hover ~ span#span0 {
-  display: none;
-}
-
-#email-icon:hover ~ span#span-email {
-  display: inline;
-}
-#linkedin-icon:hover ~ span#span-linkedin {
-  display: inline;
-}
-#twitter-icon:hover ~ span#span-twitter {
-  display: inline;
-}
-#github-icon:hover ~ span#span-github {
-  display: inline;
-}
-
-@media screen and (max-width: 1024px) {
-}
-
-@media screen and (max-width: 768px) {
-  .footer-content {
-    width: 100%;
-  }
-  .footer-content img {
-    margin: 10px 7%;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  .footer-content img {
-    width: 20%;
-    margin: 10px 2%;
-  }
-}
-
-/* subfooter content (incl. design credit and a trademark) */
-.footer-bottom {
-  font-size: 1.2rem;
-  font-family: "Roboto Mono", monospace;
-  background: #aaaaaa;
-  color: #dddddd;
-  height: 50px;
-  text-align: center;
-  position: absolute;
-  bottom: 0px;
-  left: 0px;
-  padding-top: 20px;
-  width: 100%;
-}
+/* 
+    Stylesheet for a basic footer.
+    Works in conjunction with the "main" div class to keep it positioned at the page bottom.
+*/
+.footer {
+	background: #333333;
+	color: #f4f4f4;
+	height: 225px;
+	position: relative;
+	width: 100vw;
+	margin: auto;
+	text-align: center;
+}
+/* actual footer content (contact info, social links, etc.) */
+.footer-content {
+	max-width: 868px;
+	height: 200px;
+	margin: auto;
+	padding: 20px 50px 0px 50px;
+}
+.footer-content a {
+	display: inline;
+}
+.footer-content img {
+	width: 10%;
+	margin: 0 7%;
+	float: none;
+	vertical-align: middle;
+	border-radius: 50%;
+	object-fit: cover;
+	border: 2px solid #f4f4f4;
+	background-color: white;
+}
+.footer-content img:hover {
+	box-shadow: 0px 1px 20px 0px rgba(255, 255, 255, 0.7);
+	transition: ease 0.15s;
+}
+.footer-content span {
+	height: 75px;
+	margin: auto;
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	line-height: 75px;
+	font-size: 1.6rem;
+}
+span#span0 {
+	display: inline;
+}
+span#span-email,
+span#span-linkedin,
+span#span-twitter,
+span#span-github {
+	display: none;
+}
+#email-icon:hover ~ span#span0,
+#linkedin-icon:hover ~ span#span0,
+#twitter-icon:hover ~ span#span0,
+#github-icon:hover ~ span#span0 {
+	display: none;
+}
+#email-icon:hover ~ span#span-email {
+	display: inline;
+}
+#linkedin-icon:hover ~ span#span-linkedin {
+	display: inline;
+}
+#twitter-icon:hover ~ span#span-twitter {
+	display: inline;
+}
+#github-icon:hover ~ span#span-github {
+	display: inline;
+}
+@media screen and (max-width: 1024px) {
+}
+@media screen and (max-width: 768px) {
+	.footer-content {
+		width: 100%;
+	}
+	.footer-content img {
+		margin: 10px 7%;
+	}
+}
+@media screen and (max-width: 500px) {
+	.footer-content img {
+		width: 20%;
+		margin: 10px 2%;
+	}
+}
+/* subfooter content (incl. design credit and a trademark) */
+.footer-bottom {
+	font-size: 1.2rem;
+	font-family: "Roboto Mono", monospace;
+	background: #aaaaaa;
+	color: #dddddd;
+	height: 50px;
+	text-align: center;
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	padding-top: 20px;
+	width: 100%;
+}

@@ -1,482 +1,578 @@
-<!DOCTYPE html>
-<html lang="en" prefix="og: https://ogp.me/ns#">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="robots" content="index, follow" />
-    <link rel="icon" href="/img/logos/logo-yellow.png" />
-    <link rel="stylesheet" type="text/css" href="../../css/style.css" />
-    <link rel="canonical" href="https://www.haydenbrown.dev/words/hoops/expm" />
-    <link
-      rel="stylesheet"
-      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/default.min.css"
-    />
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="import" href="/fonts/PLANB___.TTF" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap"
-      rel="stylesheet"
-    />
-
-    <title>Lessons From a Failed Stat | hayden's stuff</title>
-
-    <!-- open graph tags for social media previews -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@hb_robo" />
-    <meta
-      name="twitter:title"
-      content="Lessons From a Failed Stat | hayden's stuff"
-    />
-    <meta
-      property="og:title"
-      content="Lessons From a Failed Stat | hayden's stuff"
-    />
-    <meta property="og:type" content="text/html" />
-    <meta
-      property="og:image"
-      content="https://www.haydenbrown.dev/img/hoops/expm/expm-wide.png"
-    />
-    <meta
-      name="twitter:image"
-      content="https://www.haydenbrown.dev/img/hoops/expm/expm-wide.png"
-    />
-    <meta
-      property="og:url"
-      content="https://www.haydenbrown.dev/words/hoops/expm"
-    />
-    <meta
-      name="twitter:description"
-      content="A eulogy of my college hobby stat, with bonus musings on NBA statistics at large and the 'advanced box score.'"
-    />
-    <meta
-      property="og:description"
-      content="A eulogy of my college hobby stat, with bonus musings on NBA statistics at large and the 'advanced box score.'"
-    />
-    <meta property="og:site_name" content="hayden's stuff" />
-  </head>
-  <body>
-    <nav id="hoops-nav">
-      <div class="logo">
-        <a href="https://www.haydenbrown.dev">
-          <h4>hayden's stuff</h4>
-        </a>
-      </div>
-      <ul class="nav-links" id="hoops-nav">
-        <li><a href="https://www.haydenbrown.dev/words">words</a></li>
-        <li><a href="https://www.haydenbrown.dev/projects">projects</a></li>
-        <li><a href="https://www.haydenbrown.dev/about">about me</a></li>
-      </ul>
-      <div class="burger">
-        <div class="line1"></div>
-        <div class="line2"></div>
-        <div class="line3"></div>
-      </div>
-    </nav>
-
-    <div class="container">
-      <div class="main">
-        <article>
-          <h1>Lessons From a Failed Stat</h1>
-
-          <div class="article-info" id="hoops-heading">
-            <ul>
-              <li>
-                <h4>May 13th, 2021</h4>
-              </li>
-              <li>
-                <h4>8 min read</h4>
-              </li>
-            </ul>
-            <img
-              class="header-image"
-              src="../../img/hoops/expm/expm-wide.png"
-              alt=""
-            />
-          </div>
-
-          <div class="article-body">
-            <p>
-              In the spring of 2019, I tried to build an all-in-one aggregate
-              NBA statistic. At the time I was a busy computer science undergrad
-              with a penchant for procrastinating on the important things, and
-              marrying my love for basketball with my growing skillset as a
-              mathematician and programmer felt natural. In particular, I was
-              drawn to the idea by
-              <a href="https://twitter.com/JacobEGoldstein">Jacob Goldstein</a>,
-              current research analyst for the Washington Wizards, Mystics, and
-              Go-Go, who built the then-essential, now-proprietary PIPM
-              statistic when he was an undergrad himself. It seemed like a
-              reasonable endeavor and I felt prepared enough to try for myself.
-            </p>
-            <p>
-              My vision was grand and naive. As a follower of the ever-miserable
-              Chicago Bulls, I was frustrated by the most common source of
-              confusion that stemmed from use of plus-minus derived aggregate
-              stats like PIPM: the results. Low usage, high efficiency players
-              from winning teams tend to be rewarded over high usage, medium
-              efficiency players from losing teams, and why shouldn’t they, if
-              they have a larger part of a team’s success? Isn’t winning why
-              they play the game at all? It’s a reasonable conclusion, but it
-              can misinform. For me, this came to a head when an elderly Bulls
-              fan went on a Twitter rant claiming that he’d rather max Jeremy
-              Lamb than Zach LaVine -
-              <a href="http://www.espn.com/nba/statistics/rpm">ESPN’s RPM</a>
-              (whose formula has since been revised) cited as the chief
-              evidence.
-            </p>
-            <p>
-              The argument can be made that we live in a world severed from
-              widespread statistical comprehension. Mathematical communication
-              has always been a problem for humans, but perhaps most famously we
-              don’t find probabilities intuitive at all. The foundation of
-              confusion in statistics lies in the strange, but accurate insights
-              we are able to extract from computation, like why
-              <a href="https://en.wikipedia.org/wiki/Monty_Hall_problem"
-                >it’s always beneficial to switch prizes</a
-              >
-              on the Monty Hall Show, or why
-              <a href="https://en.wikipedia.org/wiki/Birthday_problem"
-                >it’s more likely than not that 2 people in a room of 23 share a
-                birthday</a
-              >, despite 366 possible dates. For some reason, the human brain
-              doesn't expect these outcomes.
-            </p>
-            <p>
-              Despite a gradual uptick in the comprehension of statistics in the
-              broader NBA community, professional basketball is not an exception
-              to the confusion; on the contrary, sports are possibly the most
-              common arena for misunderstaning math, I imagine because it draws
-              in people from a variety of backgrounds, not all technical. If you
-              tell the average NBA fan that
-              <a href="https://dunksandthrees.com/epm"
-                >Dunks & Threes’ all-in-one stat EPM</a
-              >
-              ranks Jakob Poeltl as a better defender than Bam Adebayo, they
-              might find it silly, or worse, use the existence of that fact to
-              dismiss the site’s efforts entirely. The dissonance, however
-              impacted by external factors like media coverage and marketing
-              efforts it might be, creates a cultural divide between “the
-              numbers” and “the game.”
-            </p>
-            <figure>
-              <iframe
-                width="942"
-                height="355"
-                src="https://www.youtube.com/embed/NZf9NFaCQHQ"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-              ></iframe>
-              <figcaption>and NBA media coverage does not help!</figcaption>
-            </figure>
-            <p>
-              But what if those fans are right to call out the discrepancies? To
-              me, there was nothing appreciably wrong with the top-down
-              plus-minus approach, but if it didn’t match a de facto reality,
-              shouldn’t it be held up to scrutiny? This was the question burning
-              a hole in my pocket, the one I wanted to try to solve with my
-              project.
-            </p>
-            <p>
-              After some soul-searching and brainstorming about the math, I
-              created a rough draft of what I called Experimental Plus-Minus
-              (EXPM) - its key feature being a complete dismissal of plus-minus
-              data, instead building the skillset of each player up from
-              scratch. Similar methodology was adopted in the days where the box
-              score was the only thing widely available, and metrics like PER,
-              Win Shares, and Box Plus-Minus (BPM) were born. But in 2019, there
-              was so much more to offer - extensive lineup data, robust
-              defensive tracking, rough playtype frequencies, and so on. My plan
-              was to take advantage of that newer, deeper NBA data to build a
-              “smarter” version of those original box-score statistics.
-            </p>
-            <p>
-              <i
-                >(As you might have guessed, EXPM is a misnomer - the "PM" part
-                of it makes no sense when plus-minus data isn't used. I
-                genuinely just thought it would be funny if the statistic had a
-                similar name to
-                <a href="https://en.wikipedia.org/wiki/Experience_point">EXP</a
-                >, the basic character-leveling currency used in thousands of
-                role-playing video games.)
-              </i>
-            </p>
-            <p>
-              EXPM was built to be comprised of multiple sub-statistics that
-              calculated a player’s value in a particular useful area, which
-              would then sum to the total. Not all areas were actually given
-              representation, only a very Moreyball-charged subset that I, at
-              the time, considered to be important to the sport: three-point
-              shooting, passing, scoring at the rim, self-creation, and a
-              clean-up component for offensive rebounds and screen assists.
-              Everything else was completely omitted from the calculation, the
-              theory being that in a modern game, only modern skills should be
-              rewarded.
-            </p>
-            <p>
-              In retrospect, my attempt is an unabashed failure at actually
-              representing basketball value. My attempt at punishing inefficient
-              players failed, as the bad shots were never considered in the
-              formulation and thus couldn't hurt them. I never built the daily
-              scraper to update the box score sources after new games had
-              completed, instead working with outdated numbers until the regular
-              season ended and there was no more need to pull them. Did I
-              mention that I also never got around to the defensive half of this
-              stat? Sometimes it just isn’t meant to be.
-            </p>
-            <p>
-              I can’t even really dissect the mathematics of EXPM here, as most
-              of it is beyond salvaging. Still, there are a few takeaways from
-              EXPM that I think can help shed some insight on basketball numbers
-              and what that information actually tells you.
-            </p>
-            <figure>
-              <img src="../../img/hoops/expm/expm.jpg" alt="" />
-              <figcaption>
-                this is the only EXPM that actually works, am I right?
-              </figcaption>
-            </figure>
-            <p>
-              Ultimately, EXPM’s fatal flaw was in the premise. Every time you
-              build upwards from existing stats, you’re trapped by an unreliable
-              present. While we might freely tease the first generation of
-              aggregate stats today for their simplicity, their creators
-              couldn’t yet factor in the wealth of information we’re able to
-              access today because it just didn’t exist. They were advanced and
-              all-encompassing for their time, but times change. Similarly, the
-              “advanced box score” as we call it today might look paltry in
-              another 30 years as automatic video trackers get more
-              sophisticated, specifically on the defensive end. The platonic
-              ideal of an all-in-one statistic is "good plays minus bad plays,"
-              and that reality might be soon.
-            </p>
-            <p>
-              It’s also healthy to recognize that these numbers in the box score
-              are just a low-resolution interpretation of a game that’s played
-              in real life. The physics of the ball and the players colliding
-              and bouncing alone is immensely complicated, with the difference
-              between, say, a made pass for a 3 and a deflected pass hit out of
-              bounds coming down to a matter of tiny micro angles of the ball
-              leaving a player’s hands. Nearly infinite layers of complexity and
-              nuance - defensive schemes, individual matchups and mismatches,
-              set designs, physicality and positioning, footwork and speed
-              changes, recent-possession momentum, nerves, confidence - go
-              unquantified and unaccounted for in even the most advanced
-              statistical suites available.
-            </p>
-            <p>
-              When confronted by a game with innumerable missing data points,
-              plus-minus data emerges as an incredibly elegant and brilliant
-              solution. Working backwards from the results, factoring in who was
-              on the court, during which minutes, against what competition, does
-              capture quite a lot about the happenings of that game. If fifty
-              factors influence the outcome of a basketball game, the on-off
-              data will invariably capture them, or at least their “shadow” -
-              manifesting as runs, stops, and streaks. This is still true if
-              there are a hundred factors, or a thousand, or ten-thousand. While
-              we can’t glean every insight from plus-minus data, it is still
-              descriptive - and maybe comprehensive - in its own abstract,
-              silhouetted way.
-            </p>
-            <figure>
-              <img src="../../img/hoops/expm/topdown-vs-bottomup.png" alt="" />
-              <figcaption>this also comes up in database design:</figcaption>
-              <figcaption>
-                <u>attribute</u>: "how good is PLAYER at SKILL?"
-              </figcaption>
-              <figcaption><u>entity</u>: "how good is PLAYER?"</figcaption>
-              <figcaption>
-                <u>conceptual model</u>: "what does 'good' mean?"
-              </figcaption>
-            </figure>
-            <p>
-              In contrast, bottom-up approaches must always be lossy, shedding
-              holistic value as it incorporates more individual subfactors that
-              may not paint the full picture. Worse still is that this can spark
-              unproductive, unsolvable discussions about the relative value of
-              basketball skills. If you build a statistic from the box score, by
-              definition your statistic must be assembled using some formulation
-              of that existing numeric data. Doing so can prompt debates that
-              cannot be conclusively determined, like “how much should a point
-              count versus an assist, or a rebound?” This ultimately makes the
-              result of the statistic only as reliable and predictive as the
-              basketball philosophy of the statistician, which may not even
-              match reality at all.
-            </p>
-            <p>
-              EXPM is absolutely littered with these decisions, because the
-              advanced box score blows the door wide open on what can be
-              considered a productive basketball event. How much should a
-              passing assist be worth versus a screen assist? Both create a
-              field goal attempt, but now you have to quantify the risk of a
-              moving screen violation versus that of a passing turnover. How
-              about the value of a contested rebound versus an uncontested one?
-              Do you use raw assists or do you approximate "expected" assists by
-              multiplying potential assists by the league average efficiency?
-              Ultimately, these decisions vary from person to person, alterating
-              (and obfuscating) the impact they aim to quantify.
-            </p>
-            <p>
-              There is also a significant problem of “invisible” value. The
-              plus-minus approach rightfully envisions a basketball games as a
-              series of possessions with score consequences, but the box score
-              does not abide by those rules. A good example is a possession
-              wherein a player drives to the rim, kicking the ball out to a
-              semi-open corner shooter who in turn swings it to a more open
-              elbow shooter, who makes the shot. This happens all the time,
-              whether it's Mike Conley to Joe Ingles to Bojan Bogdanovic, or
-              Kyle Lowry to OG Anunoby to Gary Trent Jr.
-            </p>
-            <figure>
-              <img src="../../img/hoops/expm/corner-swing.png" alt="" />
-              <figcaption>
-                I had a lot of fun drawing this and I'm gonna do it again.
-              </figcaption>
-            </figure>
-            <p>
-              With the plus-minus approach, all three players (and their two
-              other teammates) are rewarded for that successful play. From the
-              box-score, unless hockey assists are implemented, the player that
-              kicked off the sequence with the drive-and-kick goes completely
-              unrewarded, instead resulting in an assist for the corner shooter
-              and a made field goal for the elbow shooter. The two weak-side
-              teammates whose non-presence made the sequence possible (maybe
-              crucially stretching the floor to give a lane for the initial
-              drive) get no credit at all. It’s a headache.
-            </p>
-            <p>
-              Finally, EXPM fails because of intentional value overlap, where a
-              single possession can positively or negatively impact a player
-              more than once. Three separate sub-categories of EXPM -
-              three-point attempts, at-rim attempts, and self-created attempts -
-              can easily overlap with one another in two obvious and common
-              examples: the self-created drive to the basket and the pull-up
-              three pointer. These are incredibly valuable shots for a player to
-              produce, arguably the most important in the sport right now, and
-              because of that I didn’t mind that they were double-counted - I
-              figured it was a reasonable reward. Still, “double” is a flippant,
-              unscientific multiplier that isn’t really based in anything
-              meaningful besides it being convenient for my calculation. Not
-              only is it not elegant, but it's incomprehensible.
-            </p>
-            <figure>
-              <img src="../../img/hoops/expm/haydenball.png" alt="" />
-              <figcaption>
-                this is the sport I actually ended up making a stat for.
-              </figcaption>
-            </figure>
-            <p>
-              There are still good uses for the box score. To determine who is
-              the best at any individual skill, it's nearly impossible to take
-              any other approach, and without it as a supplement to the
-              aggregate stats, we lose a lot of definition. It obviously isn't
-              tenable for the basketball community at large to talk exclusively
-              in good/bad binaries when the beauty of the game lies in distinct
-              playstyles, how they interact and clash, how a player might exceed
-              or fall short of the sum of their parts.
-            </p>
-            <p>
-              That said, it might really be time to hang up it up as formulation
-              for any aggregate ranking. Even with the significantly more robust
-              tracking in the modern day, the lingering issue of relative skill
-              value is too large of an obstacle to reasonably surmise. Perhaps
-              one day we might be able to mine plus-minus data and extract the
-              exact value of every individually tracked box score stat, but
-              today is not that day. Even if an answer is reached, it might not
-              be consistent from year to year or even game to game, rendering it
-              too unstable for widespread casual usage.
-            </p>
-            <p>
-              I can't totally rule it out, maybe somebody out there that's both
-              much smarter than I am and has more creative ways to leverage the
-              ever-growing repository of NBA tracking data will crack the code.
-              But one thing is for sure, there is no need for an EXPM or
-              anything like it.
-            </p>
-          </div>
-          <div class="article-footer" id="hoops-footing">
-            <ul>
-              <li>
-                <h2>
-                  <a href="https://www.haydenbrown.dev/words/devblog"
-                    >← more hoops stuff</a
-                  >
-                </h2>
-              </li>
-              <li>
-                <h2>
-                  <a href="https://www.haydenbrown.dev/words">all articles →</a>
-                </h2>
-              </li>
-            </ul>
-          </div>
-        </article>
-      </div>
-    </div>
-
-    <!-- footer -->
-    <div class="footer">
-      <div class="footer-content">
-        <a
-          id="email-icon"
-          target="_blank"
-          rel="noopener noreferrer"
-          href="mailto: brownhayden10@gmail.com"
-          ><img src="../../img/icons/email.ico" alt=""
-        /></a>
-        <a
-          id="linkedin-icon"
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://www.linkedin.com/in/hayden-t-brown/"
-          ><img src="../../img/icons/linkedin.ico" alt=""
-        /></a>
-        <a
-          id="twitter-icon"
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://twitter.com/hb_robo"
-          ><img src="../../img/icons/twitter-circle.ico" alt=""
-        /></a>
-        <a
-          id="github-icon"
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://github.com/hbrown10"
-          ><img src="../../img/icons/iconmonstr-github-1.svg" alt=""
-        /></a>
-        <span id="span0">hello world! feel free to reach out.</span>
-        <span id="span-email"
-          >contact me about professional inquiries or whatever else!</span
-        >
-        <span id="span-linkedin"
-          >connect with me professionally, if that's your thing.</span
-        >
-        <span id="span-twitter"
-          >check out my quick-trigger thoughts in real time!</span
-        >
-        <span id="span-github"
-          >look through my code, if you want to roast me (most things I do don't
-          get uploaded).</span
-        >
-      </div>
-      <div class="footer-bottom">&copy; 2021 | designed by hayden brown</div>
-    </div>
-
-    <!--JS animations-->
-    <script src="../../js/app.js"></script>
-
-    <script>
-      hljs.highlightAll();
-    </script>
-  </body>
-</html>
+<!DOCTYPE html>
+<html lang="en" prefix="og: https://ogp.me/ns#">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="robots" content="index, follow" />
+		<link rel="icon" href="/img/logos/logo-yellow.png" />
+		<link rel="stylesheet" type="text/css" href="../../css/style.css" />
+		<link
+			rel="canonical"
+			href="https://www.haydenbrown.dev/words/hoops/expm"
+		/>
+		<link
+			rel="stylesheet"
+			href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/default.min.css"
+		/>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="import" href="/fonts/PLANB___.TTF" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap"
+			rel="stylesheet"
+		/>
+		<title>Lessons From a Failed Stat | hayden's stuff</title>
+		<!-- open graph tags for social media previews -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:site" content="@hb_robo" />
+		<meta
+			name="twitter:title"
+			content="Lessons From a Failed Stat | hayden's stuff"
+		/>
+		<meta
+			property="og:title"
+			content="Lessons From a Failed Stat | hayden's stuff"
+		/>
+		<meta property="og:type" content="text/html" />
+		<meta
+			property="og:image"
+			content="https://www.haydenbrown.dev/img/hoops/expm/expm-wide.png"
+		/>
+		<meta
+			name="twitter:image"
+			content="https://www.haydenbrown.dev/img/hoops/expm/expm-wide.png"
+		/>
+		<meta
+			property="og:url"
+			content="https://www.haydenbrown.dev/words/hoops/expm"
+		/>
+		<meta
+			name="twitter:description"
+			content="A eulogy of my college hobby stat, with bonus musings on NBA statistics at large and the 'advanced box score.'"
+		/>
+		<meta
+			property="og:description"
+			content="A eulogy of my college hobby stat, with bonus musings on NBA statistics at large and the 'advanced box score.'"
+		/>
+		<meta property="og:site_name" content="hayden's stuff" />
+	</head>
+	<body>
+		<nav id="hoops-nav">
+			<div class="logo">
+				<a href="https://www.haydenbrown.dev">
+					<h4>hayden's stuff</h4>
+				</a>
+			</div>
+			<ul class="nav-links" id="hoops-nav">
+				<li><a href="https://www.haydenbrown.dev/words">words</a></li>
+				<li>
+					<a href="https://www.haydenbrown.dev/projects">projects</a>
+				</li>
+				<li>
+					<a href="https://www.haydenbrown.dev/about">about me</a>
+				</li>
+			</ul>
+			<div class="burger">
+				<div class="line1"></div>
+				<div class="line2"></div>
+				<div class="line3"></div>
+			</div>
+		</nav>
+		<div class="container">
+			<div class="main">
+				<article>
+					<h1>Lessons From a Failed Stat</h1>
+					<div class="article-info" id="hoops-heading">
+						<ul>
+							<li>
+								<h4>May 13th, 2021</h4>
+							</li>
+							<li>
+								<h4>8 min read</h4>
+							</li>
+						</ul>
+						<img
+							class="header-image"
+							src="../../img/hoops/expm/expm-wide.png"
+							alt=""
+						/>
+					</div>
+					<div class="article-body">
+						<p>
+							In the spring of 2019, I tried to build an
+							all-in-one aggregate NBA statistic. At the time I
+							was a busy computer science undergrad with a
+							penchant for procrastinating on the important
+							things, and marrying my love for basketball with my
+							growing skillset as a mathematician and programmer
+							felt natural. In particular, I was drawn to the idea
+							by
+							<a href="https://twitter.com/JacobEGoldstein">
+								Jacob Goldstein
+							</a>
+							, current research analyst for the Washington
+							Wizards, Mystics, and Go-Go, who built the
+							then-essential, now-proprietary PIPM statistic when
+							he was an undergrad himself. It seemed like a
+							reasonable endeavor and I felt prepared enough to
+							try for myself.
+						</p>
+						<p>
+							My vision was grand and naive. As a follower of the
+							ever-miserable Chicago Bulls, I was frustrated by
+							the most common source of confusion that stemmed
+							from use of plus-minus derived aggregate stats like
+							PIPM: the results. Low usage, high efficiency
+							players from winning teams tend to be rewarded over
+							high usage, medium efficiency players from losing
+							teams, and why shouldn’t they, if they have a larger
+							part of a team’s success? Isn’t winning why they
+							play the game at all? It’s a reasonable conclusion,
+							but it can misinform. For me, this came to a head
+							when an elderly Bulls fan went on a Twitter rant
+							claiming that he’d rather max Jeremy Lamb than Zach
+							LaVine -
+							<a href="http://www.espn.com/nba/statistics/rpm">
+								ESPN’s RPM
+							</a>
+							(whose formula has since been revised) cited as the
+							chief evidence.
+						</p>
+						<p>
+							The argument can be made that we live in a world
+							severed from widespread statistical comprehension.
+							Mathematical communication has always been a problem
+							for humans, but perhaps most famously we don’t find
+							probabilities intuitive at all. The foundation of
+							confusion in statistics lies in the strange, but
+							accurate insights we are able to extract from
+							computation, like why
+							<a
+								href="https://en.wikipedia.org/wiki/Monty_Hall_problem"
+							>
+								it’s always beneficial to switch prizes
+							</a>
+							on the Monty Hall Show, or why
+							<a
+								href="https://en.wikipedia.org/wiki/Birthday_problem"
+							>
+								it’s more likely than not that 2 people in a
+								room of 23 share a birthday
+							</a>
+							, despite 366 possible dates. For some reason, the
+							human brain doesn't expect these outcomes.
+						</p>
+						<p>
+							Despite a gradual uptick in the comprehension of
+							statistics in the broader NBA community,
+							professional basketball is not an exception to the
+							confusion; on the contrary, sports are possibly the
+							most common arena for misunderstaning math, I
+							imagine because it draws in people from a variety of
+							backgrounds, not all technical. If you tell the
+							average NBA fan that
+							<a href="https://dunksandthrees.com/epm">
+								Dunks & Threes’ all-in-one stat EPM
+							</a>
+							ranks Jakob Poeltl as a better defender than Bam
+							Adebayo, they might find it silly, or worse, use the
+							existence of that fact to dismiss the site’s efforts
+							entirely. The dissonance, however impacted by
+							external factors like media coverage and marketing
+							efforts it might be, creates a cultural divide
+							between “the numbers” and “the game.”
+						</p>
+						<figure>
+							<iframe
+								width="942"
+								height="355"
+								src="https://www.youtube.com/embed/NZf9NFaCQHQ"
+								title="YouTube video player"
+								frameborder="0"
+								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+								allowfullscreen
+							></iframe>
+							<figcaption>
+								and NBA media coverage does not help!
+							</figcaption>
+						</figure>
+						<p>
+							But what if those fans are right to call out the
+							discrepancies? To me, there was nothing appreciably
+							wrong with the top-down plus-minus approach, but if
+							it didn’t match a de facto reality, shouldn’t it be
+							held up to scrutiny? This was the question burning a
+							hole in my pocket, the one I wanted to try to solve
+							with my project.
+						</p>
+						<p>
+							After some soul-searching and brainstorming about
+							the math, I created a rough draft of what I called
+							Experimental Plus-Minus (EXPM) - its key feature
+							being a complete dismissal of plus-minus data,
+							instead building the skillset of each player up from
+							scratch. Similar methodology was adopted in the days
+							where the box score was the only thing widely
+							available, and metrics like PER, Win Shares, and Box
+							Plus-Minus (BPM) were born. But in 2019, there was
+							so much more to offer - extensive lineup data,
+							robust defensive tracking, rough playtype
+							frequencies, and so on. My plan was to take
+							advantage of that newer, deeper NBA data to build a
+							“smarter” version of those original box-score
+							statistics.
+						</p>
+						<p>
+							<i>
+								(As you might have guessed, EXPM is a misnomer -
+								the "PM" part of it makes no sense when
+								plus-minus data isn't used. I genuinely just
+								thought it would be funny if the statistic had a
+								similar name to
+								<a
+									href="https://en.wikipedia.org/wiki/Experience_point"
+								>
+									EXP
+								</a>
+								, the basic character-leveling currency used in
+								thousands of role-playing video games.)
+							</i>
+						</p>
+						<p>
+							EXPM was built to be comprised of multiple
+							sub-statistics that calculated a player’s value in a
+							particular useful area, which would then sum to the
+							total. Not all areas were actually given
+							representation, only a very Moreyball-charged subset
+							that I, at the time, considered to be important to
+							the sport: three-point shooting, passing, scoring at
+							the rim, self-creation, and a clean-up component for
+							offensive rebounds and screen assists. Everything
+							else was completely omitted from the calculation,
+							the theory being that in a modern game, only modern
+							skills should be rewarded.
+						</p>
+						<p>
+							In retrospect, my attempt is an unabashed failure at
+							actually representing basketball value. My attempt
+							at punishing inefficient players failed, as the bad
+							shots were never considered in the formulation and
+							thus couldn't hurt them. I never built the daily
+							scraper to update the box score sources after new
+							games had completed, instead working with outdated
+							numbers until the regular season ended and there was
+							no more need to pull them. Did I mention that I also
+							never got around to the defensive half of this stat?
+							Sometimes it just isn’t meant to be.
+						</p>
+						<p>
+							I can’t even really dissect the mathematics of EXPM
+							here, as most of it is beyond salvaging. Still,
+							there are a few takeaways from EXPM that I think can
+							help shed some insight on basketball numbers and
+							what that information actually tells you.
+						</p>
+						<figure>
+							<img src="../../img/hoops/expm/expm.jpg" alt="" />
+							<figcaption>
+								this is the only EXPM that actually works, am I
+								right?
+							</figcaption>
+						</figure>
+						<p>
+							Ultimately, EXPM’s fatal flaw was in the premise.
+							Every time you build upwards from existing stats,
+							you’re trapped by an unreliable present. While we
+							might freely tease the first generation of aggregate
+							stats today for their simplicity, their creators
+							couldn’t yet factor in the wealth of information
+							we’re able to access today because it just didn’t
+							exist. They were advanced and all-encompassing for
+							their time, but times change. Similarly, the
+							“advanced box score” as we call it today might look
+							paltry in another 30 years as automatic video
+							trackers get more sophisticated, specifically on the
+							defensive end. The platonic ideal of an all-in-one
+							statistic is "good plays minus bad plays," and that
+							reality might be soon.
+						</p>
+						<p>
+							It’s also healthy to recognize that these numbers in
+							the box score are just a low-resolution
+							interpretation of a game that’s played in real life.
+							The physics of the ball and the players colliding
+							and bouncing alone is immensely complicated, with
+							the difference between, say, a made pass for a 3 and
+							a deflected pass hit out of bounds coming down to a
+							matter of tiny micro angles of the ball leaving a
+							player’s hands. Nearly infinite layers of complexity
+							and nuance - defensive schemes, individual matchups
+							and mismatches, set designs, physicality and
+							positioning, footwork and speed changes,
+							recent-possession momentum, nerves, confidence - go
+							unquantified and unaccounted for in even the most
+							advanced statistical suites available.
+						</p>
+						<p>
+							When confronted by a game with innumerable missing
+							data points, plus-minus data emerges as an
+							incredibly elegant and brilliant solution. Working
+							backwards from the results, factoring in who was on
+							the court, during which minutes, against what
+							competition, does capture quite a lot about the
+							happenings of that game. If fifty factors influence
+							the outcome of a basketball game, the on-off data
+							will invariably capture them, or at least their
+							“shadow” - manifesting as runs, stops, and streaks.
+							This is still true if there are a hundred factors,
+							or a thousand, or ten-thousand. While we can’t glean
+							every insight from plus-minus data, it is still
+							descriptive - and maybe comprehensive - in its own
+							abstract, silhouetted way.
+						</p>
+						<figure>
+							<img
+								src="../../img/hoops/expm/topdown-vs-bottomup.png"
+								alt=""
+							/>
+							<figcaption>
+								this also comes up in database design:
+							</figcaption>
+							<figcaption>
+								<u>attribute</u>
+								: "how good is PLAYER at SKILL?"
+							</figcaption>
+							<figcaption>
+								<u>entity</u>
+								: "how good is PLAYER?"
+							</figcaption>
+							<figcaption>
+								<u>conceptual model</u>
+								: "what does 'good' mean?"
+							</figcaption>
+						</figure>
+						<p>
+							In contrast, bottom-up approaches must always be
+							lossy, shedding holistic value as it incorporates
+							more individual subfactors that may not paint the
+							full picture. Worse still is that this can spark
+							unproductive, unsolvable discussions about the
+							relative value of basketball skills. If you build a
+							statistic from the box score, by definition your
+							statistic must be assembled using some formulation
+							of that existing numeric data. Doing so can prompt
+							debates that cannot be conclusively determined, like
+							“how much should a point count versus an assist, or
+							a rebound?” This ultimately makes the result of the
+							statistic only as reliable and predictive as the
+							basketball philosophy of the statistician, which may
+							not even match reality at all.
+						</p>
+						<p>
+							EXPM is absolutely littered with these decisions,
+							because the advanced box score blows the door wide
+							open on what can be considered a productive
+							basketball event. How much should a passing assist
+							be worth versus a screen assist? Both create a field
+							goal attempt, but now you have to quantify the risk
+							of a moving screen violation versus that of a
+							passing turnover. How about the value of a contested
+							rebound versus an uncontested one? Do you use raw
+							assists or do you approximate "expected" assists by
+							multiplying potential assists by the league average
+							efficiency? Ultimately, these decisions vary from
+							person to person, alterating (and obfuscating) the
+							impact they aim to quantify.
+						</p>
+						<p>
+							There is also a significant problem of “invisible”
+							value. The plus-minus approach rightfully envisions
+							a basketball games as a series of possessions with
+							score consequences, but the box score does not abide
+							by those rules. A good example is a possession
+							wherein a player drives to the rim, kicking the ball
+							out to a semi-open corner shooter who in turn swings
+							it to a more open elbow shooter, who makes the shot.
+							This happens all the time, whether it's Mike Conley
+							to Joe Ingles to Bojan Bogdanovic, or Kyle Lowry to
+							OG Anunoby to Gary Trent Jr.
+						</p>
+						<figure>
+							<img
+								src="../../img/hoops/expm/corner-swing.png"
+								alt=""
+							/>
+							<figcaption>
+								I had a lot of fun drawing this and I'm gonna do
+								it again.
+							</figcaption>
+						</figure>
+						<p>
+							With the plus-minus approach, all three players (and
+							their two other teammates) are rewarded for that
+							successful play. From the box-score, unless hockey
+							assists are implemented, the player that kicked off
+							the sequence with the drive-and-kick goes completely
+							unrewarded, instead resulting in an assist for the
+							corner shooter and a made field goal for the elbow
+							shooter. The two weak-side teammates whose
+							non-presence made the sequence possible (maybe
+							crucially stretching the floor to give a lane for
+							the initial drive) get no credit at all. It’s a
+							headache.
+						</p>
+						<p>
+							Finally, EXPM fails because of intentional value
+							overlap, where a single possession can positively or
+							negatively impact a player more than once. Three
+							separate sub-categories of EXPM - three-point
+							attempts, at-rim attempts, and self-created attempts
+							- can easily overlap with one another in two obvious
+							and common examples: the self-created drive to the
+							basket and the pull-up three pointer. These are
+							incredibly valuable shots for a player to produce,
+							arguably the most important in the sport right now,
+							and because of that I didn’t mind that they were
+							double-counted - I figured it was a reasonable
+							reward. Still, “double” is a flippant, unscientific
+							multiplier that isn’t really based in anything
+							meaningful besides it being convenient for my
+							calculation. Not only is it not elegant, but it's
+							incomprehensible.
+						</p>
+						<figure>
+							<img
+								src="../../img/hoops/expm/haydenball.png"
+								alt=""
+							/>
+							<figcaption>
+								this is the sport I actually ended up making a
+								stat for.
+							</figcaption>
+						</figure>
+						<p>
+							There are still good uses for the box score. To
+							determine who is the best at any individual skill,
+							it's nearly impossible to take any other approach,
+							and without it as a supplement to the aggregate
+							stats, we lose a lot of definition. It obviously
+							isn't tenable for the basketball community at large
+							to talk exclusively in good/bad binaries when the
+							beauty of the game lies in distinct playstyles, how
+							they interact and clash, how a player might exceed
+							or fall short of the sum of their parts.
+						</p>
+						<p>
+							That said, it might really be time to hang up it up
+							as formulation for any aggregate ranking. Even with
+							the significantly more robust tracking in the modern
+							day, the lingering issue of relative skill value is
+							too large of an obstacle to reasonably surmise.
+							Perhaps one day we might be able to mine plus-minus
+							data and extract the exact value of every
+							individually tracked box score stat, but today is
+							not that day. Even if an answer is reached, it might
+							not be consistent from year to year or even game to
+							game, rendering it too unstable for widespread
+							casual usage.
+						</p>
+						<p>
+							I can't totally rule it out, maybe somebody out
+							there that's both much smarter than I am and has
+							more creative ways to leverage the ever-growing
+							repository of NBA tracking data will crack the code.
+							But one thing is for sure, there is no need for an
+							EXPM or anything like it.
+						</p>
+					</div>
+					<div class="article-footer" id="hoops-footing">
+						<ul>
+							<li>
+								<h2>
+									<a
+										href="https://www.haydenbrown.dev/words/devblog"
+									>
+										← more hoops stuff
+									</a>
+								</h2>
+							</li>
+							<li>
+								<h2>
+									<a href="https://www.haydenbrown.dev/words">
+										all articles →
+									</a>
+								</h2>
+							</li>
+						</ul>
+					</div>
+				</article>
+			</div>
+		</div>
+		<!-- footer -->
+		<div class="footer">
+			<div class="footer-content">
+				<a
+					id="email-icon"
+					target="_blank"
+					rel="noopener noreferrer"
+					href="mailto: brownhayden10@gmail.com"
+				>
+					<img src="../../img/icons/email.ico" alt="" />
+				</a>
+				<a
+					id="linkedin-icon"
+					target="_blank"
+					rel="noopener noreferrer"
+					href="https://www.linkedin.com/in/hayden-t-brown/"
+				>
+					<img src="../../img/icons/linkedin.ico" alt="" />
+				</a>
+				<a
+					id="twitter-icon"
+					target="_blank"
+					rel="noopener noreferrer"
+					href="https://twitter.com/hb_robo"
+				>
+					<img src="../../img/icons/twitter-circle.ico" alt="" />
+				</a>
+				<a
+					id="github-icon"
+					target="_blank"
+					rel="noopener noreferrer"
+					href="https://github.com/hbrown10"
+				>
+					<img src="../../img/icons/iconmonstr-github-1.svg" alt="" />
+				</a>
+				<span id="span0">hello world! feel free to reach out.</span>
+				<span id="span-email">
+					contact me about professional inquiries or whatever else!
+				</span>
+				<span id="span-linkedin">
+					connect with me professionally, if that's your thing.
+				</span>
+				<span id="span-twitter">
+					check out my quick-trigger thoughts in real time!
+				</span>
+				<span id="span-github">
+					look through my code, if you want to roast me (most things I
+					do don't get uploaded).
+				</span>
+			</div>
+			<div class="footer-bottom">
+				&copy; 2021 | designed by hayden brown
+			</div>
+		</div>
+		<!--JS animations-->
+		<script src="../../js/app.js"></script>
+		<script>
+			hljs.highlightAll();
+		</script>
+	</body>
+</html>

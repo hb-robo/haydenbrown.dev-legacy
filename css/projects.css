@@ -1,93 +1,83 @@
-/*
-    Stylesheet for the "projects" page, a random collection of stuff I get into.
-    A majority of these projects will have featured articles in the "other" page.
-*/
-
-.projects {
-  margin: 10px auto;
-  padding: 10px;
-  max-width: 1128px;
-  text-align: center;
-  background-color: white;
-}
-
-.projects h1 {
-  font-family: "planet-estyle";
-  text-align: center;
-  margin-bottom: 10px;
-  border-bottom: 2px solid #44af69;
-}
-
-.project-tile {
-  min-width: 350px;
-  max-width: 500px;
-  background-color: #f4f4f4;
-  display: inline-block;
-  border-radius: 15px;
-  border: #44af69 solid 2px;
-  vertical-align: top;
-  margin: 1.5%;
-}
-
-.project-tile h3 {
-  padding: 5px 0px;
-  text-align: center;
-  border-bottom: 1px #44af69 solid;
-  margin-bottom: 5px;
-  color: black;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.project-tile-text img {
-  float: left;
-  width: 150px;
-  height: 150px;
-  margin: 13px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
-}
-
-.project-tile-text {
-  text-align: left;
-  float: right;
-  padding: 10px 5px 5px 0;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.project-tile-text p {
-  vertical-align: middle;
-  line-height: normal;
-  padding: 5px 10px;
-}
-
-.read-more {
-  font-weight: bold;
-}
-
-@media screen and (max-width: 1124px) {
-  .projects {
-    padding: 0px;
-    width: 100%;
-    margin: 10px 0 0 0;
-  }
-  .project-tile {
-    width: 95%;
-  }
-  .project-tile-text img {
-    height: auto;
-    float: left;
-  }
-  .project-tile-text {
-    width: 100%;
-    float: right;
-  }
-}
-
-@media screen and (max-width: 1084px) {
-  .project-tile {
-    max-width: 80%;
-    margin-bottom: 20px;
-  }
-  .projects {
-    margin-bottom: 20px;
-  }
-}
+/*
+    Stylesheet for the "projects" page, a random collection of stuff I get into.
+    A majority of these projects will have featured articles in the "other" page.
+*/
+.projects {
+	margin: 10px auto;
+	padding: 10px;
+	max-width: 1128px;
+	text-align: center;
+	background-color: white;
+}
+.projects h1 {
+	font-family: "planet-estyle";
+	text-align: center;
+	margin-bottom: 10px;
+	border-bottom: 2px solid #44af69;
+}
+.project-tile {
+	min-width: 350px;
+	max-width: 500px;
+	background-color: #f4f4f4;
+	display: inline-block;
+	border-radius: 15px;
+	border: #44af69 solid 2px;
+	vertical-align: top;
+	margin: 1.5%;
+}
+.project-tile h3 {
+	padding: 5px 0px;
+	text-align: center;
+	border-bottom: 1px #44af69 solid;
+	margin-bottom: 5px;
+	color: black;
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.project-tile-text img {
+	float: left;
+	width: 150px;
+	height: 150px;
+	margin: 13px;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+.project-tile-text {
+	text-align: left;
+	float: right;
+	padding: 10px 5px 5px 0;
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.project-tile-text p {
+	vertical-align: middle;
+	line-height: normal;
+	padding: 5px 10px;
+}
+.read-more {
+	font-weight: bold;
+}
+@media screen and (max-width: 1124px) {
+	.projects {
+		padding: 0px;
+		width: 100%;
+		margin: 10px 0 0 0;
+	}
+	.project-tile {
+		width: 95%;
+	}
+	.project-tile-text img {
+		height: auto;
+		float: left;
+	}
+	.project-tile-text {
+		width: 100%;
+		float: right;
+	}
+}
+@media screen and (max-width: 1084px) {
+	.project-tile {
+		max-width: 80%;
+		margin-bottom: 20px;
+	}
+	.projects {
+		margin-bottom: 20px;
+	}
+}

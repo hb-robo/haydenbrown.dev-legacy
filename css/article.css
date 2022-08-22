@@ -1,166 +1,151 @@
-article {
-  margin: 30px auto;
-  padding: 50px 20px;
-  max-width: 768px;
-  min-width: 350px;
-  background-color: white;
-}
-
-article h1 {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 800;
-  padding-bottom: 15px;
-  color: #333333;
-  letter-spacing: 1px;
-}
-
-.header-image {
-  padding-bottom: 20px;
-  margin: 0;
-  width: 100%;
-}
-
-h2#subtitle {
-  font-family: "Montserrat", sans-serif;
-  text-align: center;
-  border-top: #333333 solid 2px;
-  padding-top: 15px;
-}
-p#line {
-  border-top: #333333 solid 2px;
-  padding-top: 15px;
-}
-h2#album-subtitle {
-  font-family: "Montserrat", sans-serif;
-  text-align: center;
-  border-top: #333333 solid 2px;
-  padding-top: 15px;
-  padding-bottom: 10px;
-  margin-top: 20px;
-  font-size: 2rem;
-}
-h2#noline {
-  font-family: "Montserrat", sans-serif;
-  text-align: center;
-}
-p#subtitle {
-  font-family: "Roboto Mono", monospace;
-  text-align: center;
-  font-size: 1.4rem;
-}
-article a {
-  color: #333333;
-}
-
-.article-info ul {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  padding-bottom: 15px;
-  display: flex;
-  list-style: none;
-  justify-content: space-between;
-}
-.article-info ul li h4 {
-  font-weight: normal;
-  color: #aeb0b2;
-}
-
-p.right-subtext {
-  font-style: italic;
-  text-align: right;
-  color: #aeb0b2;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-}
-
-article figure {
-  border: 2px solid gray;
-  width: 95%;
-  margin: 20px auto;
-  background-color: #f4f4f4;
-  border-radius: 25px 25px 25px 25px;
-  text-align: center;
-}
-
-article figure img {
-  vertical-align: top;
-  width: 100%;
-}
-article figure img:nth-child(1) {
-  border-radius: 22px 22px 0px 0px;
-}
-
-img.album-cover {
-  float: left;
-  width: 200px;
-  margin: 12px 20px 12px 15px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.815);
-}
-img.album-cover-big {
-  float: left;
-  width: 275px;
-  margin: 12px 20px 12px 15px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.815);
-}
-
-article figure iframe {
-  vertical-align: top;
-  margin: 20px auto 0 auto;
-  max-width: 92%;
-}
-article figure figcaption {
-  text-align: center;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  font-family: "Roboto Mono", monospace;
-  font-size: 1.2rem;
-}
-.article-body a,
-article figure a {
-  color: #264df7;
-  text-decoration: underline;
-}
-
-.article-body {
-  font-family: "Lato", sans-serif;
-  padding: 15px 0;
-}
-
-.article-body p {
-  line-height: 25px;
-  padding: 5px 15px;
-}
-
-.article-body p i {
-  padding-right: 2px;
-}
-
-/*
-    RESPONSIVE CSS FOR ARTICLE LAYOUT.
-*/
-
-/* mobile responsive styling. minimizes margins and increases reading space. */
-@media screen and (max-width: 768px) {
-  article {
-    margin-top: 10px;
-    margin-right: 0%;
-    margin-left: 0%;
-    padding-bottom: 0;
-  }
-  article h1 {
-    font-size: 3rem;
-  }
-  article-body p {
-    padding: 5px;
-  }
-
-  img.album-cover,
-  img.album-cover-big {
-    float: none;
-    display: block;
-    margin: 10px auto;
-    width: 250px;
-  }
-  h2#subtitle,
-  h2#noline {
-    font-size: 2rem;
-  }
-}
+article {
+	margin: 30px auto;
+	padding: 50px 20px;
+	max-width: 768px;
+	min-width: 350px;
+	background-color: white;
+}
+article h1 {
+	font-family: "Montserrat", sans-serif;
+	font-weight: 800;
+	padding-bottom: 15px;
+	color: #333333;
+	letter-spacing: 1px;
+}
+.header-image {
+	padding-bottom: 20px;
+	margin: 0;
+	width: 100%;
+}
+h2#subtitle {
+	font-family: "Montserrat", sans-serif;
+	text-align: center;
+	border-top: #333333 solid 2px;
+	padding-top: 15px;
+}
+p#line {
+	border-top: #333333 solid 2px;
+	padding-top: 15px;
+}
+h2#album-subtitle {
+	font-family: "Montserrat", sans-serif;
+	text-align: center;
+	border-top: #333333 solid 2px;
+	padding-top: 15px;
+	padding-bottom: 10px;
+	margin-top: 20px;
+	font-size: 2rem;
+}
+h2#noline {
+	font-family: "Montserrat", sans-serif;
+	text-align: center;
+}
+p#subtitle {
+	font-family: "Roboto Mono", monospace;
+	text-align: center;
+	font-size: 1.4rem;
+}
+article a {
+	color: #333333;
+}
+.article-info ul {
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	padding-bottom: 15px;
+	display: flex;
+	list-style: none;
+	justify-content: space-between;
+}
+.article-info ul li h4 {
+	font-weight: normal;
+	color: #aeb0b2;
+}
+p.right-subtext {
+	font-style: italic;
+	text-align: right;
+	color: #aeb0b2;
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+article figure {
+	border: 2px solid gray;
+	width: 95%;
+	margin: 20px auto;
+	background-color: #f4f4f4;
+	border-radius: 25px 25px 25px 25px;
+	text-align: center;
+}
+article figure img {
+	vertical-align: top;
+	width: 100%;
+}
+article figure img:nth-child(1) {
+	border-radius: 22px 22px 0px 0px;
+}
+img.album-cover {
+	float: left;
+	width: 200px;
+	margin: 12px 20px 12px 15px;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.815);
+}
+img.album-cover-big {
+	float: left;
+	width: 275px;
+	margin: 12px 20px 12px 15px;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.815);
+}
+article figure iframe {
+	vertical-align: top;
+	margin: 20px auto 0 auto;
+	max-width: 92%;
+}
+article figure figcaption {
+	text-align: center;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	font-family: "Roboto Mono", monospace;
+	font-size: 1.2rem;
+}
+.article-body a,
+article figure a {
+	color: #264df7;
+	text-decoration: underline;
+}
+.article-body {
+	font-family: "Lato", sans-serif;
+	padding: 15px 0;
+}
+.article-body p {
+	line-height: 25px;
+	padding: 5px 15px;
+}
+.article-body p i {
+	padding-right: 2px;
+}
+/*
+    RESPONSIVE CSS FOR ARTICLE LAYOUT.
+*/
+/* mobile responsive styling. minimizes margins and increases reading space. */
+@media screen and (max-width: 768px) {
+	article {
+		margin-top: 10px;
+		margin-right: 0%;
+		margin-left: 0%;
+		padding-bottom: 0;
+	}
+	article h1 {
+		font-size: 3rem;
+	}
+	article-body p {
+		padding: 5px;
+	}
+	img.album-cover,
+	img.album-cover-big {
+		float: none;
+		display: block;
+		margin: 10px auto;
+		width: 250px;
+	}
+	h2#subtitle,
+	h2#noline {
+		font-size: 2rem;
+	}
+}

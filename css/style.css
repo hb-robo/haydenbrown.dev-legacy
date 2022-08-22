@@ -1,154 +1,142 @@
-/*
-  GENERAL PAGE LAYOUT
-  Deactivates some default CSS settings and sets up the basics.
-*/
-@import "about.css";
-@import "article.css";
-@import "article-index.css";
-@import "article-section.css";
-@import "article-preview.css";
-@import "devblog.css";
-@import "error.css";
-@import "fonts.css";
-@import "footer.css";
-@import "home.css";
-@import "nav.css";
-@import "projects.css";
-@import "tables.css";
-@import "words.css";
-
-* {
-  margin: 0px;
-  padding: 0px;
-  border: 0;
-  outline: 0;
-  box-sizing: border-box;
-}
-
-html {
-  font-size: 62.5%;
-  scroll-behavior: smooth;
-}
-
-html,
-body {
-  min-height: 100%;
-  background-color: #d3d3d3;
-  z-index: 1;
-}
-
-body {
-  height: 100vh;
-}
-
-h1 {
-  font-size: 3.2rem;
-}
-h2 {
-  font-size: 2.4rem;
-}
-h3 {
-  font-size: 2.08rem;
-}
-h4 {
-  font-size: 1.6rem;
-}
-h5 {
-  font-size: 1.28rem;
-}
-h6 {
-  font-size: 1.12rem;
-}
-p {
-  font-size: 1.6rem;
-}
-p code {
-  background-color: #f0f0f0;
-  font-size: 1.8rem;
-}
-span {
-  font-size: 1.4rem;
-}
-pre code {
-  font-size: 1.4rem;
-  margin: 5px auto;
-  border-radius: 25px 25px 25px 25px;
-  width: 95%;
-}
-
-/* 
-  "container" is the main bit of the content on the screen.
-  It's situated under the navbar and above the footer at all times.
-*/
-.container {
-  min-height: 60%;
-  background-color: #d3d3d3;
-  justify-content: center;
-  align-items: center;
-  z-index: 1;
-}
-.menu-container {
-  height: 100vh;
-  background-color: #d3d3d3;
-  justify-content: center;
-  align-items: center;
-  z-index: 1;
-}
-
-.logo-demo {
-  height: 630px;
-  width: 1200px;
-  background-color: #d64933;
-  margin: 50px;
-}
-
-.logo-demo h1 {
-  font-family: "planet-kosmos";
-  color: white;
-  font-size: 30rem;
-  padding: 145px 0px 0px 315px;
-}
-
-.index {
-  z-index: 1;
-  margin: 10px auto;
-  max-width: 1128px;
-  text-align: center;
-  background-color: white;
-}
-.index h1 {
-  font-family: "planet-estyle";
-  text-align: center;
-  margin-bottom: 10px;
-}
-
-.noselect,
-.unselectable {
-  -webkit-touch-callout: none; /* iOS Safari */
-  -webkit-user-select: none; /* Safari */
-  -khtml-user-select: none; /* Konqueror HTML */
-  -moz-user-select: none; /* Old versions of Firefox */
-  -ms-user-select: none; /* Internet Explorer/Edge */
-  user-select: none; /* Chrome, Edge, Opera and Firefox */
-}
-
-.rotate33 {
-  -webkit-transform: rotate(33deg);
-  -moz-transform: rotate(33deg);
-  -ms-transform: rotate(33deg);
-  -o-transform: rotate(33deg);
-  transform: rotate(33deg);
-}
-
-/* tablet-sized (mediary) responsive styling. */
-@media screen and (max-width: 1024px) {
-}
-/* mobile responsive styling. minimizes margins and increases reading space. */
-@media screen and (max-width: 768px) {
-  body {
-    overflow-x: hidden;
-  }
-  .container {
-    width: 100vw;
-  }
-}
+/*
+  GENERAL PAGE LAYOUT
+  Deactivates some default CSS settings and sets up the basics.
+*/
+@import "about.css";
+@import "article.css";
+@import "article-index.css";
+@import "article-section.css";
+@import "article-preview.css";
+@import "devblog.css";
+@import "error.css";
+@import "fonts.css";
+@import "footer.css";
+@import "home.css";
+@import "nav.css";
+@import "projects.css";
+@import "tables.css";
+@import "words.css";
+* {
+	margin: 0px;
+	padding: 0px;
+	border: 0;
+	outline: 0;
+	box-sizing: border-box;
+}
+html {
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+}
+html,
+body {
+	min-height: 100%;
+	background-color: #d3d3d3;
+	z-index: 1;
+}
+body {
+	height: 100vh;
+}
+h1 {
+	font-size: 3.2rem;
+}
+h2 {
+	font-size: 2.4rem;
+}
+h3 {
+	font-size: 2.08rem;
+}
+h4 {
+	font-size: 1.6rem;
+}
+h5 {
+	font-size: 1.28rem;
+}
+h6 {
+	font-size: 1.12rem;
+}
+p {
+	font-size: 1.6rem;
+}
+p code {
+	background-color: #f0f0f0;
+	font-size: 1.8rem;
+}
+span {
+	font-size: 1.4rem;
+}
+pre code {
+	font-size: 1.4rem;
+	margin: 5px auto;
+	border-radius: 25px 25px 25px 25px;
+	width: 95%;
+}
+/* 
+  "container" is the main bit of the content on the screen.
+  It's situated under the navbar and above the footer at all times.
+*/
+.container {
+	min-height: 60%;
+	background-color: #d3d3d3;
+	justify-content: center;
+	align-items: center;
+	z-index: 1;
+}
+.menu-container {
+	height: 100vh;
+	background-color: #d3d3d3;
+	justify-content: center;
+	align-items: center;
+	z-index: 1;
+}
+.logo-demo {
+	height: 630px;
+	width: 1200px;
+	background-color: #d64933;
+	margin: 50px;
+}
+.logo-demo h1 {
+	font-family: "planet-kosmos";
+	color: white;
+	font-size: 30rem;
+	padding: 145px 0px 0px 315px;
+}
+.index {
+	z-index: 1;
+	margin: 10px auto;
+	max-width: 1128px;
+	text-align: center;
+	background-color: white;
+}
+.index h1 {
+	font-family: "planet-estyle";
+	text-align: center;
+	margin-bottom: 10px;
+}
+.noselect,
+.unselectable {
+	-webkit-touch-callout: none; /* iOS Safari */
+	-webkit-user-select: none; /* Safari */
+	-khtml-user-select: none; /* Konqueror HTML */
+	-moz-user-select: none; /* Old versions of Firefox */
+	-ms-user-select: none; /* Internet Explorer/Edge */
+	user-select: none; /* Chrome, Edge, Opera and Firefox */
+}
+.rotate33 {
+	-webkit-transform: rotate(33deg);
+	-moz-transform: rotate(33deg);
+	-ms-transform: rotate(33deg);
+	-o-transform: rotate(33deg);
+	transform: rotate(33deg);
+}
+/* tablet-sized (mediary) responsive styling. */
+@media screen and (max-width: 1024px) {
+}
+/* mobile responsive styling. minimizes margins and increases reading space. */
+@media screen and (max-width: 768px) {
+	body {
+		overflow-x: hidden;
+	}
+	.container {
+		width: 100vw;
+	}
+}

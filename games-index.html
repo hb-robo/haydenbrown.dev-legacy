@@ -1,888 +1,985 @@
-<!DOCTYPE html>
-<html lang="en" prefix="og: https://ogp.me/ns#">
-  <head>
-    <link rel="stylesheet" href="/css/style.css" />
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="robots" content="index, follow" />
-    <link rel="icon" href="/img/logos/logo-red.png" />
-    <link rel="canonical" href="https://www.haydenbrown.dev/games-index" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
-      rel="stylesheet"
-    />
-    <title>games index | hayden's stuff</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <script src="/js/sorttable.js"></script>
-
-    <!-- open graph tags for social media previews -->
-    <meta property="og:title" content="full games index | hayden's stuff" />
-    <meta property="og:type" content="text/html" />
-    <meta
-      property="og:image"
-      content="https://www.haydenbrown.dev/img/logos/logo-red-wide.png"
-    />
-    <meta property="og:url" content="https://www.haydenbrown.dev/games-index" />
-    <meta
-      property="og:description"
-      content="a tidy chart of all of the games I've written about."
-    />
-    <meta property="og:site_name" content="hayden's stuff" />
-  </head>
-  <body>
-    <nav>
-      <div class="logo">
-        <a href="https://www.haydenbrown.dev">
-          <h4>hayden's stuff</h4>
-        </a>
-      </div>
-      <ul class="nav-links">
-        <li><a href="https://www.haydenbrown.dev/words">words</a></li>
-        <li><a href="https://www.haydenbrown.dev/projects">projects</a></li>
-        <li><a href="https://www.haydenbrown.dev/about">about me</a></li>
-      </ul>
-      <div class="burger">
-        <div class="line1"></div>
-        <div class="line2"></div>
-        <div class="line3"></div>
-      </div>
-    </nav>
-
-    <!--THE TABLE OF GAME REVIEW LINKS-->
-    <div class="container">
-      <div class="index">
-        <div class="articles">
-          <h1 id="games-heading">full games index</h1>
-
-          <input
-            class="table-search"
-            type="text"
-            id="myInput"
-            onkeyup="tableFilter()"
-            placeholder="Search to filter index..."
-          />
-
-          <div class="table-index">
-            <table class="reviews-table sortable" id="games-table">
-              <thead id="table-head">
-                <tr class="unselectable">
-                  <th>year</th>
-                  <th>title</th>
-                  <th>system</th>
-                  <th>developer</th>
-                  <th>director</th>
-                  <th>verdict</th>
-                  <th>attribution</th>
-                </tr>
-              </thead>
-              <tbody id="table-body">
-                <tr>
-                  <td>1987</td>
-                  <td>Digital Devil Story: Megami Tensei</td>
-                  <td>SNES</td>
-                  <td>ATLUS</td>
-                  <td>Kouji Okada</td>
-                  <td sorttable_customkey="1">★☆☆☆</td>
-                  <td>
-                    <a href="https://www.haydenbrown.dev/words/games/saw-20"
-                      >Selected Ambient Words '20</a
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <td>1993</td>
-                  <td>Day of the Tentacle</td>
-                  <td>DOS</td>
-                  <td>LucasArts</td>
-                  <td>Tim Schafer</td>
-                  <td sorttable_customkey="3">★★★✩</td>
-                  <td>
-                    <a href="https://www.haydenbrown.dev/words/games/saw-19"
-                      >Selected Ambient Words '19</a
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <td>1994</td>
-                  <td>Donkey Kong Country</td>
-                  <td>SNES</td>
-                  <td>Rare</td>
-                  <td>Tim Stamper & Chris Stamper</td>
-                  <td sorttable_customkey="3">★★★✩</td>
-                  <td>
-                    <a href="https://www.haydenbrown.dev/words/games/saw-18"
-                      >Selected Ambient Words '18</a
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <td>1994</td>
-                  <td>Mega Man X</td>
-                  <td>SNES</td>
-                  <td>CAPCOM</td>
-                  <td>Tokuro Fujiwara</td>
-                  <td sorttable_customkey="2.5">★★½✩</td>
-                  <td>
-                    <a href="https://www.haydenbrown.dev/words/games/saw-18"
-                      >Selected Ambient Words '18</a
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <td>1998</td>
-                  <td>Grim Fandango</td>
-                  <td>PC</td>
-                  <td>LucasArts</td>
-                  <td>Tim Schafer</td>
-                  <td sorttable_customkey="2.5">★★½✩</td>
-                  <td>
-                    <a href="https://www.haydenbrown.dev/words/games/saw-19"
-                      >Selected Ambient Words '19</a
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <td>1999</td>
-                  <td>Half-Life: Opposing Force</td>
-                  <td>PC</td>
-                  <td>Gearbox Software</td>
-                  <td>Randy Pitchford</td>
-                  <td sorttable_customkey="2">★★✩✩</td>
-                  <td>
-                    <a href="https://www.haydenbrown.dev/words/games/saw-18"
-                      >Selected Ambient Words '18</a
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <td>2000</td>
-                  <td>Marvel vs. Capcom 2: New Age of Heroes</td>
-                  <td>DC</td>
-                  <td>CAPCOM</td>
-                  <td>Yoshihiro Sudo</td>
-                  <td sorttable_customkey="3">★★★✩</td>
-                  <td>
-                    <a href="https://www.haydenbrown.dev/words/games/saw-18"
-                      >Selected Ambient Words '18</a
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <td>2001</td>
-                  <td>Advance Wars</td>
-                  <td>GBA</td>
-                  <td>Intelligent Systems</td>
-                  <td>Toru Narihiro</td>
-                  <td sorttable_customkey="2.5">★★½✩</td>
-                  <td>
-                    <a href="https://www.haydenbrown.dev/words/games/saw-20"
-                      >Selected Ambient Words '20</a
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <td>2001</td>
-                  <td>Castlevania: Circle of the Moon</td>
-                  <td>GBA</td>
-                  <td>Konami</td>
-                  <td>Shigeharu Umezaki</td>
-                  <td sorttable_customkey="2">★★☆☆</td>
-                  <td>
-                    <a href="https://www.haydenbrown.dev/words/games/saw-18"
-                      >Selected Ambient Words '18</a
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <td>2001</td>
-                  <td>Jak & Daxter: The Precursor Legacy</td>
-                  <td>PS2</td>
-                  <td>Naughty Dog</td>
-                  <td>Jason Rubin</td>
-                  <td sorttable_customkey="3">★★★☆</td>
-                  <td>
-                    <a href="https://www.haydenbrown.dev/words/games/saw-20"
-                      >Selected Ambient Words '20</a
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <td>2002</td>
-                  <td>Metroid Fusion</td>
-                  <td>GBA</td>
-                  <td>Nintendo R&D1</td>
-                  <td>Yoshio Sakamoto</td>
-                  <td sorttable_customkey="2.5">★★½✩</td>
-                  <td>
-                    <a href="https://www.haydenbrown.dev/words/games/saw-19"
-                      >Selected Ambient Words '18</a
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <td>2003</td>
-                  <td>SpongeBob SquarePants: Battle for Bikini Bottom</td>
-                  <td>GCN</td>
-                  <td>Heavy Iron Studios</td>
-                  <td>Shiraz Akmal</td>
-                  <td sorttable_customkey="2.5">★★½✩</td>
-                  <td>
-                    <a href="https://www.haydenbrown.dev/words/games/saw-19"
-                      >Selected Ambient Words '19</a
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <td>2004</td>
-                  <td>Katamari Damacy</td>
-                  <td>PS2</td>
-                  <td>Namco</td>
-                  <td>Keita Takahashi</td>
-                  <td sorttable_customkey="4">★★★★</td>
-                  <td>
-                    <a
-                      href="https://www.haydenbrown.dev/words/games/katamari-damacy"
-                      >A Cosmic Power Fantasy</a
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <td>2004</td>
-                  <td>Mario: Power Tennis</td>
-                  <td>GCN</td>
-                  <td>Camelot</td>
-                  <td>Haruki Kodera</td>
-                  <td sorttable_customkey="3">★★★☆</td>
-                  <td>
-                    <a href="https://www.haydenbrown.dev/words/games/saw-20"
-                      >Selected Ambient Words '20</a
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <td>2006</td>
-                  <td>Kirby: Squeak Squad</td>
-                  <td>NDS</td>
-                  <td>HAL Laboratory</td>
-                  <td>Takashi Hamamura</td>
-                  <td sorttable_customkey="1.5">★½☆☆</td>
-                  <td>
-                    <a
-                      href="https://www.haydenbrown.dev/words/games/100-words-2021"
-                      >100 Word Reviews: 2021</a
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <td>2006</td>
-                  <td>WarioWare: Smooth Moves</td>
-                  <td>Wii</td>
-                  <td>Intelligent Systems</td>
-                  <td>Goro Abe & Taku Sugioka</td>
-                  <td sorttable_customkey="2.5">★★½✩</td>
-                  <td>
-                    <a href="https://www.haydenbrown.dev/words/games/saw-20"
-                      >Selected Ambient Words '20</a
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <td>2007</td>
-                  <td>Portal</td>
-                  <td>PC</td>
-                  <td>Valve Software</td>
-                  <td>Kim Swift</td>
-                  <td sorttable_customkey="3.5">★★★½</td>
-                  <td>
-                    <a href="https://www.haydenbrown.dev/words/games/saw-19"
-                      >Selected Ambient Words '19</a
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <td>2007</td>
-                  <td>Uncharted: Drake's Fortune</td>
-                  <td>PS3</td>
-                  <td>Naught Dog</td>
-                  <td>Amy Hennig</td>
-                  <td sorttable_customkey="2">★★☆☆</td>
-                  <td>
-                    <a href="https://www.haydenbrown.dev/words/games/saw-18"
-                      >Selected Ambient Words '18</a
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <td>2008</td>
-                  <td>Kirby Super Star Ultra</td>
-                  <td>NDS</td>
-                  <td>HAL Laboratory</td>
-                  <td>Shinya Kumazaki</td>
-                  <td sorttable_customkey="2.5">★★½✩</td>
-                  <td>
-                    <a
-                      href="https://www.haydenbrown.dev/words/games/100-words-2021"
-                      >100 Word Reviews: 2021</a
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <td>2008</td>
-                  <td>Valkyria Chronicles</td>
-                  <td>PS3</td>
-                  <td>SEGA</td>
-                  <td>Shuntaro Tanaka</td>
-                  <td sorttable_customkey="2.5">★★½✩</td>
-                  <td>
-                    <a
-                      href="https://www.haydenbrown.dev/words/games/100-words-2021"
-                      >100 Word Reviews: 2021</a
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <td>2009</td>
-                  <td>Borderlands</td>
-                  <td>PC</td>
-                  <td>Gearbox Software</td>
-                  <td>Matthew Armstrong</td>
-                  <td sorttable_customkey="2.5">★★½✩</td>
-                  <td>
-                    <a href="https://www.haydenbrown.dev/words/games/saw-19"
-                      >Selected Ambient Words '19</a
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <td>2010</td>
-                  <td>Xenoblade Chronicles</td>
-                  <td>Wii</td>
-                  <td>Monolith Soft</td>
-                  <td>Koh Kojima & Genki Yokota</td>
-                  <td sorttable_customkey="2">★★✩✩</td>
-                  <td>
-                    <a href="https://www.haydenbrown.dev/words/games/saw-19"
-                      >Selected Ambient Words '19</a
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <td>2011</td>
-                  <td>Bastion</td>
-                  <td>PC</td>
-                  <td>Supergiant Games</td>
-                  <td>Amir Rao</td>
-                  <td sorttable_customkey="2.5">★★½✩</td>
-                  <td>Finding Supergiant's Voice</td>
-                </tr>
-                <tr>
-                  <td>2011</td>
-                  <td>LIMBO</td>
-                  <td>PC</td>
-                  <td>Playdead</td>
-                  <td>Arnt Jensen</td>
-                  <td sorttable_customkey="1">★☆☆☆</td>
-                  <td>
-                    <a href="https://www.haydenbrown.dev/words/games/saw-19"
-                      >Selected Ambient Words '19</a
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <td>2011</td>
-                  <td>Portal 2</td>
-                  <td>PC</td>
-                  <td>Valve Software</td>
-                  <td>Joshua Weier</td>
-                  <td sorttable_customkey="2.5">★★½✩</td>
-                  <td>
-                    <a href="https://www.haydenbrown.dev/words/games/saw-19"
-                      >Selected Ambient Words '19</a
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <td>2011</td>
-                  <td>Super Mario 3D Land</td>
-                  <td>3DS</td>
-                  <td>Nintendo EAD Tokyo</td>
-                  <td>Koichi Hayashida</td>
-                  <td sorttable_customkey="3">★★★☆</td>
-                  <td>
-                    <a href="https://www.haydenbrown.dev/words/games/saw-20"
-                      >Selected Ambient Words '20</a
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <td>2012</td>
-                  <td>Spec Ops: The Line</td>
-                  <td>PC</td>
-                  <td>Yager Development</td>
-                  <td>Cory Davis & Francois Coulon</td>
-                  <td sorttable_customkey="3">★★★☆</td>
-                  <td>
-                    <a href="https://www.haydenbrown.dev/words/games/spec-ops"
-                      >Spec Ops: The Meat Grinder</a
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <td>2013</td>
-                  <td>Anodyne</td>
-                  <td>NS</td>
-                  <td>Analgesic</td>
-                  <td>Melos Han-Tani & Marina Kittaka</td>
-                  <td sorttable_customkey="2">★★☆☆</td>
-                  <td>
-                    <a href="https://www.haydenbrown.dev/words/games/saw-20"
-                      >Selected Ambient Words '20</a
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <td>2013</td>
-                  <td>LYNE</td>
-                  <td>PC</td>
-                  <td>Thomas Bowker</td>
-                  <td>Thomas Bowker</td>
-                  <td sorttable_customkey="1.5">★½✩✩</td>
-                  <td>
-                    <a
-                      href="https://www.haydenbrown.dev/words/games/itch-part-1"
-                      >Scratching the Itch, Part 1</a
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <td>2013</td>
-                  <td>Ni no Kuni: Wrath of the White Witch</td>
-                  <td>PS3</td>
-                  <td>Level-5</td>
-                  <td>Ken Motomura</td>
-                  <td sorttable_customkey="1.5">★½☆☆</td>
-                  <td>
-                    <a href="https://www.haydenbrown.dev/words/games/saw-18"
-                      >Selected Ambient Words '18</a
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <td>2013</td>
-                  <td>Pom Gets Wi-Fi</td>
-                  <td>PC</td>
-                  <td>Brianna Lei</td>
-                  <td>Brianna Lei</td>
-                  <td sorttable_customkey="1.5">★½✩✩</td>
-                  <td>
-                    <a
-                      href="https://www.haydenbrown.dev/words/games/itch-part-1"
-                      >Scratching the Itch, Part 1</a
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <td>2013</td>
-                  <td>Sokobond</td>
-                  <td>PC</td>
-                  <td>Alan Hazelden & Harry Lee</td>
-                  <td>Alan Hazelden & Harry Lee</td>
-                  <td sorttable_customkey="3.5">★★★½</td>
-                  <td>
-                    <a
-                      href="https://www.haydenbrown.dev/words/games/100-words-2021"
-                      >100 Word Reviews: 2021</a
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <td>2014</td>
-                  <td>Shovel Knight</td>
-                  <td>WiiU</td>
-                  <td>Yacht Club</td>
-                  <td>Sean Velasco</td>
-                  <td sorttable_customkey="3">★★★✩</td>
-                  <td>
-                    <a href="https://www.haydenbrown.dev/words/games/saw-19"
-                      >Selected Ambient Words '19</a
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <td>2014</td>
-                  <td>Transistor</td>
-                  <td>PC</td>
-                  <td>Supergiant Games</td>
-                  <td>Amir Rao & Greg Kasavin</td>
-                  <td sorttable_customkey="1.5">★½✩✩</td>
-                  <td>Finding Supergiant's Voice</td>
-                </tr>
-                <tr>
-                  <td>2015</td>
-                  <td>A Good Snowman Is Hard To Build</td>
-                  <td>PC</td>
-                  <td>Alan Hazelden & Benjamin Davis</td>
-                  <td>Alan Hazelden & Benjamin Davis</td>
-                  <td sorttable_customkey="3">★★★✩</td>
-                  <td>
-                    <a
-                      href="https://www.haydenbrown.dev/words/games/100-words-2021"
-                      >100 Word Reviews: 2021</a
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <td>2015</td>
-                  <td>Shovel Knight: Plague of Shadows</td>
-                  <td>WiiU</td>
-                  <td>Yacht Club</td>
-                  <td>Sean Velasco</td>
-                  <td sorttable_customkey="3">★★★✩</td>
-                  <td>
-                    <a href="https://www.haydenbrown.dev/words/games/saw-19"
-                      >Selected Ambient Words '19</a
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <td>2016</td>
-                  <td>DOOM</td>
-                  <td>PC</td>
-                  <td>Id Software</td>
-                  <td>Hugo Martin</td>
-                  <td sorttable_customkey="3">★★★✩</td>
-                  <td>
-                    <a
-                      href="https://www.haydenbrown.dev/words/games/100-words-2021"
-                      >100 Word Reviews: 2021</a
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <td>2016</td>
-                  <td>The Witness</td>
-                  <td>PC</td>
-                  <td>Thekla, Inc.</td>
-                  <td>Jonathan Blow</td>
-                  <td sorttable_customkey="4">★★★★</td>
-                  <td>
-                    <a href="https://www.haydenbrown.dev/words/games/saw-19"
-                      >Selected Ambient Words '19</a
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <td>2016</td>
-                  <td>Hyper Light Drifter</td>
-                  <td>PC</td>
-                  <td>Heart Machine</td>
-                  <td>Alx Preston</td>
-                  <td sorttable_customkey="3">★★★✩</td>
-                  <td>
-                    <a
-                      href="https://www.haydenbrown.dev/words/games/100-words-2021"
-                      >100 Word Reviews: 2021</a
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <td>2017</td>
-                  <td>Butterfly Soup</td>
-                  <td>PC</td>
-                  <td>Brianna Lei</td>
-                  <td>Brianna Lei</td>
-                  <td sorttable_customkey="3.5">★★★½</td>
-                  <td>
-                    <a
-                      href="https://www.haydenbrown.dev/words/games/itch-part-1"
-                      >Scratching the Itch, Part 1</a
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <td>2017</td>
-                  <td>Far From Noise</td>
-                  <td>PC</td>
-                  <td>George Batchelor</td>
-                  <td>George Batchelor</td>
-                  <td sorttable_customkey="2.5">★★½✩</td>
-                  <td>
-                    <a
-                      href="https://www.haydenbrown.dev/words/games/itch-part-1"
-                      >Scratching the Itch, Part 1</a
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <td>2017</td>
-                  <td>A Normal Lost Phone</td>
-                  <td>PC</td>
-                  <td>Accidental Queens</td>
-                  <td>Elizabeth Maler & Rafael Martinez-Jausoro</td>
-                  <td sorttable_customkey="3.5">★★★½</td>
-                  <td>
-                    <a
-                      href="https://www.haydenbrown.dev/words/games/itch-part-1"
-                      >Scratching the Itch, Part 1</a
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <td>2017</td>
-                  <td>Pyre</td>
-                  <td>PC</td>
-                  <td>Supergiant Games</td>
-                  <td>Amir Rao & Greg Kasavin</td>
-                  <td sorttable_customkey="2">★★✩✩</td>
-                  <td>Finding Supergiant's Voice</td>
-                </tr>
-                <tr>
-                  <td>2017</td>
-                  <td>Sandcastles</td>
-                  <td>PC</td>
-                  <td>Vectorpark</td>
-                  <td>Patrick Smith</td>
-                  <td sorttable_customkey="3">★★★✩</td>
-                  <td>
-                    <a
-                      href="https://www.haydenbrown.dev/words/games/itch-part-1"
-                      >Scratching the Itch, Part 1</a
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <td>2018</td>
-                  <td>Celeste</td>
-                  <td>NS</td>
-                  <td>Extremely OK Games</td>
-                  <td>Maddy Thorson</td>
-                  <td sorttable_customkey="3.5">★★★½</td>
-                  <td>
-                    <a href="https://www.haydenbrown.dev/words/games/saw-20"
-                      >Selected Ambient Words '20</a
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <td>2018</td>
-                  <td>Fortune-499</td>
-                  <td>PC</td>
-                  <td>AP Thomson</td>
-                  <td>AP Thomson</td>
-                  <td sorttable_customkey="2">★★✩✩</td>
-                  <td>
-                    <a
-                      href="https://www.haydenbrown.dev/words/games/itch-part-1"
-                      >Scratching the Itch, Part 1</a
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <td>2018</td>
-                  <td>Minit</td>
-                  <td>PC</td>
-                  <td>
-                    Jan Willem Nijman, Kitty Calis, Jukio Kallio, & Dominik
-                    Johann
-                  </td>
-                  <td>
-                    Jan Willem Nijman, Kitty Calis, Jukio Kallio, & Dominik
-                    Johann
-                  </td>
-                  <td sorttable_customkey="2">★★✩✩</td>
-                  <td>
-                    <a
-                      href="https://www.haydenbrown.dev/words/games/itch-part-1"
-                      >Scratching the Itch, Part 1</a
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <td>2019</td>
-                  <td>Luigi's Mansion 3</td>
-                  <td>NS</td>
-                  <td>Next Level Games & Nintendo EAD</td>
-                  <td>Bryce Holliday</td>
-                  <td sorttable_customkey="2.5">★★½✩</td>
-                  <td>
-                    <a
-                      href="https://www.haydenbrown.dev/words/games/100-words-2021"
-                      >100 Word Reviews: 2021</a
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <td>2019</td>
-                  <td>Super Mario Maker 2</td>
-                  <td>NS</td>
-                  <td>Nintendo EPD</td>
-                  <td>Yosuke Oshino</td>
-                  <td sorttable_customkey="2">★★✩✩</td>
-                  <td>
-                    <a
-                      href="https://www.haydenbrown.dev/words/games/100-words-2021"
-                      >100 Word Reviews: 2021</a
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <td>2020</td>
-                  <td>Democratic Socialism Simulator</td>
-                  <td>PC</td>
-                  <td>Molleindustria</td>
-                  <td>Paolo Pedercini</td>
-                  <td sorttable_customkey="2.5">★★½✩</td>
-                  <td>
-                    <a
-                      href="https://www.haydenbrown.dev/words/games/itch-part-1"
-                      >Scratching the Itch, Part 1</a
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <td>2020</td>
-                  <td>Gunfire Reborn</td>
-                  <td>PC</td>
-                  <td>Duoyi (Hong Kong) Interactive Entertainment</td>
-                  <td>???</td>
-                  <td sorttable_customkey="3">★★★✩</td>
-                  <td>
-                    <a
-                      href="https://www.haydenbrown.dev/words/games/100-words-2021"
-                      >100 Word Reviews: 2021</a
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <td>2020</td>
-                  <td>Kingdom Hearts: Melody of Memory</td>
-                  <td>NS</td>
-                  <td>Square Enix & Indieszero</td>
-                  <td>Tetsuya Nomura & Masanobu Suzui</td>
-                  <td sorttable_customkey="2.5">★★½✩</td>
-                  <td>
-                    <a
-                      href="https://www.haydenbrown.dev/words/games/100-words-2021"
-                      >100 Word Reviews: 2021</a
-                    >
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <script>
-            $(document).ready(function () {
-              var $allRows = $("#table-body tr:visible");
-              var $oddRows = $allRows.filter(":odd");
-              var $evenRows = $allRows.filter(":even");
-
-              // Remove old classes, then add new ones.
-              $oddRows.removeClass("even").addClass("odd");
-              $evenRows.removeClass("odd").addClass("even");
-
-              $("#table-head").click(function () {
-                var $allRows = $("#table-body tr:visible");
-                var $oddRows = $allRows.filter(":odd");
-                var $evenRows = $allRows.filter(":even");
-
-                // Remove old classes, then add new ones.
-                $oddRows.removeClass("even").addClass("odd");
-                $evenRows.removeClass("odd").addClass("even");
-              });
-
-              $("#myInput").on("keyup", function () {
-                var value = $(this).val().toLowerCase();
-                $("#table-body tr").filter(function () {
-                  $(this).toggle(
-                    $(this).text().toLowerCase().indexOf(value) > -1
-                  );
-                });
-                var $allRows = $("#table-body tr:visible");
-                var $oddRows = $allRows.filter(":odd");
-                var $evenRows = $allRows.filter(":even");
-
-                // Remove old classes, then add new ones.
-                $oddRows.removeClass("even").addClass("odd");
-                $evenRows.removeClass("odd").addClass("even");
-              });
-            });
-          </script>
-
-          <div class="article-footer" id="games-footing">
-            <ul>
-              <li>
-                <h2>
-                  <a href="https://www.haydenbrown.dev/words/games"
-                    >← back to games articles</a
-                  >
-                </h2>
-              </li>
-              <li>
-                <h2>
-                  <a href="https://www.haydenbrown.dev/words">all articles →</a>
-                </h2>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- footer -->
-    <div class="footer">
-      <div class="footer-content">
-        <a
-          id="email-icon"
-          target="_blank"
-          rel="noopener noreferrer"
-          href="mailto: brownhayden10@gmail.com"
-          ><img src="img/icons/email.ico" alt=""
-        /></a>
-        <a
-          id="linkedin-icon"
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://www.linkedin.com/in/hayden-t-brown/"
-          ><img src="img/icons/linkedin.ico" alt=""
-        /></a>
-        <a
-          id="twitter-icon"
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://twitter.com/hb_robo"
-          ><img src="img/icons/twitter-circle.ico" alt=""
-        /></a>
-        <a
-          id="github-icon"
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://github.com/hbrown10"
-          ><img src="img/icons/iconmonstr-github-1.svg" alt=""
-        /></a>
-        <span id="span0">hello world! feel free to reach out.</span>
-        <span id="span-email"
-          >contact me about professional inquiries or whatever else!</span
-        >
-        <span id="span-linkedin"
-          >connect with me professionally, if that's your thing.</span
-        >
-        <span id="span-twitter"
-          >check out my quick-trigger thoughts in real time!</span
-        >
-        <span id="span-github"
-          >look through my code, if you want to roast me (most things I do don't
-          get uploaded).</span
-        >
-      </div>
-      <div class="footer-bottom">&copy; 2021 | designed by hayden brown</div>
-    </div>
-
-    <script src="/js/app.js"></script>
-  </body>
-</html>
+<!DOCTYPE html>
+<html lang="en" prefix="og: https://ogp.me/ns#">
+	<head>
+		<link rel="stylesheet" href="/css/style.css" />
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="robots" content="index, follow" />
+		<link rel="icon" href="/img/logos/logo-red.png" />
+		<link rel="canonical" href="https://www.haydenbrown.dev/games-index" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
+			rel="stylesheet"
+		/>
+		<title>games index | hayden's stuff</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+		<script src="/js/sorttable.js"></script>
+		<!-- open graph tags for social media previews -->
+		<meta property="og:title" content="full games index | hayden's stuff" />
+		<meta property="og:type" content="text/html" />
+		<meta
+			property="og:image"
+			content="https://www.haydenbrown.dev/img/logos/logo-red-wide.png"
+		/>
+		<meta
+			property="og:url"
+			content="https://www.haydenbrown.dev/games-index"
+		/>
+		<meta
+			property="og:description"
+			content="a tidy chart of all of the games I've written about."
+		/>
+		<meta property="og:site_name" content="hayden's stuff" />
+	</head>
+	<body>
+		<nav>
+			<div class="logo">
+				<a href="https://www.haydenbrown.dev">
+					<h4>hayden's stuff</h4>
+				</a>
+			</div>
+			<ul class="nav-links">
+				<li><a href="https://www.haydenbrown.dev/words">words</a></li>
+				<li>
+					<a href="https://www.haydenbrown.dev/projects">projects</a>
+				</li>
+				<li>
+					<a href="https://www.haydenbrown.dev/about">about me</a>
+				</li>
+			</ul>
+			<div class="burger">
+				<div class="line1"></div>
+				<div class="line2"></div>
+				<div class="line3"></div>
+			</div>
+		</nav>
+		<!--THE TABLE OF GAME REVIEW LINKS-->
+		<div class="container">
+			<div class="index">
+				<div class="articles">
+					<h1 id="games-heading">full games index</h1>
+					<input
+						class="table-search"
+						type="text"
+						id="myInput"
+						onkeyup="tableFilter()"
+						placeholder="Search to filter index..."
+					/>
+					<div class="table-index">
+						<table class="reviews-table sortable" id="games-table">
+							<thead id="table-head">
+								<tr class="unselectable">
+									<th>year</th>
+									<th>title</th>
+									<th>system</th>
+									<th>developer</th>
+									<th>director</th>
+									<th>verdict</th>
+									<th>attribution</th>
+								</tr>
+							</thead>
+							<tbody id="table-body">
+								<tr>
+									<td>1987</td>
+									<td>Digital Devil Story: Megami Tensei</td>
+									<td>SNES</td>
+									<td>ATLUS</td>
+									<td>Kouji Okada</td>
+									<td sorttable_customkey="1">★☆☆☆</td>
+									<td>
+										<a
+											href="https://www.haydenbrown.dev/words/games/saw-20"
+										>
+											Selected Ambient Words '20
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td>1993</td>
+									<td>Day of the Tentacle</td>
+									<td>DOS</td>
+									<td>LucasArts</td>
+									<td>Tim Schafer</td>
+									<td sorttable_customkey="3">★★★✩</td>
+									<td>
+										<a
+											href="https://www.haydenbrown.dev/words/games/saw-19"
+										>
+											Selected Ambient Words '19
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td>1994</td>
+									<td>Donkey Kong Country</td>
+									<td>SNES</td>
+									<td>Rare</td>
+									<td>Tim Stamper & Chris Stamper</td>
+									<td sorttable_customkey="3">★★★✩</td>
+									<td>
+										<a
+											href="https://www.haydenbrown.dev/words/games/saw-18"
+										>
+											Selected Ambient Words '18
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td>1994</td>
+									<td>Mega Man X</td>
+									<td>SNES</td>
+									<td>CAPCOM</td>
+									<td>Tokuro Fujiwara</td>
+									<td sorttable_customkey="2.5">★★½✩</td>
+									<td>
+										<a
+											href="https://www.haydenbrown.dev/words/games/saw-18"
+										>
+											Selected Ambient Words '18
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td>1998</td>
+									<td>Grim Fandango</td>
+									<td>PC</td>
+									<td>LucasArts</td>
+									<td>Tim Schafer</td>
+									<td sorttable_customkey="2.5">★★½✩</td>
+									<td>
+										<a
+											href="https://www.haydenbrown.dev/words/games/saw-19"
+										>
+											Selected Ambient Words '19
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td>1999</td>
+									<td>Half-Life: Opposing Force</td>
+									<td>PC</td>
+									<td>Gearbox Software</td>
+									<td>Randy Pitchford</td>
+									<td sorttable_customkey="2">★★✩✩</td>
+									<td>
+										<a
+											href="https://www.haydenbrown.dev/words/games/saw-18"
+										>
+											Selected Ambient Words '18
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td>2000</td>
+									<td>
+										Marvel vs. Capcom 2: New Age of Heroes
+									</td>
+									<td>DC</td>
+									<td>CAPCOM</td>
+									<td>Yoshihiro Sudo</td>
+									<td sorttable_customkey="3">★★★✩</td>
+									<td>
+										<a
+											href="https://www.haydenbrown.dev/words/games/saw-18"
+										>
+											Selected Ambient Words '18
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td>2001</td>
+									<td>Advance Wars</td>
+									<td>GBA</td>
+									<td>Intelligent Systems</td>
+									<td>Toru Narihiro</td>
+									<td sorttable_customkey="2.5">★★½✩</td>
+									<td>
+										<a
+											href="https://www.haydenbrown.dev/words/games/saw-20"
+										>
+											Selected Ambient Words '20
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td>2001</td>
+									<td>Castlevania: Circle of the Moon</td>
+									<td>GBA</td>
+									<td>Konami</td>
+									<td>Shigeharu Umezaki</td>
+									<td sorttable_customkey="2">★★☆☆</td>
+									<td>
+										<a
+											href="https://www.haydenbrown.dev/words/games/saw-18"
+										>
+											Selected Ambient Words '18
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td>2001</td>
+									<td>Jak & Daxter: The Precursor Legacy</td>
+									<td>PS2</td>
+									<td>Naughty Dog</td>
+									<td>Jason Rubin</td>
+									<td sorttable_customkey="3">★★★☆</td>
+									<td>
+										<a
+											href="https://www.haydenbrown.dev/words/games/saw-20"
+										>
+											Selected Ambient Words '20
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td>2002</td>
+									<td>Metroid Fusion</td>
+									<td>GBA</td>
+									<td>Nintendo R&D1</td>
+									<td>Yoshio Sakamoto</td>
+									<td sorttable_customkey="2.5">★★½✩</td>
+									<td>
+										<a
+											href="https://www.haydenbrown.dev/words/games/saw-19"
+										>
+											Selected Ambient Words '18
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td>2003</td>
+									<td>
+										SpongeBob SquarePants: Battle for Bikini
+										Bottom
+									</td>
+									<td>GCN</td>
+									<td>Heavy Iron Studios</td>
+									<td>Shiraz Akmal</td>
+									<td sorttable_customkey="2.5">★★½✩</td>
+									<td>
+										<a
+											href="https://www.haydenbrown.dev/words/games/saw-19"
+										>
+											Selected Ambient Words '19
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td>2004</td>
+									<td>Katamari Damacy</td>
+									<td>PS2</td>
+									<td>Namco</td>
+									<td>Keita Takahashi</td>
+									<td sorttable_customkey="4">★★★★</td>
+									<td>
+										<a
+											href="https://www.haydenbrown.dev/words/games/katamari-damacy"
+										>
+											A Cosmic Power Fantasy
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td>2004</td>
+									<td>Mario: Power Tennis</td>
+									<td>GCN</td>
+									<td>Camelot</td>
+									<td>Haruki Kodera</td>
+									<td sorttable_customkey="3">★★★☆</td>
+									<td>
+										<a
+											href="https://www.haydenbrown.dev/words/games/saw-20"
+										>
+											Selected Ambient Words '20
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td>2006</td>
+									<td>Kirby: Squeak Squad</td>
+									<td>NDS</td>
+									<td>HAL Laboratory</td>
+									<td>Takashi Hamamura</td>
+									<td sorttable_customkey="1.5">★½☆☆</td>
+									<td>
+										<a
+											href="https://www.haydenbrown.dev/words/games/100-words-2021"
+										>
+											100 Word Reviews: 2021
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td>2006</td>
+									<td>WarioWare: Smooth Moves</td>
+									<td>Wii</td>
+									<td>Intelligent Systems</td>
+									<td>Goro Abe & Taku Sugioka</td>
+									<td sorttable_customkey="2.5">★★½✩</td>
+									<td>
+										<a
+											href="https://www.haydenbrown.dev/words/games/saw-20"
+										>
+											Selected Ambient Words '20
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td>2007</td>
+									<td>Portal</td>
+									<td>PC</td>
+									<td>Valve Software</td>
+									<td>Kim Swift</td>
+									<td sorttable_customkey="3.5">★★★½</td>
+									<td>
+										<a
+											href="https://www.haydenbrown.dev/words/games/saw-19"
+										>
+											Selected Ambient Words '19
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td>2007</td>
+									<td>Uncharted: Drake's Fortune</td>
+									<td>PS3</td>
+									<td>Naught Dog</td>
+									<td>Amy Hennig</td>
+									<td sorttable_customkey="2">★★☆☆</td>
+									<td>
+										<a
+											href="https://www.haydenbrown.dev/words/games/saw-18"
+										>
+											Selected Ambient Words '18
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td>2008</td>
+									<td>Kirby Super Star Ultra</td>
+									<td>NDS</td>
+									<td>HAL Laboratory</td>
+									<td>Shinya Kumazaki</td>
+									<td sorttable_customkey="2.5">★★½✩</td>
+									<td>
+										<a
+											href="https://www.haydenbrown.dev/words/games/100-words-2021"
+										>
+											100 Word Reviews: 2021
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td>2008</td>
+									<td>Valkyria Chronicles</td>
+									<td>PS3</td>
+									<td>SEGA</td>
+									<td>Shuntaro Tanaka</td>
+									<td sorttable_customkey="2.5">★★½✩</td>
+									<td>
+										<a
+											href="https://www.haydenbrown.dev/words/games/100-words-2021"
+										>
+											100 Word Reviews: 2021
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td>2009</td>
+									<td>Borderlands</td>
+									<td>PC</td>
+									<td>Gearbox Software</td>
+									<td>Matthew Armstrong</td>
+									<td sorttable_customkey="2.5">★★½✩</td>
+									<td>
+										<a
+											href="https://www.haydenbrown.dev/words/games/saw-19"
+										>
+											Selected Ambient Words '19
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td>2010</td>
+									<td>Xenoblade Chronicles</td>
+									<td>Wii</td>
+									<td>Monolith Soft</td>
+									<td>Koh Kojima & Genki Yokota</td>
+									<td sorttable_customkey="2">★★✩✩</td>
+									<td>
+										<a
+											href="https://www.haydenbrown.dev/words/games/saw-19"
+										>
+											Selected Ambient Words '19
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td>2011</td>
+									<td>Bastion</td>
+									<td>PC</td>
+									<td>Supergiant Games</td>
+									<td>Amir Rao</td>
+									<td sorttable_customkey="2.5">★★½✩</td>
+									<td>Finding Supergiant's Voice</td>
+								</tr>
+								<tr>
+									<td>2011</td>
+									<td>LIMBO</td>
+									<td>PC</td>
+									<td>Playdead</td>
+									<td>Arnt Jensen</td>
+									<td sorttable_customkey="1">★☆☆☆</td>
+									<td>
+										<a
+											href="https://www.haydenbrown.dev/words/games/saw-19"
+										>
+											Selected Ambient Words '19
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td>2011</td>
+									<td>Portal 2</td>
+									<td>PC</td>
+									<td>Valve Software</td>
+									<td>Joshua Weier</td>
+									<td sorttable_customkey="2.5">★★½✩</td>
+									<td>
+										<a
+											href="https://www.haydenbrown.dev/words/games/saw-19"
+										>
+											Selected Ambient Words '19
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td>2011</td>
+									<td>Super Mario 3D Land</td>
+									<td>3DS</td>
+									<td>Nintendo EAD Tokyo</td>
+									<td>Koichi Hayashida</td>
+									<td sorttable_customkey="3">★★★☆</td>
+									<td>
+										<a
+											href="https://www.haydenbrown.dev/words/games/saw-20"
+										>
+											Selected Ambient Words '20
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td>2012</td>
+									<td>Spec Ops: The Line</td>
+									<td>PC</td>
+									<td>Yager Development</td>
+									<td>Cory Davis & Francois Coulon</td>
+									<td sorttable_customkey="3">★★★☆</td>
+									<td>
+										<a
+											href="https://www.haydenbrown.dev/words/games/spec-ops"
+										>
+											Spec Ops: The Meat Grinder
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td>2013</td>
+									<td>Anodyne</td>
+									<td>NS</td>
+									<td>Analgesic</td>
+									<td>Melos Han-Tani & Marina Kittaka</td>
+									<td sorttable_customkey="2">★★☆☆</td>
+									<td>
+										<a
+											href="https://www.haydenbrown.dev/words/games/saw-20"
+										>
+											Selected Ambient Words '20
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td>2013</td>
+									<td>LYNE</td>
+									<td>PC</td>
+									<td>Thomas Bowker</td>
+									<td>Thomas Bowker</td>
+									<td sorttable_customkey="1.5">★½✩✩</td>
+									<td>
+										<a
+											href="https://www.haydenbrown.dev/words/games/itch-part-1"
+										>
+											Scratching the Itch, Part 1
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td>2013</td>
+									<td>
+										Ni no Kuni: Wrath of the White Witch
+									</td>
+									<td>PS3</td>
+									<td>Level-5</td>
+									<td>Ken Motomura</td>
+									<td sorttable_customkey="1.5">★½☆☆</td>
+									<td>
+										<a
+											href="https://www.haydenbrown.dev/words/games/saw-18"
+										>
+											Selected Ambient Words '18
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td>2013</td>
+									<td>Pom Gets Wi-Fi</td>
+									<td>PC</td>
+									<td>Brianna Lei</td>
+									<td>Brianna Lei</td>
+									<td sorttable_customkey="1.5">★½✩✩</td>
+									<td>
+										<a
+											href="https://www.haydenbrown.dev/words/games/itch-part-1"
+										>
+											Scratching the Itch, Part 1
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td>2013</td>
+									<td>Sokobond</td>
+									<td>PC</td>
+									<td>Alan Hazelden & Harry Lee</td>
+									<td>Alan Hazelden & Harry Lee</td>
+									<td sorttable_customkey="3.5">★★★½</td>
+									<td>
+										<a
+											href="https://www.haydenbrown.dev/words/games/100-words-2021"
+										>
+											100 Word Reviews: 2021
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td>2014</td>
+									<td>Shovel Knight</td>
+									<td>WiiU</td>
+									<td>Yacht Club</td>
+									<td>Sean Velasco</td>
+									<td sorttable_customkey="3">★★★✩</td>
+									<td>
+										<a
+											href="https://www.haydenbrown.dev/words/games/saw-19"
+										>
+											Selected Ambient Words '19
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td>2014</td>
+									<td>Transistor</td>
+									<td>PC</td>
+									<td>Supergiant Games</td>
+									<td>Amir Rao & Greg Kasavin</td>
+									<td sorttable_customkey="1.5">★½✩✩</td>
+									<td>Finding Supergiant's Voice</td>
+								</tr>
+								<tr>
+									<td>2015</td>
+									<td>A Good Snowman Is Hard To Build</td>
+									<td>PC</td>
+									<td>Alan Hazelden & Benjamin Davis</td>
+									<td>Alan Hazelden & Benjamin Davis</td>
+									<td sorttable_customkey="3">★★★✩</td>
+									<td>
+										<a
+											href="https://www.haydenbrown.dev/words/games/100-words-2021"
+										>
+											100 Word Reviews: 2021
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td>2015</td>
+									<td>Shovel Knight: Plague of Shadows</td>
+									<td>WiiU</td>
+									<td>Yacht Club</td>
+									<td>Sean Velasco</td>
+									<td sorttable_customkey="3">★★★✩</td>
+									<td>
+										<a
+											href="https://www.haydenbrown.dev/words/games/saw-19"
+										>
+											Selected Ambient Words '19
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td>2016</td>
+									<td>DOOM</td>
+									<td>PC</td>
+									<td>Id Software</td>
+									<td>Hugo Martin</td>
+									<td sorttable_customkey="3">★★★✩</td>
+									<td>
+										<a
+											href="https://www.haydenbrown.dev/words/games/100-words-2021"
+										>
+											100 Word Reviews: 2021
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td>2016</td>
+									<td>The Witness</td>
+									<td>PC</td>
+									<td>Thekla, Inc.</td>
+									<td>Jonathan Blow</td>
+									<td sorttable_customkey="4">★★★★</td>
+									<td>
+										<a
+											href="https://www.haydenbrown.dev/words/games/saw-19"
+										>
+											Selected Ambient Words '19
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td>2016</td>
+									<td>Hyper Light Drifter</td>
+									<td>PC</td>
+									<td>Heart Machine</td>
+									<td>Alx Preston</td>
+									<td sorttable_customkey="3">★★★✩</td>
+									<td>
+										<a
+											href="https://www.haydenbrown.dev/words/games/100-words-2021"
+										>
+											100 Word Reviews: 2021
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td>2017</td>
+									<td>Butterfly Soup</td>
+									<td>PC</td>
+									<td>Brianna Lei</td>
+									<td>Brianna Lei</td>
+									<td sorttable_customkey="3.5">★★★½</td>
+									<td>
+										<a
+											href="https://www.haydenbrown.dev/words/games/itch-part-1"
+										>
+											Scratching the Itch, Part 1
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td>2017</td>
+									<td>Far From Noise</td>
+									<td>PC</td>
+									<td>George Batchelor</td>
+									<td>George Batchelor</td>
+									<td sorttable_customkey="2.5">★★½✩</td>
+									<td>
+										<a
+											href="https://www.haydenbrown.dev/words/games/itch-part-1"
+										>
+											Scratching the Itch, Part 1
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td>2017</td>
+									<td>A Normal Lost Phone</td>
+									<td>PC</td>
+									<td>Accidental Queens</td>
+									<td>
+										Elizabeth Maler & Rafael
+										Martinez-Jausoro
+									</td>
+									<td sorttable_customkey="3.5">★★★½</td>
+									<td>
+										<a
+											href="https://www.haydenbrown.dev/words/games/itch-part-1"
+										>
+											Scratching the Itch, Part 1
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td>2017</td>
+									<td>Pyre</td>
+									<td>PC</td>
+									<td>Supergiant Games</td>
+									<td>Amir Rao & Greg Kasavin</td>
+									<td sorttable_customkey="2">★★✩✩</td>
+									<td>Finding Supergiant's Voice</td>
+								</tr>
+								<tr>
+									<td>2017</td>
+									<td>Sandcastles</td>
+									<td>PC</td>
+									<td>Vectorpark</td>
+									<td>Patrick Smith</td>
+									<td sorttable_customkey="3">★★★✩</td>
+									<td>
+										<a
+											href="https://www.haydenbrown.dev/words/games/itch-part-1"
+										>
+											Scratching the Itch, Part 1
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td>2018</td>
+									<td>Celeste</td>
+									<td>NS</td>
+									<td>Extremely OK Games</td>
+									<td>Maddy Thorson</td>
+									<td sorttable_customkey="3.5">★★★½</td>
+									<td>
+										<a
+											href="https://www.haydenbrown.dev/words/games/saw-20"
+										>
+											Selected Ambient Words '20
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td>2018</td>
+									<td>Fortune-499</td>
+									<td>PC</td>
+									<td>AP Thomson</td>
+									<td>AP Thomson</td>
+									<td sorttable_customkey="2">★★✩✩</td>
+									<td>
+										<a
+											href="https://www.haydenbrown.dev/words/games/itch-part-1"
+										>
+											Scratching the Itch, Part 1
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td>2018</td>
+									<td>Minit</td>
+									<td>PC</td>
+									<td>
+										Jan Willem Nijman, Kitty Calis, Jukio
+										Kallio, & Dominik Johann
+									</td>
+									<td>
+										Jan Willem Nijman, Kitty Calis, Jukio
+										Kallio, & Dominik Johann
+									</td>
+									<td sorttable_customkey="2">★★✩✩</td>
+									<td>
+										<a
+											href="https://www.haydenbrown.dev/words/games/itch-part-1"
+										>
+											Scratching the Itch, Part 1
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td>2019</td>
+									<td>Luigi's Mansion 3</td>
+									<td>NS</td>
+									<td>Next Level Games & Nintendo EAD</td>
+									<td>Bryce Holliday</td>
+									<td sorttable_customkey="2.5">★★½✩</td>
+									<td>
+										<a
+											href="https://www.haydenbrown.dev/words/games/100-words-2021"
+										>
+											100 Word Reviews: 2021
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td>2019</td>
+									<td>Super Mario Maker 2</td>
+									<td>NS</td>
+									<td>Nintendo EPD</td>
+									<td>Yosuke Oshino</td>
+									<td sorttable_customkey="2">★★✩✩</td>
+									<td>
+										<a
+											href="https://www.haydenbrown.dev/words/games/100-words-2021"
+										>
+											100 Word Reviews: 2021
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td>2020</td>
+									<td>Democratic Socialism Simulator</td>
+									<td>PC</td>
+									<td>Molleindustria</td>
+									<td>Paolo Pedercini</td>
+									<td sorttable_customkey="2.5">★★½✩</td>
+									<td>
+										<a
+											href="https://www.haydenbrown.dev/words/games/itch-part-1"
+										>
+											Scratching the Itch, Part 1
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td>2020</td>
+									<td>Gunfire Reborn</td>
+									<td>PC</td>
+									<td>
+										Duoyi (Hong Kong) Interactive
+										Entertainment
+									</td>
+									<td>???</td>
+									<td sorttable_customkey="3">★★★✩</td>
+									<td>
+										<a
+											href="https://www.haydenbrown.dev/words/games/100-words-2021"
+										>
+											100 Word Reviews: 2021
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td>2020</td>
+									<td>Kingdom Hearts: Melody of Memory</td>
+									<td>NS</td>
+									<td>Square Enix & Indieszero</td>
+									<td>Tetsuya Nomura & Masanobu Suzui</td>
+									<td sorttable_customkey="2.5">★★½✩</td>
+									<td>
+										<a
+											href="https://www.haydenbrown.dev/words/games/100-words-2021"
+										>
+											100 Word Reviews: 2021
+										</a>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<script>
+						$(document).ready(function () {
+							var $allRows = $("#table-body tr:visible");
+							var $oddRows = $allRows.filter(":odd");
+							var $evenRows = $allRows.filter(":even");
+							// Remove old classes, then add new ones.
+							$oddRows.removeClass("even").addClass("odd");
+							$evenRows.removeClass("odd").addClass("even");
+							$("#table-head").click(function () {
+								var $allRows = $("#table-body tr:visible");
+								var $oddRows = $allRows.filter(":odd");
+								var $evenRows = $allRows.filter(":even");
+								// Remove old classes, then add new ones.
+								$oddRows.removeClass("even").addClass("odd");
+								$evenRows.removeClass("odd").addClass("even");
+							});
+							$("#myInput").on("keyup", function () {
+								var value = $(this).val().toLowerCase();
+								$("#table-body tr").filter(function () {
+									$(this).toggle(
+										$(this)
+											.text()
+											.toLowerCase()
+											.indexOf(value) > -1
+									);
+								});
+								var $allRows = $("#table-body tr:visible");
+								var $oddRows = $allRows.filter(":odd");
+								var $evenRows = $allRows.filter(":even");
+								// Remove old classes, then add new ones.
+								$oddRows.removeClass("even").addClass("odd");
+								$evenRows.removeClass("odd").addClass("even");
+							});
+						});
+					</script>
+					<div class="article-footer" id="games-footing">
+						<ul>
+							<li>
+								<h2>
+									<a
+										href="https://www.haydenbrown.dev/words/games"
+									>
+										← back to games articles
+									</a>
+								</h2>
+							</li>
+							<li>
+								<h2>
+									<a href="https://www.haydenbrown.dev/words">
+										all articles →
+									</a>
+								</h2>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- footer -->
+		<div class="footer">
+			<div class="footer-content">
+				<a
+					id="email-icon"
+					target="_blank"
+					rel="noopener noreferrer"
+					href="mailto: brownhayden10@gmail.com"
+				>
+					<img src="img/icons/email.ico" alt="" />
+				</a>
+				<a
+					id="linkedin-icon"
+					target="_blank"
+					rel="noopener noreferrer"
+					href="https://www.linkedin.com/in/hayden-t-brown/"
+				>
+					<img src="img/icons/linkedin.ico" alt="" />
+				</a>
+				<a
+					id="twitter-icon"
+					target="_blank"
+					rel="noopener noreferrer"
+					href="https://twitter.com/hb_robo"
+				>
+					<img src="img/icons/twitter-circle.ico" alt="" />
+				</a>
+				<a
+					id="github-icon"
+					target="_blank"
+					rel="noopener noreferrer"
+					href="https://github.com/hbrown10"
+				>
+					<img src="img/icons/iconmonstr-github-1.svg" alt="" />
+				</a>
+				<span id="span0">hello world! feel free to reach out.</span>
+				<span id="span-email">
+					contact me about professional inquiries or whatever else!
+				</span>
+				<span id="span-linkedin">
+					connect with me professionally, if that's your thing.
+				</span>
+				<span id="span-twitter">
+					check out my quick-trigger thoughts in real time!
+				</span>
+				<span id="span-github">
+					look through my code, if you want to roast me (most things I
+					do don't get uploaded).
+				</span>
+			</div>
+			<div class="footer-bottom">
+				&copy; 2021 | designed by hayden brown
+			</div>
+		</div>
+		<script src="/js/app.js"></script>
+	</body>
+</html>

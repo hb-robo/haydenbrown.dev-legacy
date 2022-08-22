@@ -1,802 +1,1167 @@
-<!DOCTYPE html>
-<html lang="en" prefix="og: https://ogp.me/ns#">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="robots" content="index, follow" />
-    <link rel="icon" href="/img/logos/logo-green.png" />
-    <link rel="stylesheet" type="text/css" href="../../css/style.css" />
-    <link
-      rel="canonical"
-      href="https://www.haydenbrown.dev/words/devblog/trackmania"
-    />
-    <link
-      rel="stylesheet"
-      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/default.min.css"
-    />
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="import" href="/fonts/PLANB___.TTF" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap"
-      rel="stylesheet"
-    />
-
-    <title>Riffing on Trackmania Logos | hayden's stuff</title>
-
-    <!-- open graph tags for social media previews -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@hb_robo" />
-
-    <meta
-      property="og:title"
-      content="Riffing on Trackmania Logos | hayden's stuff"
-    />
-    <meta
-      property="twitter:title"
-      content="Riffing on Trackmania Logos | hayden's stuff"
-    />
-    <meta property="og:type" content="text/html" />
-    <meta
-      property="og:image"
-      content="https://www.haydenbrown.dev/img/devblog/trackmania/tm-logo-wide.jpg"
-    />
-    <meta
-      property="twitter:image"
-      content="https://www.haydenbrown.dev/img/devblog/trackmania/tm-logo-wide.jpg"
-    />
-    <meta
-      property="og:url"
-      content="https://www.haydenbrown.dev/words/devblog/trackmania"
-    />
-    <meta
-      property="og:description"
-      content="A quick little design session about recreating the logos from TrackMania Nations and United in pure-CSS."
-    />
-    <meta
-      property="twitter:description"
-      content="A quick little design session about recreating the logos from TrackMania Nations and United in pure-CSS."
-    />
-    <meta property="og:site_name" content="hayden's stuff" />
-  </head>
-  <body>
-    <nav id="devblog-nav">
-      <div class="logo">
-        <a href="https://www.haydenbrown.dev">
-          <h4>hayden's stuff</h4>
-        </a>
-      </div>
-      <ul class="nav-links" id="devblog-nav">
-        <li><a href="https://www.haydenbrown.dev/words">words</a></li>
-        <li><a href="https://www.haydenbrown.dev/projects">projects</a></li>
-        <li><a href="https://www.haydenbrown.dev/about">about me</a></li>
-      </ul>
-      <div class="burger">
-        <div class="line1"></div>
-        <div class="line2"></div>
-        <div class="line3"></div>
-      </div>
-    </nav>
-
-    <div class="container">
-      <div class="main">
-        <article>
-          <h1>Riffing on TrackMania Logos</h1>
-          <div class="article-info" id="devblog-heading">
-            <ul>
-              <li>
-                <h4>April 13th, 2021</h4>
-              </li>
-              <li>
-                <h4>5 min read</h4>
-              </li>
-            </ul>
-          </div>
-          <div class="article-body">
-            <p>
-              I recently noticed these logos while watching a few videos about
-              the <i>TrackMania</i> series, which I've only been vaguely
-              familiar with over the years. The games are about racing the clock
-              on highly modular racetracks, and I can remember way back in the
-              early days of YouTube when some custom tracks in the earlier
-              entries went viral for their insane geometry. When the driver is
-              in first-person mode, it becomes a sort of digital rollercoaster.
-            </p>
-            <figure>
-              <img src="../../img/devblog/trackmania/nations.jpg" />
-              <img src="../../img/devblog/trackmania/united.webp" />
-              <figcaption>
-                I would call these "shockingly colorful" for a non-Mario racing
-                series in 2006.
-              </figcaption>
-            </figure>
-            <p>
-              The games, sharing an engine and released within a year of one
-              another, share clean, borderline sterile art directions befitting
-              of most modern racing sims, but these small splashes of color
-              stood out to me. I wanted to see if that sort of palette-blocking
-              effect could be done easily in pure CSS.
-            </p>
-            <h2 id="subtitle">basic pure-CSS concept</h2>
-            <p>
-              The easy method necessitates a monospace font type, because of the
-              predictable letter spacing. The actual logos use Arial as the
-              font, which is sans-serif and comes with its own specialized
-              kerning that makes things pretty annoying, with each letter
-              requiring individual padding to unset that kerning. I suppose a
-              monospace Arial lookalike would be the best case scenario, but I'm
-              not all that interested in hunting one down, lol.
-            </p>
-            <p>
-              For the sake of convenience, here's an approximation for the
-              <i>Nations</i> logo using pure monospace:
-            </p>
-            <div id="nations" class="noselect">
-              <span class="nations-block" style="background-color: #66a115"
-                >N</span
-              >
-              <span class="nations-block" style="background-color: #60ba00"
-                >a</span
-              >
-              <span class="nations-block" style="background-color: #98e13a"
-                >t</span
-              >
-              <span class="nations-block" style="background-color: #80ca01"
-                >i</span
-              >
-              <span class="nations-block" style="background-color: #5ab710"
-                >o</span
-              >
-              <span class="nations-block" style="background-color: #7fdf01"
-                >n</span
-              >
-              <span class="nations-block" style="background-color: #50d500"
-                >s</span
-              >
-            </div>
-            <p>Here's one way to do it:</p>
-            <pre><code class="html">
-    &lt;div id=&quot;nations&quot; class=&quot;noselect&quot;&gt;
-        &lt;span class=&quot;nations-block&quot; style=&quot;background-color: #66a115&quot;&gt;N&lt;/span&gt;
-        &lt;span class=&quot;nations-block&quot; style=&quot;background-color: #60ba00&quot;&gt;a&lt;/span&gt;
-        &lt;span class=&quot;nations-block&quot; style=&quot;background-color: #98e13a&quot;&gt;t&lt;/span&gt;
-        &lt;span class=&quot;nations-block&quot; style=&quot;background-color: #80ca01&quot;&gt;i&lt;/span&gt;
-        &lt;span class=&quot;nations-block&quot; style=&quot;background-color: #5ab710&quot;&gt;o&lt;/span&gt;
-        &lt;span class=&quot;nations-block&quot; style=&quot;background-color: #7fdf01&quot;&gt;n&lt;/span&gt;
-        &lt;span class=&quot;nations-block&quot; style=&quot;background-color: #50d500&quot;&gt;s&lt;/span&gt;
-    &lt;/div&gt;
-            </code></pre>
-            <p>
-              The HTML is a series of <code>span</code>s wrapped up in a
-              standard <code>div</code> with inline styling for the specific
-              coloring. It's a little cluttered but ultimately a lot cleaner
-              than a different CSS class or id for every letter. That
-              <code>.noselect</code> class for the <code>div</code> prevents the
-              user from highlighting the text so the illusion of this being an
-              image isn't broken. You can replicate that behavior with this
-              monstrosity:
-            </p>
-            <pre><code>
-    .noselect {
-        -webkit-touch-callout: none; /* iOS Safari */
-        -webkit-user-select: none; /* Safari */
-        -khtml-user-select: none; /* Konqueror HTML */
-        -moz-user-select: none; /* Old versions of Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-        user-select: none; /* Chrome, Edge, Opera and Firefox */
-    }
-    /* we really need to standardize this, don't we? */
-            </code></pre>
-            <p>
-              Back to the Nations logo, here's what the stylesheet is doing:
-            </p>
-            <pre><code class="css">
-    div#nations {
-        display: flex;
-    }
-    span.nations-block {
-        padding: 0 8px; /* creates the space to color in */
-        line-height: 26px;
-        font-size: 30px; /* larger than line-height for vertical compactness */
-        font-family: monospace;
-    }
-            </code></pre>
-            <p>
-              The important takeaway is that this div is held together by the
-              <code><b>display:</b> flex;</code> option, which packs things in
-              as tightly as possible unless told not to. The reasoning for this
-              choice is that the other display options, including the default in
-              this scenario, try to give span objects some built-in spacing
-              between each other that we don't want.
-            </p>
-            <p>
-              Trying to circumvent this by placing all of the <code>span</code>s
-              on one line of HTML code removes our ability to alter the
-              <code>line-height</code> variable, which we need to be shorter
-              than the font size to bring the bounds of the coloring down snugly
-              to the lettering. Later, we'll see how to get around using
-              <code><b>display:</b> flex</code> altogether.
-            </p>
-            <p>
-              The logo for Trackmania United is more of the same, with a bolder
-              font and some tighter padding:
-            </p>
-            <div id="united" class="noselect">
-              <span class="united-block" style="background-color: #fe0000"
-                >U</span
-              >
-              <span class="united-block" style="background-color: #ffa900"
-                >n</span
-              >
-              <span class="united-block" style="background-color: #fdfe01"
-                >i</span
-              >
-              <span class="united-block" style="background-color: #54ff00"
-                >t</span
-              >
-              <span class="united-block" style="background-color: #00d3ff"
-                >e</span
-              >
-              <span
-                class="united-block rotate33"
-                style="background-color: #007eff"
-                >d</span
-              >
-            </div>
-            <p>
-              I don't like this one as much as Nations - it's a bit more garish.
-              But it is a good excuse to play around with some unusual text
-              patterns, like inline tilting.
-            </p>
-            <pre><code>
-    &lt;div id=&quot;united&quot; class=&quot;noselect&quot;&gt;
-        &lt;span class=&quot;united-block&quot; style=&quot;background-color: #fe0000&quot;&gt;U&lt;/span&gt;
-        &lt;span class=&quot;united-block&quot; style=&quot;background-color: #ffa900&quot;&gt;n&lt;/span&gt;
-        &lt;span class=&quot;united-block&quot; style=&quot;background-color: #fdfe01&quot;&gt;i&lt;/span&gt;
-        &lt;span class=&quot;united-block&quot; style=&quot;background-color: #54ff00&quot;&gt;t&lt;/span&gt;
-        &lt;span class=&quot;united-block&quot; style=&quot;background-color: #00d3ff&quot;&gt;e&lt;/span&gt;
-        &lt;span class=&quot;united-block rotate33&quot; style=&quot;background-color: #007eff&quot;&gt;d&lt;/span&gt;
-    &lt;/div&gt;
-            </code></pre>
-            <pre><code>
-    div#united {
-        display: flex;
-        padding-left: 33%;
-    }
-    span.united-block {
-        padding: 0 9px;
-        line-height: 27px;
-        font-size: 35px;
-        font-family: monospace;
-        font-weight: 500;
-    }
-            </code></pre>
-            <p>
-              The "d" has an additional class called
-              <code>.rotate33</code> which tilts it 33 degrees to the right
-              using the <code>transform</code> element. I am not 100% confident
-              that this is tilt angle but it's certainly the closest common
-              angle to the source. You can achieve this effect like this:
-            </p>
-            <pre><code>
-    .rotate33 {
-        -webkit-transform: rotate(33deg); /* Safari */
-        -moz-transform: rotate(33deg); /* Old versions of Firefox */
-        -ms-transform: rotate(33deg); /* Internet Explorer/Edge */
-        -o-transform: rotate(33deg); /* Old versions of Opera */
-        transform: rotate(33deg); /* Chrome, Edge, Opera and Firefox */
-    }
-    /* seriously, we need to standardize this stuff. */
-            </code></pre>
-            <p>
-              In all, the actual implementation of this color-blocking technique
-              is nothing very difficult to achieve in CSS. The simplicity of the
-              task and interesting composition of the colors, especially similar
-              ones like the greens in <i>Nations</i>, compelled me to play
-              around with them a little.
-            </p>
-
-            <!-- PART 3: DOODLING -->
-            <h2 id="subtitle">fixes and design tweaks</h2>
-            <p>
-              While I feel like the idea that <i>TrackMania</i> had was sort of
-              eye-catching, it also felt underdeveloped. I decided to play
-              around with the idea a bit, and I landed on something a bit softer
-              and more square, taking the palette-splatter idea and trying out
-              different colors.
-            </p>
-            <p>
-              Unfortunately, adding the border and outline that I wanted
-              revealed that <code><b>display:</b> flex;</code> option wasn't
-              keeping the whole <code>div</code> horizontally "tight," just the
-              <code>span</code>s. The rest of the <code>div</code> still
-              extended on the end of the container, like you see here:
-            </p>
-
-            <div class="doodle-container">
-              <div id="doodle1" class="noselect">
-                <span class="color-block" style="background-color: #2554f0"
-                  >p</span
-                >
-                <span class="color-block" style="background-color: #101e6b"
-                  >r</span
-                >
-                <span class="color-block" style="background-color: #3d1dee"
-                  >o</span
-                >
-                <span class="color-block" style="background-color: #687cee"
-                  >j</span
-                >
-                <span class="color-block" style="background-color: #3880df"
-                  >e</span
-                >
-                <span class="color-block" style="background-color: #3b48f8"
-                  >c</span
-                >
-                <span class="color-block" style="background-color: #365897"
-                  >t</span
-                >
-                <span class="color-block" style="background-color: #3c88fa"
-                  >s</span
-                >
-              </div>
-              <div id="doodle1" class="noselect">
-                <span class="color-block" style="background-color: #589207"
-                  >p</span
-                >
-                <span class="color-block" style="background-color: #60ba00"
-                  >o</span
-                >
-                <span class="color-block" style="background-color: #98e13a"
-                  >r</span
-                >
-                <span class="color-block" style="background-color: #80ca01"
-                  >t</span
-                >
-                <span class="color-block" style="background-color: #5ab710"
-                  >f</span
-                >
-                <span class="color-block" style="background-color: #7fdf01"
-                  >o</span
-                >
-                <span class="color-block" style="background-color: #50d500"
-                  >l</span
-                >
-                <span class="color-block" style="background-color: #53bb12"
-                  >i</span
-                >
-                <span class="color-block" style="background-color: #378308"
-                  >o</span
-                >
-              </div>
-              <div id="doodle1" class="noselect">
-                <span class="color-block" style="background-color: #b9261c"
-                  >w</span
-                >
-                <span class="color-block" style="background-color: #ec6767"
-                  >o</span
-                >
-                <span class="color-block" style="background-color: #eb2019"
-                  >r</span
-                >
-                <span class="color-block" style="background-color: #aa3323"
-                  >d</span
-                >
-                <span class="color-block" style="background-color: #f84242"
-                  >s</span
-                >
-              </div>
-              <div id="doodle1" class="noselect">
-                <span class="color-block" style="background-color: #f1dc1c"
-                  >a</span
-                >
-                <span class="color-block" style="background-color: #fff346"
-                  >b</span
-                >
-                <span class="color-block" style="background-color: #eee01f"
-                  >o</span
-                >
-                <span class="color-block" style="background-color: #ffde49"
-                  >u</span
-                >
-                <span class="color-block" style="background-color: #f8da2f"
-                  >t</span
-                >
-                <span
-                  class="color-block"
-                  style="background-color: white"
-                ></span>
-                <span class="color-block" style="background-color: #f8d50f"
-                  >m</span
-                >
-                <span class="color-block" style="background-color: #fff133"
-                  >e</span
-                >
-              </div>
-            </div>
-            <p>
-              Using <code><b>display:</b> inline-flex;</code> helps a little,
-              and it's the only difference between the two groups, but multiple
-              words in a row are forced into a row without something between
-              them. In a perfect world, they're a complete object that doesn't
-              get pushed around or snapped into some unwanted position.
-            </p>
-            <p>
-              If you're viewing this on mobile, try looking at it in landscape
-              mode to see what I'm talking about.
-            </p>
-            <div class="doodle-container">
-              <div id="doodle2" class="noselect">
-                <span class="color-block" style="background-color: #2554f0"
-                  >p</span
-                ><span class="color-block" style="background-color: #101e6b"
-                  >r</span
-                ><span class="color-block" style="background-color: #3d1dee"
-                  >o</span
-                ><span class="color-block" style="background-color: #687cee"
-                  >j</span
-                ><span class="color-block" style="background-color: #3880df"
-                  >e</span
-                ><span class="color-block" style="background-color: #3b48f8"
-                  >c</span
-                ><span class="color-block" style="background-color: #365897"
-                  >t</span
-                ><span class="color-block" style="background-color: #3c88fa"
-                  >s</span
-                >
-              </div>
-              <div id="doodle2" class="noselect">
-                <span class="color-block" style="background-color: #589207"
-                  >p</span
-                >
-                <span class="color-block" style="background-color: #60ba00"
-                  >o</span
-                >
-                <span class="color-block" style="background-color: #98e13a"
-                  >r</span
-                >
-                <span class="color-block" style="background-color: #80ca01"
-                  >t</span
-                >
-                <span class="color-block" style="background-color: #5ab710"
-                  >f</span
-                >
-                <span class="color-block" style="background-color: #7fdf01"
-                  >o</span
-                >
-                <span class="color-block" style="background-color: #50d500"
-                  >l</span
-                >
-                <span class="color-block" style="background-color: #53bb12"
-                  >i</span
-                >
-                <span class="color-block" style="background-color: #378308"
-                  >o</span
-                >
-              </div>
-              <div id="doodle2" class="noselect">
-                <span class="color-block" style="background-color: #b9261c"
-                  >w</span
-                >
-                <span class="color-block" style="background-color: #ec6767"
-                  >o</span
-                >
-                <span class="color-block" style="background-color: #eb2019"
-                  >r</span
-                >
-                <span class="color-block" style="background-color: #aa3323"
-                  >d</span
-                >
-                <span class="color-block" style="background-color: #f84242"
-                  >s</span
-                >
-              </div>
-              <div id="doodle2" class="noselect">
-                <span class="color-block" style="background-color: #f1dc1c"
-                  >a</span
-                >
-                <span class="color-block" style="background-color: #fff346"
-                  >b</span
-                >
-                <span class="color-block" style="background-color: #eee01f"
-                  >o</span
-                >
-                <span class="color-block" style="background-color: #ffde49"
-                  >u</span
-                >
-                <span class="color-block" style="background-color: #f8da2f"
-                  >t</span
-                >
-                <span
-                  class="color-block"
-                  style="background-color: white"
-                ></span>
-                <span class="color-block" style="background-color: #f8d50f"
-                  >m</span
-                >
-                <span class="color-block" style="background-color: #fff133"
-                  >e</span
-                >
-              </div>
-            </div>
-
-            <p>
-              Mercifully, simply hitching these <code>inline-flex</code> objects
-              onto an unordered list can give you the structure you need, so if
-              you wanted to use this concept for navigation bar elements it
-              works great.
-            </p>
-
-            <ul style="padding-left: 20px">
-              <li>
-                <div id="doodle2" class="noselect">
-                  <span class="color-block" style="background-color: #2554f0"
-                    >p</span
-                  >
-                  <span class="color-block" style="background-color: #101e6b"
-                    >r</span
-                  >
-                  <span class="color-block" style="background-color: #3d1dee"
-                    >o</span
-                  >
-                  <span class="color-block" style="background-color: #687cee"
-                    >j</span
-                  >
-                  <span class="color-block" style="background-color: #3880df"
-                    >e</span
-                  >
-                  <span class="color-block" style="background-color: #3b48f8"
-                    >c</span
-                  >
-                  <span class="color-block" style="background-color: #365897"
-                    >t</span
-                  >
-                  <span class="color-block" style="background-color: #3c88fa"
-                    >s</span
-                  >
-                </div>
-              </li>
-              <li>
-                <div id="doodle2" class="noselect">
-                  <span class="color-block" style="background-color: #589207"
-                    >p</span
-                  >
-                  <span class="color-block" style="background-color: #60ba00"
-                    >o</span
-                  >
-                  <span class="color-block" style="background-color: #98e13a"
-                    >r</span
-                  >
-                  <span class="color-block" style="background-color: #80ca01"
-                    >t</span
-                  >
-                  <span class="color-block" style="background-color: #5ab710"
-                    >f</span
-                  >
-                  <span class="color-block" style="background-color: #7fdf01"
-                    >o</span
-                  >
-                  <span class="color-block" style="background-color: #50d500"
-                    >l</span
-                  >
-                  <span class="color-block" style="background-color: #53bb12"
-                    >i</span
-                  >
-                  <span class="color-block" style="background-color: #378308"
-                    >o</span
-                  >
-                </div>
-              </li>
-              <li>
-                <div id="doodle2" class="noselect">
-                  <span class="color-block" style="background-color: #b9261c"
-                    >w</span
-                  >
-                  <span class="color-block" style="background-color: #ec6767"
-                    >o</span
-                  >
-                  <span class="color-block" style="background-color: #eb2019"
-                    >r</span
-                  >
-                  <span class="color-block" style="background-color: #aa3323"
-                    >d</span
-                  >
-                  <span class="color-block" style="background-color: #f84242"
-                    >s</span
-                  >
-                </div>
-              </li>
-              <li>
-                <div id="doodle2" class="noselect">
-                  <span class="color-block" style="background-color: #f1dc1c"
-                    >a</span
-                  >
-                  <span class="color-block" style="background-color: #fff346"
-                    >b</span
-                  >
-                  <span class="color-block" style="background-color: #eee01f"
-                    >o</span
-                  >
-                  <span class="color-block" style="background-color: #ffde49"
-                    >u</span
-                  >
-                  <span class="color-block" style="background-color: #f8da2f"
-                    >t</span
-                  >
-                  <span
-                    class="color-block"
-                    style="background-color: white"
-                  ></span>
-                  <span class="color-block" style="background-color: #f8d50f"
-                    >m</span
-                  >
-                  <span class="color-block" style="background-color: #fff133"
-                    >e</span
-                  >
-                </div>
-              </li>
-            </ul>
-            <p>
-              Here's everything that goes into the above concept if you wanted
-              to try it out:
-            </p>
-            <pre><code>
-    &lt;ul style=&quot;padding-left: 20px&quot;&gt;
-        &lt;li&gt;
-            &lt;div id=&quot;doodle&quot; class=&quot;noselect&quot;&gt;
-                &lt;span class=&quot;color-block&quot; style=&quot;background-color: #2554f0&quot;&gt;p&lt;/span&gt;
-                &lt;span class=&quot;color-block&quot; style=&quot;background-color: #101e6b&quot;&gt;r&lt;/span&gt;
-                &lt;span class=&quot;color-block&quot; style=&quot;background-color: #3d1dee&quot;&gt;o&lt;/span&gt;
-                &lt;span class=&quot;color-block&quot; style=&quot;background-color: #687cee&quot;&gt;j&lt;/span&gt;
-                &lt;span class=&quot;color-block&quot; style=&quot;background-color: #3880df&quot;&gt;e&lt;/span&gt;
-                &lt;span class=&quot;color-block&quot; style=&quot;background-color: #3b48f8&quot;&gt;c&lt;/span&gt;
-                &lt;span class=&quot;color-block&quot; style=&quot;background-color: #365897&quot;&gt;t&lt;/span&gt;
-                &lt;span class=&quot;color-block&quot; style=&quot;background-color: #3c88fa&quot;&gt;s&lt;/span&gt;
-            &lt;/div&gt;
-        &lt;/li&gt;
-        &lt;li&gt;
-            &lt;div id=&quot;doodle&quot; class=&quot;noselect&quot;&gt;
-                &lt;span class=&quot;color-block&quot; style=&quot;background-color: #589207&quot;&gt;p&lt;/span&gt;
-                &lt;span class=&quot;color-block&quot; style=&quot;background-color: #60ba00&quot;&gt;o&lt;/span&gt;
-                &lt;span class=&quot;color-block&quot; style=&quot;background-color: #98e13a&quot;&gt;r&lt;/span&gt;
-                &lt;span class=&quot;color-block&quot; style=&quot;background-color: #80ca01&quot;&gt;t&lt;/span&gt;
-                &lt;span class=&quot;color-block&quot; style=&quot;background-color: #5ab710&quot;&gt;f&lt;/span&gt;
-                &lt;span class=&quot;color-block&quot; style=&quot;background-color: #7fdf01&quot;&gt;o&lt;/span&gt;
-                &lt;span class=&quot;color-block&quot; style=&quot;background-color: #50d500&quot;&gt;l&lt;/span&gt;
-                &lt;span class=&quot;color-block&quot; style=&quot;background-color: #53bb12&quot;&gt;i&lt;/span&gt;
-                &lt;span class=&quot;color-block&quot; style=&quot;background-color: #378308&quot;&gt;o&lt;/span&gt;
-            &lt;/div&gt;
-        &lt;/li&gt;
-        &lt;li&gt;
-            &lt;div id=&quot;doodle&quot; class=&quot;noselect&quot;&gt;
-                &lt;span class=&quot;color-block&quot; style=&quot;background-color: #b9261c&quot;&gt;w&lt;/span&gt;
-                &lt;span class=&quot;color-block&quot; style=&quot;background-color: #ec6767&quot;&gt;o&lt;/span&gt;
-                &lt;span class=&quot;color-block&quot; style=&quot;background-color: #eb2019&quot;&gt;r&lt;/span&gt;
-                &lt;span class=&quot;color-block&quot; style=&quot;background-color: #aa3323&quot;&gt;d&lt;/span&gt;
-                &lt;span class=&quot;color-block&quot; style=&quot;background-color: #f84242&quot;&gt;s&lt;/span&gt;
-            &lt;/div&gt;
-        &lt;/li&gt;
-        &lt;li&gt; 
-            &lt;div id=&quot;doodle&quot; class=&quot;noselect&quot;&gt;
-                &lt;span class=&quot;color-block&quot; style=&quot;background-color: #f1dc1c&quot;&gt;a&lt;/span&gt;
-                &lt;span class=&quot;color-block&quot; style=&quot;background-color: #fff346&quot;&gt;b&lt;/span&gt;
-                &lt;span class=&quot;color-block&quot; style=&quot;background-color: #eee01f&quot;&gt;o&lt;/span&gt;
-                &lt;span class=&quot;color-block&quot; style=&quot;background-color: #ffde49&quot;&gt;u&lt;/span&gt;
-                &lt;span class=&quot;color-block&quot; style=&quot;background-color: #f8da2f&quot;&gt;t&lt;/span&gt;
-                &lt;span class=&quot;color-block&quot; style=&quot;background-color: white&quot;&gt;&lt;/span&gt;
-                &lt;span class=&quot;color-block&quot; style=&quot;background-color: #f8d50f&quot;&gt;m&lt;/span&gt;
-                &lt;span class=&quot;color-block&quot; style=&quot;background-color: #fff133&quot;&gt;e&lt;/span&gt;
-            &lt;/div&gt;
-        &lt;/li&gt;
-    &lt;/ul&gt;
-            </code></pre>
-            <pre><code>
-    div#doodle {
-        display: inline-flex;
-        margin: 25px auto;
-        border: solid white 4px;
-        outline: solid black 2px;
-    }
-        
-    span.color-block {
-        padding: 0 10px;
-        font-size: 30px;
-        font-family: monospace;
-        color: white;
-    }
-            </code></pre>
-            <p>
-              Lists are very powerful in HTML and can be organized into plenty
-              of shapes that make designs like this functional. It's not like
-              this sort of text can be used as a font, or to display longform
-              information like a sentence or paragraph. I feel this general idea
-              is an eye-catching way to display small amounts of information
-              like names or titles of various tabs, so a coherent use case in a
-              list or navigation tool of some kind feels like a fitting end. It
-              is from a logo, after all.
-            </p>
-          </div>
-          <div class="article-footer" id="devblog-footing">
-            <ul>
-              <li>
-                <h2>
-                  <a href="https://www.haydenbrown.dev/words/devblog"
-                    >← back to devblog</a
-                  >
-                </h2>
-              </li>
-              <li>
-                <h2>
-                  <a href="https://www.haydenbrown.dev/words">all articles →</a>
-                </h2>
-              </li>
-            </ul>
-          </div>
-        </article>
-      </div>
-    </div>
-
-    <!-- footer -->
-    <div class="footer">
-      <div class="footer-content">
-        <a
-          id="email-icon"
-          target="_blank"
-          rel="noopener noreferrer"
-          href="mailto: brownhayden10@gmail.com"
-          ><img src="../../img/icons/email.ico" alt=""
-        /></a>
-        <a
-          id="linkedin-icon"
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://www.linkedin.com/in/hayden-t-brown/"
-          ><img src="../../img/icons/linkedin.ico" alt=""
-        /></a>
-        <a
-          id="twitter-icon"
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://twitter.com/hb_robo"
-          ><img src="../../img/icons/twitter-circle.ico" alt=""
-        /></a>
-        <a
-          id="github-icon"
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://github.com/hbrown10"
-          ><img src="../../img/icons/iconmonstr-github-1.svg" alt=""
-        /></a>
-        <span id="span0">hello world! feel free to reach out.</span>
-        <span id="span-email"
-          >contact me about professional inquiries or whatever else!</span
-        >
-        <span id="span-linkedin"
-          >connect with me professionally, if that's your thing.</span
-        >
-        <span id="span-twitter"
-          >check out my quick-trigger thoughts in real time!</span
-        >
-        <span id="span-github"
-          >look through my code, if you want to roast me (most things I do don't
-          get uploaded).</span
-        >
-      </div>
-      <div class="footer-bottom">&copy; 2021 | designed by hayden brown</div>
-    </div>
-
-    <!--JS animations-->
-    <script src="../../js/app.js"></script>
-
-    <script>
-      hljs.highlightAll();
-    </script>
-  </body>
-</html>
+<!DOCTYPE html>
+<html lang="en" prefix="og: https://ogp.me/ns#">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="robots" content="index, follow" />
+		<link rel="icon" href="/img/logos/logo-green.png" />
+		<link rel="stylesheet" type="text/css" href="../../css/style.css" />
+		<link
+			rel="canonical"
+			href="https://www.haydenbrown.dev/words/devblog/trackmania"
+		/>
+		<link
+			rel="stylesheet"
+			href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/default.min.css"
+		/>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="import" href="/fonts/PLANB___.TTF" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap"
+			rel="stylesheet"
+		/>
+		<title>Riffing on Trackmania Logos | hayden's stuff</title>
+		<!-- open graph tags for social media previews -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:site" content="@hb_robo" />
+		<meta
+			property="og:title"
+			content="Riffing on Trackmania Logos | hayden's stuff"
+		/>
+		<meta
+			property="twitter:title"
+			content="Riffing on Trackmania Logos | hayden's stuff"
+		/>
+		<meta property="og:type" content="text/html" />
+		<meta
+			property="og:image"
+			content="https://www.haydenbrown.dev/img/devblog/trackmania/tm-logo-wide.jpg"
+		/>
+		<meta
+			property="twitter:image"
+			content="https://www.haydenbrown.dev/img/devblog/trackmania/tm-logo-wide.jpg"
+		/>
+		<meta
+			property="og:url"
+			content="https://www.haydenbrown.dev/words/devblog/trackmania"
+		/>
+		<meta
+			property="og:description"
+			content="A quick little design session about recreating the logos from TrackMania Nations and United in pure-CSS."
+		/>
+		<meta
+			property="twitter:description"
+			content="A quick little design session about recreating the logos from TrackMania Nations and United in pure-CSS."
+		/>
+		<meta property="og:site_name" content="hayden's stuff" />
+	</head>
+	<body>
+		<nav id="devblog-nav">
+			<div class="logo">
+				<a href="https://www.haydenbrown.dev">
+					<h4>hayden's stuff</h4>
+				</a>
+			</div>
+			<ul class="nav-links" id="devblog-nav">
+				<li><a href="https://www.haydenbrown.dev/words">words</a></li>
+				<li>
+					<a href="https://www.haydenbrown.dev/projects">projects</a>
+				</li>
+				<li>
+					<a href="https://www.haydenbrown.dev/about">about me</a>
+				</li>
+			</ul>
+			<div class="burger">
+				<div class="line1"></div>
+				<div class="line2"></div>
+				<div class="line3"></div>
+			</div>
+		</nav>
+		<div class="container">
+			<div class="main">
+				<article>
+					<h1>Riffing on TrackMania Logos</h1>
+					<div class="article-info" id="devblog-heading">
+						<ul>
+							<li>
+								<h4>April 13th, 2021</h4>
+							</li>
+							<li>
+								<h4>5 min read</h4>
+							</li>
+						</ul>
+					</div>
+					<div class="article-body">
+						<p>
+							I recently noticed these logos while watching a few
+							videos about the
+							<i>TrackMania</i>
+							series, which I've only been vaguely familiar with
+							over the years. The games are about racing the clock
+							on highly modular racetracks, and I can remember way
+							back in the early days of YouTube when some custom
+							tracks in the earlier entries went viral for their
+							insane geometry. When the driver is in first-person
+							mode, it becomes a sort of digital rollercoaster.
+						</p>
+						<figure>
+							<img
+								src="../../img/devblog/trackmania/nations.jpg"
+							/>
+							<img
+								src="../../img/devblog/trackmania/united.webp"
+							/>
+							<figcaption>
+								I would call these "shockingly colorful" for a
+								non-Mario racing series in 2006.
+							</figcaption>
+						</figure>
+						<p>
+							The games, sharing an engine and released within a
+							year of one another, share clean, borderline sterile
+							art directions befitting of most modern racing sims,
+							but these small splashes of color stood out to me. I
+							wanted to see if that sort of palette-blocking
+							effect could be done easily in pure CSS.
+						</p>
+						<h2 id="subtitle">basic pure-CSS concept</h2>
+						<p>
+							The easy method necessitates a monospace font type,
+							because of the predictable letter spacing. The
+							actual logos use Arial as the font, which is
+							sans-serif and comes with its own specialized
+							kerning that makes things pretty annoying, with each
+							letter requiring individual padding to unset that
+							kerning. I suppose a monospace Arial lookalike would
+							be the best case scenario, but I'm not all that
+							interested in hunting one down, lol.
+						</p>
+						<p>
+							For the sake of convenience, here's an approximation
+							for the
+							<i>Nations</i>
+							logo using pure monospace:
+						</p>
+						<div id="nations" class="noselect">
+							<span
+								class="nations-block"
+								style="background-color: #66a115"
+							>
+								N
+							</span>
+							<span
+								class="nations-block"
+								style="background-color: #60ba00"
+							>
+								a
+							</span>
+							<span
+								class="nations-block"
+								style="background-color: #98e13a"
+							>
+								t
+							</span>
+							<span
+								class="nations-block"
+								style="background-color: #80ca01"
+							>
+								i
+							</span>
+							<span
+								class="nations-block"
+								style="background-color: #5ab710"
+							>
+								o
+							</span>
+							<span
+								class="nations-block"
+								style="background-color: #7fdf01"
+							>
+								n
+							</span>
+							<span
+								class="nations-block"
+								style="background-color: #50d500"
+							>
+								s
+							</span>
+						</div>
+						<p>Here's one way to do it:</p>
+						<pre><code class="html">
+    &lt;div id=&quot;nations&quot; class=&quot;noselect&quot;&gt;
+        &lt;span class=&quot;nations-block&quot; style=&quot;background-color: #66a115&quot;&gt;N&lt;/span&gt;
+        &lt;span class=&quot;nations-block&quot; style=&quot;background-color: #60ba00&quot;&gt;a&lt;/span&gt;
+        &lt;span class=&quot;nations-block&quot; style=&quot;background-color: #98e13a&quot;&gt;t&lt;/span&gt;
+        &lt;span class=&quot;nations-block&quot; style=&quot;background-color: #80ca01&quot;&gt;i&lt;/span&gt;
+        &lt;span class=&quot;nations-block&quot; style=&quot;background-color: #5ab710&quot;&gt;o&lt;/span&gt;
+        &lt;span class=&quot;nations-block&quot; style=&quot;background-color: #7fdf01&quot;&gt;n&lt;/span&gt;
+        &lt;span class=&quot;nations-block&quot; style=&quot;background-color: #50d500&quot;&gt;s&lt;/span&gt;
+    &lt;/div&gt;
+            </code></pre>
+						<p>
+							The HTML is a series of
+							<code>span</code>
+							s wrapped up in a standard
+							<code>div</code>
+							with inline styling for the specific coloring. It's
+							a little cluttered but ultimately a lot cleaner than
+							a different CSS class or id for every letter. That
+							<code>.noselect</code>
+							class for the
+							<code>div</code>
+							prevents the user from highlighting the text so the
+							illusion of this being an image isn't broken. You
+							can replicate that behavior with this monstrosity:
+						</p>
+						<pre><code>
+    .noselect {
+        -webkit-touch-callout: none; /* iOS Safari */
+        -webkit-user-select: none; /* Safari */
+        -khtml-user-select: none; /* Konqueror HTML */
+        -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+        user-select: none; /* Chrome, Edge, Opera and Firefox */
+    }
+    /* we really need to standardize this, don't we? */
+            </code></pre>
+						<p>
+							Back to the Nations logo, here's what the stylesheet
+							is doing:
+						</p>
+						<pre><code class="css">
+    div#nations {
+        display: flex;
+    }
+    span.nations-block {
+        padding: 0 8px; /* creates the space to color in */
+        line-height: 26px;
+        font-size: 30px; /* larger than line-height for vertical compactness */
+        font-family: monospace;
+    }
+            </code></pre>
+						<p>
+							The important takeaway is that this div is held
+							together by the
+							<code>
+								<b>display:</b>
+								flex;
+							</code>
+							option, which packs things in as tightly as possible
+							unless told not to. The reasoning for this choice is
+							that the other display options, including the
+							default in this scenario, try to give span objects
+							some built-in spacing between each other that we
+							don't want.
+						</p>
+						<p>
+							Trying to circumvent this by placing all of the
+							<code>span</code>
+							s on one line of HTML code removes our ability to
+							alter the
+							<code>line-height</code>
+							variable, which we need to be shorter than the font
+							size to bring the bounds of the coloring down snugly
+							to the lettering. Later, we'll see how to get around
+							using
+							<code>
+								<b>display:</b>
+								flex
+							</code>
+							altogether.
+						</p>
+						<p>
+							The logo for Trackmania United is more of the same,
+							with a bolder font and some tighter padding:
+						</p>
+						<div id="united" class="noselect">
+							<span
+								class="united-block"
+								style="background-color: #fe0000"
+							>
+								U
+							</span>
+							<span
+								class="united-block"
+								style="background-color: #ffa900"
+							>
+								n
+							</span>
+							<span
+								class="united-block"
+								style="background-color: #fdfe01"
+							>
+								i
+							</span>
+							<span
+								class="united-block"
+								style="background-color: #54ff00"
+							>
+								t
+							</span>
+							<span
+								class="united-block"
+								style="background-color: #00d3ff"
+							>
+								e
+							</span>
+							<span
+								class="united-block rotate33"
+								style="background-color: #007eff"
+							>
+								d
+							</span>
+						</div>
+						<p>
+							I don't like this one as much as Nations - it's a
+							bit more garish. But it is a good excuse to play
+							around with some unusual text patterns, like inline
+							tilting.
+						</p>
+						<pre><code>
+    &lt;div id=&quot;united&quot; class=&quot;noselect&quot;&gt;
+        &lt;span class=&quot;united-block&quot; style=&quot;background-color: #fe0000&quot;&gt;U&lt;/span&gt;
+        &lt;span class=&quot;united-block&quot; style=&quot;background-color: #ffa900&quot;&gt;n&lt;/span&gt;
+        &lt;span class=&quot;united-block&quot; style=&quot;background-color: #fdfe01&quot;&gt;i&lt;/span&gt;
+        &lt;span class=&quot;united-block&quot; style=&quot;background-color: #54ff00&quot;&gt;t&lt;/span&gt;
+        &lt;span class=&quot;united-block&quot; style=&quot;background-color: #00d3ff&quot;&gt;e&lt;/span&gt;
+        &lt;span class=&quot;united-block rotate33&quot; style=&quot;background-color: #007eff&quot;&gt;d&lt;/span&gt;
+    &lt;/div&gt;
+            </code></pre>
+						<pre><code>
+    div#united {
+        display: flex;
+        padding-left: 33%;
+    }
+    span.united-block {
+        padding: 0 9px;
+        line-height: 27px;
+        font-size: 35px;
+        font-family: monospace;
+        font-weight: 500;
+    }
+            </code></pre>
+						<p>
+							The "d" has an additional class called
+							<code>.rotate33</code>
+							which tilts it 33 degrees to the right using the
+							<code>transform</code>
+							element. I am not 100% confident that this is tilt
+							angle but it's certainly the closest common angle to
+							the source. You can achieve this effect like this:
+						</p>
+						<pre><code>
+    .rotate33 {
+        -webkit-transform: rotate(33deg); /* Safari */
+        -moz-transform: rotate(33deg); /* Old versions of Firefox */
+        -ms-transform: rotate(33deg); /* Internet Explorer/Edge */
+        -o-transform: rotate(33deg); /* Old versions of Opera */
+        transform: rotate(33deg); /* Chrome, Edge, Opera and Firefox */
+    }
+    /* seriously, we need to standardize this stuff. */
+            </code></pre>
+						<p>
+							In all, the actual implementation of this
+							color-blocking technique is nothing very difficult
+							to achieve in CSS. The simplicity of the task and
+							interesting composition of the colors, especially
+							similar ones like the greens in
+							<i>Nations</i>
+							, compelled me to play around with them a little.
+						</p>
+						<!-- PART 3: DOODLING -->
+						<h2 id="subtitle">fixes and design tweaks</h2>
+						<p>
+							While I feel like the idea that
+							<i>TrackMania</i>
+							had was sort of eye-catching, it also felt
+							underdeveloped. I decided to play around with the
+							idea a bit, and I landed on something a bit softer
+							and more square, taking the palette-splatter idea
+							and trying out different colors.
+						</p>
+						<p>
+							Unfortunately, adding the border and outline that I
+							wanted revealed that
+							<code>
+								<b>display:</b>
+								flex;
+							</code>
+							option wasn't keeping the whole
+							<code>div</code>
+							horizontally "tight," just the
+							<code>span</code>
+							s. The rest of the
+							<code>div</code>
+							still extended on the end of the container, like you
+							see here:
+						</p>
+						<div class="doodle-container">
+							<div id="doodle1" class="noselect">
+								<span
+									class="color-block"
+									style="background-color: #2554f0"
+								>
+									p
+								</span>
+								<span
+									class="color-block"
+									style="background-color: #101e6b"
+								>
+									r
+								</span>
+								<span
+									class="color-block"
+									style="background-color: #3d1dee"
+								>
+									o
+								</span>
+								<span
+									class="color-block"
+									style="background-color: #687cee"
+								>
+									j
+								</span>
+								<span
+									class="color-block"
+									style="background-color: #3880df"
+								>
+									e
+								</span>
+								<span
+									class="color-block"
+									style="background-color: #3b48f8"
+								>
+									c
+								</span>
+								<span
+									class="color-block"
+									style="background-color: #365897"
+								>
+									t
+								</span>
+								<span
+									class="color-block"
+									style="background-color: #3c88fa"
+								>
+									s
+								</span>
+							</div>
+							<div id="doodle1" class="noselect">
+								<span
+									class="color-block"
+									style="background-color: #589207"
+								>
+									p
+								</span>
+								<span
+									class="color-block"
+									style="background-color: #60ba00"
+								>
+									o
+								</span>
+								<span
+									class="color-block"
+									style="background-color: #98e13a"
+								>
+									r
+								</span>
+								<span
+									class="color-block"
+									style="background-color: #80ca01"
+								>
+									t
+								</span>
+								<span
+									class="color-block"
+									style="background-color: #5ab710"
+								>
+									f
+								</span>
+								<span
+									class="color-block"
+									style="background-color: #7fdf01"
+								>
+									o
+								</span>
+								<span
+									class="color-block"
+									style="background-color: #50d500"
+								>
+									l
+								</span>
+								<span
+									class="color-block"
+									style="background-color: #53bb12"
+								>
+									i
+								</span>
+								<span
+									class="color-block"
+									style="background-color: #378308"
+								>
+									o
+								</span>
+							</div>
+							<div id="doodle1" class="noselect">
+								<span
+									class="color-block"
+									style="background-color: #b9261c"
+								>
+									w
+								</span>
+								<span
+									class="color-block"
+									style="background-color: #ec6767"
+								>
+									o
+								</span>
+								<span
+									class="color-block"
+									style="background-color: #eb2019"
+								>
+									r
+								</span>
+								<span
+									class="color-block"
+									style="background-color: #aa3323"
+								>
+									d
+								</span>
+								<span
+									class="color-block"
+									style="background-color: #f84242"
+								>
+									s
+								</span>
+							</div>
+							<div id="doodle1" class="noselect">
+								<span
+									class="color-block"
+									style="background-color: #f1dc1c"
+								>
+									a
+								</span>
+								<span
+									class="color-block"
+									style="background-color: #fff346"
+								>
+									b
+								</span>
+								<span
+									class="color-block"
+									style="background-color: #eee01f"
+								>
+									o
+								</span>
+								<span
+									class="color-block"
+									style="background-color: #ffde49"
+								>
+									u
+								</span>
+								<span
+									class="color-block"
+									style="background-color: #f8da2f"
+								>
+									t
+								</span>
+								<span
+									class="color-block"
+									style="background-color: white"
+								></span>
+								<span
+									class="color-block"
+									style="background-color: #f8d50f"
+								>
+									m
+								</span>
+								<span
+									class="color-block"
+									style="background-color: #fff133"
+								>
+									e
+								</span>
+							</div>
+						</div>
+						<p>
+							Using
+							<code>
+								<b>display:</b>
+								inline-flex;
+							</code>
+							helps a little, and it's the only difference between
+							the two groups, but multiple words in a row are
+							forced into a row without something between them. In
+							a perfect world, they're a complete object that
+							doesn't get pushed around or snapped into some
+							unwanted position.
+						</p>
+						<p>
+							If you're viewing this on mobile, try looking at it
+							in landscape mode to see what I'm talking about.
+						</p>
+						<div class="doodle-container">
+							<div id="doodle2" class="noselect">
+								<span
+									class="color-block"
+									style="background-color: #2554f0"
+								>
+									p
+								</span>
+								<span
+									class="color-block"
+									style="background-color: #101e6b"
+								>
+									r
+								</span>
+								<span
+									class="color-block"
+									style="background-color: #3d1dee"
+								>
+									o
+								</span>
+								<span
+									class="color-block"
+									style="background-color: #687cee"
+								>
+									j
+								</span>
+								<span
+									class="color-block"
+									style="background-color: #3880df"
+								>
+									e
+								</span>
+								<span
+									class="color-block"
+									style="background-color: #3b48f8"
+								>
+									c
+								</span>
+								<span
+									class="color-block"
+									style="background-color: #365897"
+								>
+									t
+								</span>
+								<span
+									class="color-block"
+									style="background-color: #3c88fa"
+								>
+									s
+								</span>
+							</div>
+							<div id="doodle2" class="noselect">
+								<span
+									class="color-block"
+									style="background-color: #589207"
+								>
+									p
+								</span>
+								<span
+									class="color-block"
+									style="background-color: #60ba00"
+								>
+									o
+								</span>
+								<span
+									class="color-block"
+									style="background-color: #98e13a"
+								>
+									r
+								</span>
+								<span
+									class="color-block"
+									style="background-color: #80ca01"
+								>
+									t
+								</span>
+								<span
+									class="color-block"
+									style="background-color: #5ab710"
+								>
+									f
+								</span>
+								<span
+									class="color-block"
+									style="background-color: #7fdf01"
+								>
+									o
+								</span>
+								<span
+									class="color-block"
+									style="background-color: #50d500"
+								>
+									l
+								</span>
+								<span
+									class="color-block"
+									style="background-color: #53bb12"
+								>
+									i
+								</span>
+								<span
+									class="color-block"
+									style="background-color: #378308"
+								>
+									o
+								</span>
+							</div>
+							<div id="doodle2" class="noselect">
+								<span
+									class="color-block"
+									style="background-color: #b9261c"
+								>
+									w
+								</span>
+								<span
+									class="color-block"
+									style="background-color: #ec6767"
+								>
+									o
+								</span>
+								<span
+									class="color-block"
+									style="background-color: #eb2019"
+								>
+									r
+								</span>
+								<span
+									class="color-block"
+									style="background-color: #aa3323"
+								>
+									d
+								</span>
+								<span
+									class="color-block"
+									style="background-color: #f84242"
+								>
+									s
+								</span>
+							</div>
+							<div id="doodle2" class="noselect">
+								<span
+									class="color-block"
+									style="background-color: #f1dc1c"
+								>
+									a
+								</span>
+								<span
+									class="color-block"
+									style="background-color: #fff346"
+								>
+									b
+								</span>
+								<span
+									class="color-block"
+									style="background-color: #eee01f"
+								>
+									o
+								</span>
+								<span
+									class="color-block"
+									style="background-color: #ffde49"
+								>
+									u
+								</span>
+								<span
+									class="color-block"
+									style="background-color: #f8da2f"
+								>
+									t
+								</span>
+								<span
+									class="color-block"
+									style="background-color: white"
+								></span>
+								<span
+									class="color-block"
+									style="background-color: #f8d50f"
+								>
+									m
+								</span>
+								<span
+									class="color-block"
+									style="background-color: #fff133"
+								>
+									e
+								</span>
+							</div>
+						</div>
+						<p>
+							Mercifully, simply hitching these
+							<code>inline-flex</code>
+							objects onto an unordered list can give you the
+							structure you need, so if you wanted to use this
+							concept for navigation bar elements it works great.
+						</p>
+						<ul style="padding-left: 20px">
+							<li>
+								<div id="doodle2" class="noselect">
+									<span
+										class="color-block"
+										style="background-color: #2554f0"
+									>
+										p
+									</span>
+									<span
+										class="color-block"
+										style="background-color: #101e6b"
+									>
+										r
+									</span>
+									<span
+										class="color-block"
+										style="background-color: #3d1dee"
+									>
+										o
+									</span>
+									<span
+										class="color-block"
+										style="background-color: #687cee"
+									>
+										j
+									</span>
+									<span
+										class="color-block"
+										style="background-color: #3880df"
+									>
+										e
+									</span>
+									<span
+										class="color-block"
+										style="background-color: #3b48f8"
+									>
+										c
+									</span>
+									<span
+										class="color-block"
+										style="background-color: #365897"
+									>
+										t
+									</span>
+									<span
+										class="color-block"
+										style="background-color: #3c88fa"
+									>
+										s
+									</span>
+								</div>
+							</li>
+							<li>
+								<div id="doodle2" class="noselect">
+									<span
+										class="color-block"
+										style="background-color: #589207"
+									>
+										p
+									</span>
+									<span
+										class="color-block"
+										style="background-color: #60ba00"
+									>
+										o
+									</span>
+									<span
+										class="color-block"
+										style="background-color: #98e13a"
+									>
+										r
+									</span>
+									<span
+										class="color-block"
+										style="background-color: #80ca01"
+									>
+										t
+									</span>
+									<span
+										class="color-block"
+										style="background-color: #5ab710"
+									>
+										f
+									</span>
+									<span
+										class="color-block"
+										style="background-color: #7fdf01"
+									>
+										o
+									</span>
+									<span
+										class="color-block"
+										style="background-color: #50d500"
+									>
+										l
+									</span>
+									<span
+										class="color-block"
+										style="background-color: #53bb12"
+									>
+										i
+									</span>
+									<span
+										class="color-block"
+										style="background-color: #378308"
+									>
+										o
+									</span>
+								</div>
+							</li>
+							<li>
+								<div id="doodle2" class="noselect">
+									<span
+										class="color-block"
+										style="background-color: #b9261c"
+									>
+										w
+									</span>
+									<span
+										class="color-block"
+										style="background-color: #ec6767"
+									>
+										o
+									</span>
+									<span
+										class="color-block"
+										style="background-color: #eb2019"
+									>
+										r
+									</span>
+									<span
+										class="color-block"
+										style="background-color: #aa3323"
+									>
+										d
+									</span>
+									<span
+										class="color-block"
+										style="background-color: #f84242"
+									>
+										s
+									</span>
+								</div>
+							</li>
+							<li>
+								<div id="doodle2" class="noselect">
+									<span
+										class="color-block"
+										style="background-color: #f1dc1c"
+									>
+										a
+									</span>
+									<span
+										class="color-block"
+										style="background-color: #fff346"
+									>
+										b
+									</span>
+									<span
+										class="color-block"
+										style="background-color: #eee01f"
+									>
+										o
+									</span>
+									<span
+										class="color-block"
+										style="background-color: #ffde49"
+									>
+										u
+									</span>
+									<span
+										class="color-block"
+										style="background-color: #f8da2f"
+									>
+										t
+									</span>
+									<span
+										class="color-block"
+										style="background-color: white"
+									></span>
+									<span
+										class="color-block"
+										style="background-color: #f8d50f"
+									>
+										m
+									</span>
+									<span
+										class="color-block"
+										style="background-color: #fff133"
+									>
+										e
+									</span>
+								</div>
+							</li>
+						</ul>
+						<p>
+							Here's everything that goes into the above concept
+							if you wanted to try it out:
+						</p>
+						<pre><code>
+    &lt;ul style=&quot;padding-left: 20px&quot;&gt;
+        &lt;li&gt;
+            &lt;div id=&quot;doodle&quot; class=&quot;noselect&quot;&gt;
+                &lt;span class=&quot;color-block&quot; style=&quot;background-color: #2554f0&quot;&gt;p&lt;/span&gt;
+                &lt;span class=&quot;color-block&quot; style=&quot;background-color: #101e6b&quot;&gt;r&lt;/span&gt;
+                &lt;span class=&quot;color-block&quot; style=&quot;background-color: #3d1dee&quot;&gt;o&lt;/span&gt;
+                &lt;span class=&quot;color-block&quot; style=&quot;background-color: #687cee&quot;&gt;j&lt;/span&gt;
+                &lt;span class=&quot;color-block&quot; style=&quot;background-color: #3880df&quot;&gt;e&lt;/span&gt;
+                &lt;span class=&quot;color-block&quot; style=&quot;background-color: #3b48f8&quot;&gt;c&lt;/span&gt;
+                &lt;span class=&quot;color-block&quot; style=&quot;background-color: #365897&quot;&gt;t&lt;/span&gt;
+                &lt;span class=&quot;color-block&quot; style=&quot;background-color: #3c88fa&quot;&gt;s&lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;div id=&quot;doodle&quot; class=&quot;noselect&quot;&gt;
+                &lt;span class=&quot;color-block&quot; style=&quot;background-color: #589207&quot;&gt;p&lt;/span&gt;
+                &lt;span class=&quot;color-block&quot; style=&quot;background-color: #60ba00&quot;&gt;o&lt;/span&gt;
+                &lt;span class=&quot;color-block&quot; style=&quot;background-color: #98e13a&quot;&gt;r&lt;/span&gt;
+                &lt;span class=&quot;color-block&quot; style=&quot;background-color: #80ca01&quot;&gt;t&lt;/span&gt;
+                &lt;span class=&quot;color-block&quot; style=&quot;background-color: #5ab710&quot;&gt;f&lt;/span&gt;
+                &lt;span class=&quot;color-block&quot; style=&quot;background-color: #7fdf01&quot;&gt;o&lt;/span&gt;
+                &lt;span class=&quot;color-block&quot; style=&quot;background-color: #50d500&quot;&gt;l&lt;/span&gt;
+                &lt;span class=&quot;color-block&quot; style=&quot;background-color: #53bb12&quot;&gt;i&lt;/span&gt;
+                &lt;span class=&quot;color-block&quot; style=&quot;background-color: #378308&quot;&gt;o&lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;div id=&quot;doodle&quot; class=&quot;noselect&quot;&gt;
+                &lt;span class=&quot;color-block&quot; style=&quot;background-color: #b9261c&quot;&gt;w&lt;/span&gt;
+                &lt;span class=&quot;color-block&quot; style=&quot;background-color: #ec6767&quot;&gt;o&lt;/span&gt;
+                &lt;span class=&quot;color-block&quot; style=&quot;background-color: #eb2019&quot;&gt;r&lt;/span&gt;
+                &lt;span class=&quot;color-block&quot; style=&quot;background-color: #aa3323&quot;&gt;d&lt;/span&gt;
+                &lt;span class=&quot;color-block&quot; style=&quot;background-color: #f84242&quot;&gt;s&lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li&gt; 
+            &lt;div id=&quot;doodle&quot; class=&quot;noselect&quot;&gt;
+                &lt;span class=&quot;color-block&quot; style=&quot;background-color: #f1dc1c&quot;&gt;a&lt;/span&gt;
+                &lt;span class=&quot;color-block&quot; style=&quot;background-color: #fff346&quot;&gt;b&lt;/span&gt;
+                &lt;span class=&quot;color-block&quot; style=&quot;background-color: #eee01f&quot;&gt;o&lt;/span&gt;
+                &lt;span class=&quot;color-block&quot; style=&quot;background-color: #ffde49&quot;&gt;u&lt;/span&gt;
+                &lt;span class=&quot;color-block&quot; style=&quot;background-color: #f8da2f&quot;&gt;t&lt;/span&gt;
+                &lt;span class=&quot;color-block&quot; style=&quot;background-color: white&quot;&gt;&lt;/span&gt;
+                &lt;span class=&quot;color-block&quot; style=&quot;background-color: #f8d50f&quot;&gt;m&lt;/span&gt;
+                &lt;span class=&quot;color-block&quot; style=&quot;background-color: #fff133&quot;&gt;e&lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+            </code></pre>
+						<pre><code>
+    div#doodle {
+        display: inline-flex;
+        margin: 25px auto;
+        border: solid white 4px;
+        outline: solid black 2px;
+    }
+        
+    span.color-block {
+        padding: 0 10px;
+        font-size: 30px;
+        font-family: monospace;
+        color: white;
+    }
+            </code></pre>
+						<p>
+							Lists are very powerful in HTML and can be organized
+							into plenty of shapes that make designs like this
+							functional. It's not like this sort of text can be
+							used as a font, or to display longform information
+							like a sentence or paragraph. I feel this general
+							idea is an eye-catching way to display small amounts
+							of information like names or titles of various tabs,
+							so a coherent use case in a list or navigation tool
+							of some kind feels like a fitting end. It is from a
+							logo, after all.
+						</p>
+					</div>
+					<div class="article-footer" id="devblog-footing">
+						<ul>
+							<li>
+								<h2>
+									<a
+										href="https://www.haydenbrown.dev/words/devblog"
+									>
+										← back to devblog
+									</a>
+								</h2>
+							</li>
+							<li>
+								<h2>
+									<a href="https://www.haydenbrown.dev/words">
+										all articles →
+									</a>
+								</h2>
+							</li>
+						</ul>
+					</div>
+				</article>
+			</div>
+		</div>
+		<!-- footer -->
+		<div class="footer">
+			<div class="footer-content">
+				<a
+					id="email-icon"
+					target="_blank"
+					rel="noopener noreferrer"
+					href="mailto: brownhayden10@gmail.com"
+				>
+					<img src="../../img/icons/email.ico" alt="" />
+				</a>
+				<a
+					id="linkedin-icon"
+					target="_blank"
+					rel="noopener noreferrer"
+					href="https://www.linkedin.com/in/hayden-t-brown/"
+				>
+					<img src="../../img/icons/linkedin.ico" alt="" />
+				</a>
+				<a
+					id="twitter-icon"
+					target="_blank"
+					rel="noopener noreferrer"
+					href="https://twitter.com/hb_robo"
+				>
+					<img src="../../img/icons/twitter-circle.ico" alt="" />
+				</a>
+				<a
+					id="github-icon"
+					target="_blank"
+					rel="noopener noreferrer"
+					href="https://github.com/hbrown10"
+				>
+					<img src="../../img/icons/iconmonstr-github-1.svg" alt="" />
+				</a>
+				<span id="span0">hello world! feel free to reach out.</span>
+				<span id="span-email">
+					contact me about professional inquiries or whatever else!
+				</span>
+				<span id="span-linkedin">
+					connect with me professionally, if that's your thing.
+				</span>
+				<span id="span-twitter">
+					check out my quick-trigger thoughts in real time!
+				</span>
+				<span id="span-github">
+					look through my code, if you want to roast me (most things I
+					do don't get uploaded).
+				</span>
+			</div>
+			<div class="footer-bottom">
+				&copy; 2021 | designed by hayden brown
+			</div>
+		</div>
+		<!--JS animations-->
+		<script src="../../js/app.js"></script>
+		<script>
+			hljs.highlightAll();
+		</script>
+	</body>
+</html>

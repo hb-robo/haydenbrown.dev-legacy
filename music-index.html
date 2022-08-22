@@ -1,629 +1,671 @@
-<!DOCTYPE html>
-<html lang="en" prefix="og: https://ogp.me/ns#">
-  <head>
-    <link rel="stylesheet" href="/css/style.css" />
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="robots" content="index, follow" />
-    <link rel="icon" href="/img/logos/logo-blue.png" />
-    <link rel="canonical" href="https://www.haydenbrown.dev/music-index" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
-      rel="stylesheet"
-    />
-    <title>music index | hayden's stuff</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <script src="/js/sorttable.js"></script>
-
-    <!-- open graph tags for social media previews -->
-    <meta property="og:title" content="full music index | hayden's stuff" />
-    <meta property="og:type" content="text/html" />
-    <meta
-      property="og:image"
-      content="https://www.haydenbrown.dev/img/logos/logo-blue-wide.png"
-    />
-    <meta property="og:url" content="https://www.haydenbrown.dev/music-index" />
-    <meta
-      property="og:description"
-      content="a tidy chart of all of the music I've written about."
-    />
-    <meta property="og:site_name" content="hayden's stuff" />
-  </head>
-  <body>
-    <nav id="music-nav">
-      <div class="logo">
-        <a href="https://www.haydenbrown.dev">
-          <h4>hayden's stuff</h4>
-        </a>
-      </div>
-      <ul class="nav-links" id="music-nav">
-        <li><a href="https://www.haydenbrown.dev/words">words</a></li>
-        <li><a href="https://www.haydenbrown.dev/projects">projects</a></li>
-        <li><a href="https://www.haydenbrown.dev/about">about me</a></li>
-      </ul>
-      <div class="burger">
-        <div class="line1"></div>
-        <div class="line2"></div>
-        <div class="line3"></div>
-      </div>
-    </nav>
-
-    <!--THE TABLE OF GAME REVIEW LINKS-->
-    <div class="container">
-      <div class="index">
-        <div class="articles">
-          <h1 id="music-heading">full music index</h1>
-
-          <input
-            class="table-search"
-            type="text"
-            id="myInput"
-            onkeyup="tableFilter()"
-            placeholder="Search to filter index..."
-          />
-
-          <div class="table-index">
-            <table class="reviews-table sortable" id="music-table">
-              <thead id="table-head">
-                <tr class="unselectable">
-                  <th>year</th>
-                  <th>release</th>
-                  <th>type</th>
-                  <th>artist</th>
-                  <th>producer</th>
-                  <th>verdict</th>
-                  <th>attribution</th>
-                </tr>
-              </thead>
-              <tbody id="table-body">
-                <tr>
-                  <td>1959</td>
-                  <td>Moanin'</td>
-                  <td>LP</td>
-                  <td>Art Blakey & the Jazz Messengers</td>
-                  <td>Alfred Lion</td>
-                  <td sorttable_customkey="3.5">★★★½</td>
-                  <td>
-                    <a
-                      href="https://www.haydenbrown.dev/words/music/rym-archive-vol2"
-                      >RYM Archive, Vol. II</a
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <td>1968</td>
-                  <td>Dreams</td>
-                  <td>LP</td>
-                  <td>Gábor Szabó</td>
-                  <td>Gary McFarland</td>
-                  <td sorttable_customkey="3">★★★☆</td>
-                  <td>
-                    <a href="https://www.haydenbrown.dev/words/music/algorithm"
-                      >The Algorithm Folk Heroes</a
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <td>1969</td>
-                  <td>In a Silent Way</td>
-                  <td>LP</td>
-                  <td>Miles Davis</td>
-                  <td>Teo Macero</td>
-                  <td sorttable_customkey="4">★★★★</td>
-                  <td>
-                    <a
-                      href="https://www.haydenbrown.dev/words/music/rym-archive-vol2"
-                      >RYM Archive, Vol. II</a
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <td>1971</td>
-                  <td>Journey in Satchidananda</td>
-                  <td>LP</td>
-                  <td>Alice Coltrane</td>
-                  <td>Alice Coltrane & Ed Michel</td>
-                  <td sorttable_customkey="4">★★★★</td>
-                  <td>
-                    <a
-                      href="https://www.haydenbrown.dev/words/music/rym-archive-vol2"
-                      >RYM Archive, Vol. II</a
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <td>1975</td>
-                  <td>Places and Spaces</td>
-                  <td>LP</td>
-                  <td>Donald Byrd</td>
-                  <td>Larry Mizell</td>
-                  <td sorttable_customkey="3">★★★☆</td>
-                  <td>
-                    <a
-                      href="https://www.haydenbrown.dev/words/music/rym-archive-vol2"
-                      >RYM Archive, Vol. II</a
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <td>1976</td>
-                  <td>Plantasia</td>
-                  <td>LP</td>
-                  <td>Mort Garson</td>
-                  <td>Mort Garson</td>
-                  <td sorttable_customkey="3">★★★☆</td>
-                  <td>
-                    <a href="https://www.haydenbrown.dev/words/music/algorithm"
-                      >The Algorithm Folk Heroes</a
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <td>1976</td>
-                  <td>Scenery</td>
-                  <td>LP</td>
-                  <td>Ryo Fukui</td>
-                  <td>Masataka Ito & Ryo Fukui</td>
-                  <td sorttable_customkey="3">★★★☆</td>
-                  <td>
-                    <a href="https://www.haydenbrown.dev/words/music/algorithm"
-                      >The Algorithm Folk Heroes</a
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <td>1981</td>
-                  <td>Firefly</td>
-                  <td>LP</td>
-                  <td>Emily Remler</td>
-                  <td>Carl E. Jefferson</td>
-                  <td sorttable_customkey="2.5">★★½☆</td>
-                  <td>
-                    <a href="https://www.haydenbrown.dev/words/music/algorithm"
-                      >The Algorithm Folk Heroes</a
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <td>1991</td>
-                  <td>Spiderland</td>
-                  <td>LP</td>
-                  <td>Slint</td>
-                  <td>Brian Paulson</td>
-                  <td sorttable_customkey="3.5">★★★½</td>
-                  <td>
-                    <a
-                      href="https://www.haydenbrown.dev/words/music/rym-archive-vol2"
-                      >RYM Archive, Vol. II</a
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <td>1992</td>
-                  <td>Love Deluxe</td>
-                  <td>LP</td>
-                  <td>Sade</td>
-                  <td>Sade</td>
-                  <td sorttable_customkey="3.5">★★★½</td>
-                  <td>
-                    <a
-                      href="https://www.haydenbrown.dev/words/music/rym-archive-vol2"
-                      >RYM Archive, Vol. II</a
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <td>1993</td>
-                  <td>Quique</td>
-                  <td>LP</td>
-                  <td>Seefeel</td>
-                  <td>Seefeel</td>
-                  <td sorttable_customkey="1.5">★½☆☆</td>
-                  <td>
-                    <a
-                      href="https://www.haydenbrown.dev/words/music/rym-archive-vol2"
-                      >RYM Archive, Vol. II</a
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <td>1993</td>
-                  <td>Robot World</td>
-                  <td>LP</td>
-                  <td>Bailter Space</td>
-                  <td>Bailter Space</td>
-                  <td sorttable_customkey="2.5">★★½☆</td>
-                  <td>
-                    <a
-                      href="https://www.haydenbrown.dev/words/music/rym-archive-vol2"
-                      >RYM Archive, Vol. II</a
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <td>1993</td>
-                  <td>The Stars Are So Big...</td>
-                  <td>LP</td>
-                  <td>Pram</td>
-                  <td>Pram</td>
-                  <td sorttable_customkey="3.5">★★★½</td>
-                  <td>
-                    <a
-                      href="https://www.haydenbrown.dev/words/music/rym-archive-vol2"
-                      >RYM Archive, Vol. II</a
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <td>1996</td>
-                  <td>Born Slippy .NUXX</td>
-                  <td>Single</td>
-                  <td>Underworld</td>
-                  <td>Underworld</td>
-                  <td sorttable_customkey="3">★★★☆</td>
-                  <td>
-                    <a
-                      href="https://www.haydenbrown.dev/words/music/rym-archive-vol2"
-                      >RYM Archive, Vol. II</a
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <td>1996</td>
-                  <td>Feed Me Weird Things</td>
-                  <td>LP</td>
-                  <td>Squarepusher</td>
-                  <td>Squarepusher</td>
-                  <td sorttable_customkey="3">★★★☆</td>
-                  <td>
-                    <a
-                      href="https://www.haydenbrown.dev/words/music/rym-archive-vol2"
-                      >RYM Archive, Vol. II</a
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <td>1996</td>
-                  <td>Richard D. James Album</td>
-                  <td>LP</td>
-                  <td>Aphex Twin</td>
-                  <td>Aphex Twin</td>
-                  <td sorttable_customkey="3.5">★★★½</td>
-                  <td>
-                    <a
-                      href="https://www.haydenbrown.dev/words/music/rym-archive-vol2"
-                      >RYM Archive, Vol. II</a
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <td>1998</td>
-                  <td>Halica</td>
-                  <td>LP</td>
-                  <td>Sweet Trip</td>
-                  <td>Roberto Burgos</td>
-                  <td sorttable_customkey="3">★★★☆</td>
-                  <td>
-                    <a
-                      href="https://www.haydenbrown.dev/words/music/rym-archive-vol2"
-                      >RYM Archive, Vol. II</a
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <td>1998</td>
-                  <td>Taking Care of You</td>
-                  <td>LP</td>
-                  <td>Junior Varsity KM</td>
-                  <td>Kenric McDowell</td>
-                  <td sorttable_customkey="2.5">★★½☆</td>
-                  <td>
-                    <a
-                      href="https://www.haydenbrown.dev/words/music/rym-archive-vol2"
-                      >RYM Archive, Vol. II</a
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <td>1999</td>
-                  <td>R4 / Direct Audio</td>
-                  <td>LP</td>
-                  <td>Namco Software Sound Team</td>
-                  <td>Hiroshi Okubo</td>
-                  <td sorttable_customkey="2.5">★★½☆</td>
-                  <td>
-                    <a
-                      href="https://www.haydenbrown.dev/words/music/rym-archive-vol2"
-                      >RYM Archive, Vol. II</a
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <td>2000</td>
-                  <td>Parallel Dimensions</td>
-                  <td>LP</td>
-                  <td>Theo Parrish</td>
-                  <td>Theo Parrish</td>
-                  <td sorttable_customkey="2.5">★★½☆</td>
-                  <td>
-                    <a
-                      href="https://www.haydenbrown.dev/words/music/rym-archive-vol2"
-                      >RYM Archive, Vol. II</a
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <td>2001</td>
-                  <td>Angles Without Edges</td>
-                  <td>LP</td>
-                  <td>Yesterday's New Quintet</td>
-                  <td>Madlib</td>
-                  <td sorttable_customkey="2">★★✩✩</td>
-                  <td>Madlib's Jazzcats Universe</td>
-                </tr>
-                <tr>
-                  <td>2001</td>
-                  <td>Enjoy Your Rabbit</td>
-                  <td>LP</td>
-                  <td>Sufjan Stevens</td>
-                  <td>Sufjan Stevens</td>
-                  <td sorttable_customkey="3">★★★✩</td>
-                  <td>
-                    <a
-                      href="https://www.haydenbrown.dev/words/music/rym-archive-vol2"
-                      >RYM Archive, Vol. II</a
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <td>2002</td>
-                  <td>Finally We Are No One</td>
-                  <td>LP</td>
-                  <td>Múm</td>
-                  <td>Valgeir Sigurðsson</td>
-                  <td sorttable_customkey="2.5">★★½☆</td>
-                  <td>
-                    <a
-                      href="https://www.haydenbrown.dev/words/music/rym-archive-vol2"
-                      >RYM Archive, Vol. II</a
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <td>2004</td>
-                  <td>Madvillainy</td>
-                  <td>LP</td>
-                  <td>Madvillain</td>
-                  <td>MF DOOM & Madlib</td>
-                  <td sorttable_customkey="3.5">★★★½</td>
-                  <td>Madlib's Jazzcats Universe</td>
-                </tr>
-                <tr>
-                  <td>2004</td>
-                  <td>Stevie</td>
-                  <td>LP</td>
-                  <td>Yesterday's New Quintet</td>
-                  <td>Madlib</td>
-                  <td sorttable_customkey="1">★☆✩✩</td>
-                  <td>Madlib's Jazzcats Universe</td>
-                </tr>
-                <tr>
-                  <td>2007</td>
-                  <td>Act 1: Eternal Sunshine (The Pledge)</td>
-                  <td>EP</td>
-                  <td>Jay Electronica</td>
-                  <td>Jay Electronica</td>
-                  <td sorttable_customkey="3.5">★★★½</td>
-                  <td>
-                    <a
-                      href="https://www.haydenbrown.dev/words/music/rym-archive-vol2"
-                      >RYM Archive, Vol. II</a
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <td>2008</td>
-                  <td>Sujinho</td>
-                  <td>LP</td>
-                  <td>Jackson Conti</td>
-                  <td>Madlib & Ivan Conti</td>
-                  <td sorttable_customkey="3">★★★✩</td>
-                  <td>Madlib's Jazzcats Universe</td>
-                </tr>
-                <tr>
-                  <td>2009</td>
-                  <td>Lotusize</td>
-                  <td>LP</td>
-                  <td>Watchman</td>
-                  <td>Watchman</td>
-                  <td sorttable_customkey="3">★★★✩</td>
-                  <td>
-                    <a
-                      href="https://www.haydenbrown.dev/words/music/rym-archive-vol2"
-                      >RYM Archive, Vol. II</a
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <td>2011</td>
-                  <td>Minecraft: Volume Alpha</td>
-                  <td>LP</td>
-                  <td>C418</td>
-                  <td>C418</td>
-                  <td sorttable_customkey="2.5">★★½☆</td>
-                  <td>
-                    <a
-                      href="https://www.haydenbrown.dev/words/music/rym-archive-vol2"
-                      >RYM Archive, Vol. II</a
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <td>2011</td>
-                  <td>The Golden Age of Apocalypse</td>
-                  <td>LP</td>
-                  <td>Thundercat</td>
-                  <td>Flying Lotus & Thundercat</td>
-                  <td sorttable_customkey="2">★★☆☆</td>
-                  <td>
-                    <a
-                      href="https://www.haydenbrown.dev/words/music/rym-archive-vol2"
-                      >RYM Archive, Vol. II</a
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <td>2016</td>
-                  <td>Those Who Throw Objects...</td>
-                  <td>LP</td>
-                  <td>Bruno Pernadas</td>
-                  <td>Bruno Pernadas</td>
-                  <td sorttable_customkey="1.5">★½☆☆</td>
-                  <td>
-                    <a
-                      href="https://www.haydenbrown.dev/words/music/rym-archive-vol2"
-                      >RYM Archive, Vol. II</a
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <td>2017</td>
-                  <td>Playboi Carti</td>
-                  <td>LP</td>
-                  <td>Playboi Carti</td>
-                  <td>Pi'erre Bourne</td>
-                  <td sorttable_customkey="3">★★★☆</td>
-                  <td>
-                    <a
-                      href="https://www.haydenbrown.dev/words/music/rym-archive-vol2"
-                      >RYM Archive, Vol. II</a
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <td>2021</td>
-                  <td>Sound Ancestors</td>
-                  <td>LP</td>
-                  <td>Madlib</td>
-                  <td>Four Tet</td>
-                  <td sorttable_customkey="3">★★★✩</td>
-                  <td>Madlib's Jazzcats Universe</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <script>
-            $(document).ready(function () {
-              var $allRows = $("#table-body tr:visible");
-              var $oddRows = $allRows.filter(":odd");
-              var $evenRows = $allRows.filter(":even");
-
-              // Remove old classes, then add new ones.
-              $oddRows.removeClass("even").addClass("odd");
-              $evenRows.removeClass("odd").addClass("even");
-
-              $("#table-head").click(function () {
-                var $allRows = $("#table-body tr:visible");
-                var $oddRows = $allRows.filter(":odd");
-                var $evenRows = $allRows.filter(":even");
-
-                // Remove old classes, then add new ones.
-                $oddRows.removeClass("even").addClass("odd");
-                $evenRows.removeClass("odd").addClass("even");
-              });
-
-              $("#myInput").on("keyup", function () {
-                var value = $(this).val().toLowerCase();
-                $("#table-body tr").filter(function () {
-                  $(this).toggle(
-                    $(this).text().toLowerCase().indexOf(value) > -1
-                  );
-                });
-                var $allRows = $("#table-body tr:visible");
-                var $oddRows = $allRows.filter(":odd");
-                var $evenRows = $allRows.filter(":even");
-
-                // Remove old classes, then add new ones.
-                $oddRows.removeClass("even").addClass("odd");
-                $evenRows.removeClass("odd").addClass("even");
-              });
-            });
-          </script>
-
-          <div class="article-footer" id="music-footing">
-            <ul>
-              <li>
-                <h2>
-                  <a href="https://www.haydenbrown.dev/words/music"
-                    >← back to music articles</a
-                  >
-                </h2>
-              </li>
-              <li>
-                <h2>
-                  <a href="https://www.haydenbrown.dev/words">all articles →</a>
-                </h2>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- footer -->
-    <div class="footer">
-      <div class="footer-content">
-        <a
-          id="email-icon"
-          target="_blank"
-          rel="noopener noreferrer"
-          href="mailto: brownhayden10@gmail.com"
-          ><img src="img/icons/email.ico" alt=""
-        /></a>
-        <a
-          id="linkedin-icon"
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://www.linkedin.com/in/hayden-t-brown/"
-          ><img src="img/icons/linkedin.ico" alt=""
-        /></a>
-        <a
-          id="twitter-icon"
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://twitter.com/hb_robo"
-          ><img src="img/icons/twitter-circle.ico" alt=""
-        /></a>
-        <a
-          id="github-icon"
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://github.com/hbrown10"
-          ><img src="img/icons/iconmonstr-github-1.svg" alt=""
-        /></a>
-        <span id="span0">hello world! feel free to reach out.</span>
-        <span id="span-email"
-          >contact me about professional inquiries or whatever else!</span
-        >
-        <span id="span-linkedin"
-          >connect with me professionally, if that's your thing.</span
-        >
-        <span id="span-twitter"
-          >check out my quick-trigger thoughts in real time!</span
-        >
-        <span id="span-github"
-          >look through my code, if you want to roast me (most things I do don't
-          get uploaded).</span
-        >
-      </div>
-      <div class="footer-bottom">&copy; 2021 | designed by hayden brown</div>
-    </div>
-
-    <script src="app.js"></script>
-  </body>
-</html>
+<!DOCTYPE html>
+<html lang="en" prefix="og: https://ogp.me/ns#">
+	<head>
+		<link rel="stylesheet" href="/css/style.css" />
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="robots" content="index, follow" />
+		<link rel="icon" href="/img/logos/logo-blue.png" />
+		<link rel="canonical" href="https://www.haydenbrown.dev/music-index" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
+			rel="stylesheet"
+		/>
+		<title>music index | hayden's stuff</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+		<script src="/js/sorttable.js"></script>
+		<!-- open graph tags for social media previews -->
+		<meta property="og:title" content="full music index | hayden's stuff" />
+		<meta property="og:type" content="text/html" />
+		<meta
+			property="og:image"
+			content="https://www.haydenbrown.dev/img/logos/logo-blue-wide.png"
+		/>
+		<meta
+			property="og:url"
+			content="https://www.haydenbrown.dev/music-index"
+		/>
+		<meta
+			property="og:description"
+			content="a tidy chart of all of the music I've written about."
+		/>
+		<meta property="og:site_name" content="hayden's stuff" />
+	</head>
+	<body>
+		<nav id="music-nav">
+			<div class="logo">
+				<a href="https://www.haydenbrown.dev">
+					<h4>hayden's stuff</h4>
+				</a>
+			</div>
+			<ul class="nav-links" id="music-nav">
+				<li><a href="https://www.haydenbrown.dev/words">words</a></li>
+				<li>
+					<a href="https://www.haydenbrown.dev/projects">projects</a>
+				</li>
+				<li>
+					<a href="https://www.haydenbrown.dev/about">about me</a>
+				</li>
+			</ul>
+			<div class="burger">
+				<div class="line1"></div>
+				<div class="line2"></div>
+				<div class="line3"></div>
+			</div>
+		</nav>
+		<!--THE TABLE OF GAME REVIEW LINKS-->
+		<div class="container">
+			<div class="index">
+				<div class="articles">
+					<h1 id="music-heading">full music index</h1>
+					<input
+						class="table-search"
+						type="text"
+						id="myInput"
+						onkeyup="tableFilter()"
+						placeholder="Search to filter index..."
+					/>
+					<div class="table-index">
+						<table class="reviews-table sortable" id="music-table">
+							<thead id="table-head">
+								<tr class="unselectable">
+									<th>year</th>
+									<th>release</th>
+									<th>type</th>
+									<th>artist</th>
+									<th>producer</th>
+									<th>verdict</th>
+									<th>attribution</th>
+								</tr>
+							</thead>
+							<tbody id="table-body">
+								<tr>
+									<td>1959</td>
+									<td>Moanin'</td>
+									<td>LP</td>
+									<td>Art Blakey & the Jazz Messengers</td>
+									<td>Alfred Lion</td>
+									<td sorttable_customkey="3.5">★★★½</td>
+									<td>
+										<a
+											href="https://www.haydenbrown.dev/words/music/rym-archive-vol2"
+										>
+											RYM Archive, Vol. II
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td>1968</td>
+									<td>Dreams</td>
+									<td>LP</td>
+									<td>Gábor Szabó</td>
+									<td>Gary McFarland</td>
+									<td sorttable_customkey="3">★★★☆</td>
+									<td>
+										<a
+											href="https://www.haydenbrown.dev/words/music/algorithm"
+										>
+											The Algorithm Folk Heroes
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td>1969</td>
+									<td>In a Silent Way</td>
+									<td>LP</td>
+									<td>Miles Davis</td>
+									<td>Teo Macero</td>
+									<td sorttable_customkey="4">★★★★</td>
+									<td>
+										<a
+											href="https://www.haydenbrown.dev/words/music/rym-archive-vol2"
+										>
+											RYM Archive, Vol. II
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td>1971</td>
+									<td>Journey in Satchidananda</td>
+									<td>LP</td>
+									<td>Alice Coltrane</td>
+									<td>Alice Coltrane & Ed Michel</td>
+									<td sorttable_customkey="4">★★★★</td>
+									<td>
+										<a
+											href="https://www.haydenbrown.dev/words/music/rym-archive-vol2"
+										>
+											RYM Archive, Vol. II
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td>1975</td>
+									<td>Places and Spaces</td>
+									<td>LP</td>
+									<td>Donald Byrd</td>
+									<td>Larry Mizell</td>
+									<td sorttable_customkey="3">★★★☆</td>
+									<td>
+										<a
+											href="https://www.haydenbrown.dev/words/music/rym-archive-vol2"
+										>
+											RYM Archive, Vol. II
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td>1976</td>
+									<td>Plantasia</td>
+									<td>LP</td>
+									<td>Mort Garson</td>
+									<td>Mort Garson</td>
+									<td sorttable_customkey="3">★★★☆</td>
+									<td>
+										<a
+											href="https://www.haydenbrown.dev/words/music/algorithm"
+										>
+											The Algorithm Folk Heroes
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td>1976</td>
+									<td>Scenery</td>
+									<td>LP</td>
+									<td>Ryo Fukui</td>
+									<td>Masataka Ito & Ryo Fukui</td>
+									<td sorttable_customkey="3">★★★☆</td>
+									<td>
+										<a
+											href="https://www.haydenbrown.dev/words/music/algorithm"
+										>
+											The Algorithm Folk Heroes
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td>1981</td>
+									<td>Firefly</td>
+									<td>LP</td>
+									<td>Emily Remler</td>
+									<td>Carl E. Jefferson</td>
+									<td sorttable_customkey="2.5">★★½☆</td>
+									<td>
+										<a
+											href="https://www.haydenbrown.dev/words/music/algorithm"
+										>
+											The Algorithm Folk Heroes
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td>1991</td>
+									<td>Spiderland</td>
+									<td>LP</td>
+									<td>Slint</td>
+									<td>Brian Paulson</td>
+									<td sorttable_customkey="3.5">★★★½</td>
+									<td>
+										<a
+											href="https://www.haydenbrown.dev/words/music/rym-archive-vol2"
+										>
+											RYM Archive, Vol. II
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td>1992</td>
+									<td>Love Deluxe</td>
+									<td>LP</td>
+									<td>Sade</td>
+									<td>Sade</td>
+									<td sorttable_customkey="3.5">★★★½</td>
+									<td>
+										<a
+											href="https://www.haydenbrown.dev/words/music/rym-archive-vol2"
+										>
+											RYM Archive, Vol. II
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td>1993</td>
+									<td>Quique</td>
+									<td>LP</td>
+									<td>Seefeel</td>
+									<td>Seefeel</td>
+									<td sorttable_customkey="1.5">★½☆☆</td>
+									<td>
+										<a
+											href="https://www.haydenbrown.dev/words/music/rym-archive-vol2"
+										>
+											RYM Archive, Vol. II
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td>1993</td>
+									<td>Robot World</td>
+									<td>LP</td>
+									<td>Bailter Space</td>
+									<td>Bailter Space</td>
+									<td sorttable_customkey="2.5">★★½☆</td>
+									<td>
+										<a
+											href="https://www.haydenbrown.dev/words/music/rym-archive-vol2"
+										>
+											RYM Archive, Vol. II
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td>1993</td>
+									<td>The Stars Are So Big...</td>
+									<td>LP</td>
+									<td>Pram</td>
+									<td>Pram</td>
+									<td sorttable_customkey="3.5">★★★½</td>
+									<td>
+										<a
+											href="https://www.haydenbrown.dev/words/music/rym-archive-vol2"
+										>
+											RYM Archive, Vol. II
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td>1996</td>
+									<td>Born Slippy .NUXX</td>
+									<td>Single</td>
+									<td>Underworld</td>
+									<td>Underworld</td>
+									<td sorttable_customkey="3">★★★☆</td>
+									<td>
+										<a
+											href="https://www.haydenbrown.dev/words/music/rym-archive-vol2"
+										>
+											RYM Archive, Vol. II
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td>1996</td>
+									<td>Feed Me Weird Things</td>
+									<td>LP</td>
+									<td>Squarepusher</td>
+									<td>Squarepusher</td>
+									<td sorttable_customkey="3">★★★☆</td>
+									<td>
+										<a
+											href="https://www.haydenbrown.dev/words/music/rym-archive-vol2"
+										>
+											RYM Archive, Vol. II
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td>1996</td>
+									<td>Richard D. James Album</td>
+									<td>LP</td>
+									<td>Aphex Twin</td>
+									<td>Aphex Twin</td>
+									<td sorttable_customkey="3.5">★★★½</td>
+									<td>
+										<a
+											href="https://www.haydenbrown.dev/words/music/rym-archive-vol2"
+										>
+											RYM Archive, Vol. II
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td>1998</td>
+									<td>Halica</td>
+									<td>LP</td>
+									<td>Sweet Trip</td>
+									<td>Roberto Burgos</td>
+									<td sorttable_customkey="3">★★★☆</td>
+									<td>
+										<a
+											href="https://www.haydenbrown.dev/words/music/rym-archive-vol2"
+										>
+											RYM Archive, Vol. II
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td>1998</td>
+									<td>Taking Care of You</td>
+									<td>LP</td>
+									<td>Junior Varsity KM</td>
+									<td>Kenric McDowell</td>
+									<td sorttable_customkey="2.5">★★½☆</td>
+									<td>
+										<a
+											href="https://www.haydenbrown.dev/words/music/rym-archive-vol2"
+										>
+											RYM Archive, Vol. II
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td>1999</td>
+									<td>R4 / Direct Audio</td>
+									<td>LP</td>
+									<td>Namco Software Sound Team</td>
+									<td>Hiroshi Okubo</td>
+									<td sorttable_customkey="2.5">★★½☆</td>
+									<td>
+										<a
+											href="https://www.haydenbrown.dev/words/music/rym-archive-vol2"
+										>
+											RYM Archive, Vol. II
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td>2000</td>
+									<td>Parallel Dimensions</td>
+									<td>LP</td>
+									<td>Theo Parrish</td>
+									<td>Theo Parrish</td>
+									<td sorttable_customkey="2.5">★★½☆</td>
+									<td>
+										<a
+											href="https://www.haydenbrown.dev/words/music/rym-archive-vol2"
+										>
+											RYM Archive, Vol. II
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td>2001</td>
+									<td>Angles Without Edges</td>
+									<td>LP</td>
+									<td>Yesterday's New Quintet</td>
+									<td>Madlib</td>
+									<td sorttable_customkey="2">★★✩✩</td>
+									<td>Madlib's Jazzcats Universe</td>
+								</tr>
+								<tr>
+									<td>2001</td>
+									<td>Enjoy Your Rabbit</td>
+									<td>LP</td>
+									<td>Sufjan Stevens</td>
+									<td>Sufjan Stevens</td>
+									<td sorttable_customkey="3">★★★✩</td>
+									<td>
+										<a
+											href="https://www.haydenbrown.dev/words/music/rym-archive-vol2"
+										>
+											RYM Archive, Vol. II
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td>2002</td>
+									<td>Finally We Are No One</td>
+									<td>LP</td>
+									<td>Múm</td>
+									<td>Valgeir Sigurðsson</td>
+									<td sorttable_customkey="2.5">★★½☆</td>
+									<td>
+										<a
+											href="https://www.haydenbrown.dev/words/music/rym-archive-vol2"
+										>
+											RYM Archive, Vol. II
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td>2004</td>
+									<td>Madvillainy</td>
+									<td>LP</td>
+									<td>Madvillain</td>
+									<td>MF DOOM & Madlib</td>
+									<td sorttable_customkey="3.5">★★★½</td>
+									<td>Madlib's Jazzcats Universe</td>
+								</tr>
+								<tr>
+									<td>2004</td>
+									<td>Stevie</td>
+									<td>LP</td>
+									<td>Yesterday's New Quintet</td>
+									<td>Madlib</td>
+									<td sorttable_customkey="1">★☆✩✩</td>
+									<td>Madlib's Jazzcats Universe</td>
+								</tr>
+								<tr>
+									<td>2007</td>
+									<td>
+										Act 1: Eternal Sunshine (The Pledge)
+									</td>
+									<td>EP</td>
+									<td>Jay Electronica</td>
+									<td>Jay Electronica</td>
+									<td sorttable_customkey="3.5">★★★½</td>
+									<td>
+										<a
+											href="https://www.haydenbrown.dev/words/music/rym-archive-vol2"
+										>
+											RYM Archive, Vol. II
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td>2008</td>
+									<td>Sujinho</td>
+									<td>LP</td>
+									<td>Jackson Conti</td>
+									<td>Madlib & Ivan Conti</td>
+									<td sorttable_customkey="3">★★★✩</td>
+									<td>Madlib's Jazzcats Universe</td>
+								</tr>
+								<tr>
+									<td>2009</td>
+									<td>Lotusize</td>
+									<td>LP</td>
+									<td>Watchman</td>
+									<td>Watchman</td>
+									<td sorttable_customkey="3">★★★✩</td>
+									<td>
+										<a
+											href="https://www.haydenbrown.dev/words/music/rym-archive-vol2"
+										>
+											RYM Archive, Vol. II
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td>2011</td>
+									<td>Minecraft: Volume Alpha</td>
+									<td>LP</td>
+									<td>C418</td>
+									<td>C418</td>
+									<td sorttable_customkey="2.5">★★½☆</td>
+									<td>
+										<a
+											href="https://www.haydenbrown.dev/words/music/rym-archive-vol2"
+										>
+											RYM Archive, Vol. II
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td>2011</td>
+									<td>The Golden Age of Apocalypse</td>
+									<td>LP</td>
+									<td>Thundercat</td>
+									<td>Flying Lotus & Thundercat</td>
+									<td sorttable_customkey="2">★★☆☆</td>
+									<td>
+										<a
+											href="https://www.haydenbrown.dev/words/music/rym-archive-vol2"
+										>
+											RYM Archive, Vol. II
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td>2016</td>
+									<td>Those Who Throw Objects...</td>
+									<td>LP</td>
+									<td>Bruno Pernadas</td>
+									<td>Bruno Pernadas</td>
+									<td sorttable_customkey="1.5">★½☆☆</td>
+									<td>
+										<a
+											href="https://www.haydenbrown.dev/words/music/rym-archive-vol2"
+										>
+											RYM Archive, Vol. II
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td>2017</td>
+									<td>Playboi Carti</td>
+									<td>LP</td>
+									<td>Playboi Carti</td>
+									<td>Pi'erre Bourne</td>
+									<td sorttable_customkey="3">★★★☆</td>
+									<td>
+										<a
+											href="https://www.haydenbrown.dev/words/music/rym-archive-vol2"
+										>
+											RYM Archive, Vol. II
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td>2021</td>
+									<td>Sound Ancestors</td>
+									<td>LP</td>
+									<td>Madlib</td>
+									<td>Four Tet</td>
+									<td sorttable_customkey="3">★★★✩</td>
+									<td>Madlib's Jazzcats Universe</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<script>
+						$(document).ready(function () {
+							var $allRows = $("#table-body tr:visible");
+							var $oddRows = $allRows.filter(":odd");
+							var $evenRows = $allRows.filter(":even");
+							// Remove old classes, then add new ones.
+							$oddRows.removeClass("even").addClass("odd");
+							$evenRows.removeClass("odd").addClass("even");
+							$("#table-head").click(function () {
+								var $allRows = $("#table-body tr:visible");
+								var $oddRows = $allRows.filter(":odd");
+								var $evenRows = $allRows.filter(":even");
+								// Remove old classes, then add new ones.
+								$oddRows.removeClass("even").addClass("odd");
+								$evenRows.removeClass("odd").addClass("even");
+							});
+							$("#myInput").on("keyup", function () {
+								var value = $(this).val().toLowerCase();
+								$("#table-body tr").filter(function () {
+									$(this).toggle(
+										$(this)
+											.text()
+											.toLowerCase()
+											.indexOf(value) > -1
+									);
+								});
+								var $allRows = $("#table-body tr:visible");
+								var $oddRows = $allRows.filter(":odd");
+								var $evenRows = $allRows.filter(":even");
+								// Remove old classes, then add new ones.
+								$oddRows.removeClass("even").addClass("odd");
+								$evenRows.removeClass("odd").addClass("even");
+							});
+						});
+					</script>
+					<div class="article-footer" id="music-footing">
+						<ul>
+							<li>
+								<h2>
+									<a
+										href="https://www.haydenbrown.dev/words/music"
+									>
+										← back to music articles
+									</a>
+								</h2>
+							</li>
+							<li>
+								<h2>
+									<a href="https://www.haydenbrown.dev/words">
+										all articles →
+									</a>
+								</h2>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- footer -->
+		<div class="footer">
+			<div class="footer-content">
+				<a
+					id="email-icon"
+					target="_blank"
+					rel="noopener noreferrer"
+					href="mailto: brownhayden10@gmail.com"
+				>
+					<img src="img/icons/email.ico" alt="" />
+				</a>
+				<a
+					id="linkedin-icon"
+					target="_blank"
+					rel="noopener noreferrer"
+					href="https://www.linkedin.com/in/hayden-t-brown/"
+				>
+					<img src="img/icons/linkedin.ico" alt="" />
+				</a>
+				<a
+					id="twitter-icon"
+					target="_blank"
+					rel="noopener noreferrer"
+					href="https://twitter.com/hb_robo"
+				>
+					<img src="img/icons/twitter-circle.ico" alt="" />
+				</a>
+				<a
+					id="github-icon"
+					target="_blank"
+					rel="noopener noreferrer"
+					href="https://github.com/hbrown10"
+				>
+					<img src="img/icons/iconmonstr-github-1.svg" alt="" />
+				</a>
+				<span id="span0">hello world! feel free to reach out.</span>
+				<span id="span-email">
+					contact me about professional inquiries or whatever else!
+				</span>
+				<span id="span-linkedin">
+					connect with me professionally, if that's your thing.
+				</span>
+				<span id="span-twitter">
+					check out my quick-trigger thoughts in real time!
+				</span>
+				<span id="span-github">
+					look through my code, if you want to roast me (most things I
+					do don't get uploaded).
+				</span>
+			</div>
+			<div class="footer-bottom">
+				&copy; 2021 | designed by hayden brown
+			</div>
+		</div>
+		<script src="app.js"></script>
+	</body>
+</html>
