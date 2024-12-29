@@ -1,0 +1,3 @@
+This was my first personal portfolio site, launched in February 2021. It was hosted for a couple years at haydenbrown.dev, but has since been taken down. Aside from the typical about and projects page, it also served as the first public repository of my personal writing.
+
+The site is made entirely out of handcrafted HTML5/CSS3, even the animations. I knew almost nothing about web development when I started the project, so it was an arduous process. The upkeep required to add new content is why it was left unmaintained, and why I started anew with Astro.js on [robolab.dev](https://github.com/hb-robo/robolab.dev).
